@@ -7,19 +7,198 @@
     <title>About BrightAct</title>
 
     <!-- Bootstrap -->
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link href="../static/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- Custom CSS -->
-    <link href="../static/css/about_page.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/about_page.css">
     <!-- Social Media CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+    .founders {
+        padding: 0;
+        width: 100%;
+        height: 800px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .story {
+        position: relative;
+        top: -700px;
+        padding: 0;
+        width: 50%;
+        height: 700px;
+        background-color: rgb(255, 255, 255);
+        overflow: scroll;
+    }
+
+    .video > .clouds {
+        position: relative;
+        top: 20px;
+        background-color: white;
+        width: 50%;
+        left: 50%;
+        height: 700px;
+    }
+
+    .navbar {
+        height: 80px;
+    }
+
+    .navbar-brand {
+        font-size: 70px;
+        position: relative;
+        left: 30px;
+    }
+
+    .navButtons {
+        position: relative;
+        left: -20px;
+    }
+
+    .founderstory {
+        font-size: 20px;
+        padding: 20px;
+        position: relative;
+        top: 20px;
+        width: 700px;
+        left: 30px;
+        color: teal;
+        background-color: azure;
+    }
+
+    .cultureTeam {
+        width: 100%;
+        height: 900px;
+        background-color: rgb(250, 248, 248);
+        width: 100%;
+    }
+
+    .culTitle {
+        font-size: 60px;
+        background-color: whitesmoke;
+        position: relative;
+        left: 33px;
+        width: 400px;
+    }
+    
+    .culturetitle {
+        position: relative;
+        top: 5px;
+    }
+
+    .pvalues {
+        font-size: 20px;
+        background-color: whitesmoke;
+        position: relative;
+        left: 30px;
+        width: 400px;
+        height: 200px;
+        top: 100px;
+    }
+
+    .values {
+        background-color: red;
+    }
+
+    .card {
+        max-width: 300px;
+        margin: 40px;
+        text-align: center;
+        font-family: arial;
+        position: relative;
+        left: 200px;
+        top: 20px;
+        padding: 0;
+    }
+    
+    .teamcards {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: -20px;
+        padding: 10;
+        top: 10px;
+    }
+
+    .teamitle {
+        color: grey;
+        font-size: 18px;
+        position: relative;
+        top: 100px;
+    }
+    </style>
 </head>
 <body>
-    <h1>About</h1>
+    <!--Nav Bar-->
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">BrightAct</a>
+        <div class="navButtons">
+            <button type="button">Changemakers</button>
+            <button type="button">Product</button>
+            <button type="button">Updates</button>
+        </div>
+    </nav>
+    <!--Founder/Storytelling-->
+    <div class="founders">
+         <!--Video -->
+        <div class="video">
+            <video class= "clouds" autoplay loop muted>
+                <source src="../static/video/clouds.MP4" type="video/MP4">
+            </video>
+        </div>
+         <!--story-->
+        <div class="story">
+            <div class="founderstory">
+                <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, quod nobis! Libero similique vero quod neque nesciunt illum quasi voluptates maxime veritatis autem, odit, doloremque asperiores deleniti consequatur ea rerum.</h1>
+                <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</small>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatum labore a illum? Explicabo quos earum, rerum asperiores aliquam debitis unde quae dolorum necessitatibus quod vel cupiditate dicta dolorem? Et?</h4>
+                <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quis est? Ut dolorum, aliquid nam accusamus et dicta beatae aspernatur omnis vero, aperiam illum perferendis quos iste maxime deleniti nulla.</h6>
+                <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, quod nobis! Libero similique vero quod neque nesciunt illum quasi voluptates maxime veritatis autem, odit, doloremque asperiores deleniti consequatur ea rerum.</h1>
+           </div>
+        </div>
+    </div>
+
+     <!--Culture & Team-->
+     <div class="cultureTeam">
+        <div class="culturetitle">
+            <p class="culTitle">Culture & Team</p>
+        </div>
+        <div class="teamcards">
+            <div class="card">
+                <img src="../static/img/BAlogo.png" style="width:100%">
+                <h1>John Doe</h1>
+                <p class="teamtitle">CEO & Founder, Example</p>
+            </div>
+            <div class="card">
+                <img src="../static/img/BAlogo.png" style="width:100%">
+                <h1>John Doe</h1>
+                <p class="teamtitle">CEO & Founder, Example</p>
+            </div>
+            <div class="card">
+                <img src="../static/img/BAlogo.png" style="width:100%">
+                <h1>John Doe</h1>
+                <p class="teamtitle">CEO & Founder, Example</p>
+            </div>
+            <div class="card">
+                <img src="../static/img/BAlogo.png" style="width:100%">
+                <h1>John Doe</h1>
+                <p class="teamtitle">CEO & Founder, Example</p>
+            </div>
+        </div>
+
+        <div class="values">
+            <p class="pvalues">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae natus voluptate asperiores numquam vitae dolor, tempora consequatur perferendis repellendus aspernatur, architecto dolores commodi dicta libero eum dignissimos aliquam, harum ducimus!</p>
+        </div>
+    </div>
+
+   
+
     {% include 'footer.html' %}
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap plugins -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
 </body>
 </html>
