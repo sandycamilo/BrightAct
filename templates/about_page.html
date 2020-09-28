@@ -32,7 +32,7 @@
         overflow: scroll;
     }
 
-    .video > .clouds{
+    .video > .clouds {
         position: relative;
         top: 20px;
         background-color: white;
@@ -46,17 +46,17 @@
     }
 
     .navbar-brand {
-        font-size: 55px;
+        font-size: 70px;
         position: relative;
         left: 30px;
     }
 
-    .navButtons{
+    .navButtons {
         position: relative;
-        left: -80px;
+        left: -20px;
     }
 
-    .founderstory{
+    .founderstory {
         font-size: 20px;
         padding: 20px;
         position: relative;
@@ -66,9 +66,68 @@
         color: teal;
         background-color: azure;
     }
-    </style>
 
+    .cultureTeam {
+        width: 100%;
+        height: 900px;
+        background-color: rgb(250, 248, 248);
+        width: 100%;
+    }
+
+    .culTitle {
+        font-size: 60px;
+        background-color: whitesmoke;
+        position: relative;
+        left: 33px;
+        width: 400px;
+    }
     
+    .culturetitle {
+        position: relative;
+        top: 5px;
+    }
+
+    .pvalues {
+        font-size: 20px;
+        background-color: whitesmoke;
+        position: relative;
+        left: 30px;
+        width: 400px;
+        height: 200px;
+        top: 100px;
+    }
+
+    .values {
+        background-color: red;
+    }
+
+    .card {
+        max-width: 300px;
+        margin: 40px;
+        text-align: center;
+        font-family: arial;
+        position: relative;
+        left: 200px;
+        top: 20px;
+        padding: 0;
+    }
+    
+    .teamcards {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: -20px;
+        padding: 10;
+        top: 10px;
+    }
+
+    .teamitle {
+        color: grey;
+        font-size: 18px;
+        position: relative;
+        top: 100px;
+    }
+    </style>
 </head>
 <body>
     <!--Nav Bar-->
@@ -84,7 +143,7 @@
     <div class="founders">
          <!--Video -->
         <div class="video">
-            <video class= "clouds"  autoplay loop muted>
+            <video class= "clouds" autoplay loop muted>
                 <source src="../static/video/clouds.MP4" type="video/MP4">
             </video>
         </div>
@@ -97,6 +156,39 @@
                 <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quis est? Ut dolorum, aliquid nam accusamus et dicta beatae aspernatur omnis vero, aperiam illum perferendis quos iste maxime deleniti nulla.</h6>
                 <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, quod nobis! Libero similique vero quod neque nesciunt illum quasi voluptates maxime veritatis autem, odit, doloremque asperiores deleniti consequatur ea rerum.</h1>
            </div>
+        </div>
+    </div>
+
+     <!--Culture & Team-->
+     <div class="cultureTeam">
+        <div class="culturetitle">
+            <p class="culTitle">Culture & Team</p>
+        </div>
+        <div class="teamcards">
+            <div class="card">
+                <img src="../static/img/BAlogo.png" style="width:100%">
+                <h1>John Doe</h1>
+                <p class="teamtitle">CEO & Founder, Example</p>
+            </div>
+            <div class="card">
+                <img src="../static/img/BAlogo.png" style="width:100%">
+                <h1>John Doe</h1>
+                <p class="teamtitle">CEO & Founder, Example</p>
+            </div>
+            <div class="card">
+                <img src="../static/img/BAlogo.png" style="width:100%">
+                <h1>John Doe</h1>
+                <p class="teamtitle">CEO & Founder, Example</p>
+            </div>
+            <div class="card">
+                <img src="../static/img/BAlogo.png" style="width:100%">
+                <h1>John Doe</h1>
+                <p class="teamtitle">CEO & Founder, Example</p>
+            </div>
+        </div>
+
+        <div class="values">
+            <p class="pvalues">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae natus voluptate asperiores numquam vitae dolor, tempora consequatur perferendis repellendus aspernatur, architecto dolores commodi dicta libero eum dignissimos aliquam, harum ducimus!</p>
         </div>
     </div>
 
