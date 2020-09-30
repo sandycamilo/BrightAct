@@ -1,5 +1,6 @@
 /env
 __pycache__
+<<<<<<< HEAD
 /react-app/app/node_modules/
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
@@ -25,3 +26,6 @@ __pycache__
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+=======
+.env
+>>>>>>> 73952023702578445aeb9f8bf9d1636a7b17a8ba
