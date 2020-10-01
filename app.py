@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from flask import Flask, render_template, request, flash
-from form import ContactForm
+from form import ContactForm, GetInvolvedForm
 from flask_mail import Message, Mail
 
 app = Flask(__name__)
@@ -38,8 +38,8 @@ def contact_page():
             flash('All fields are required.')
             return render_template('contact_page.html', form=form)
         else:
-            msg = Message(subject=form.subject.data, 
-                        sender=form.name.data, 
+            msg = Message(subject=form.subject.data,
+                        sender=form.name.data,
                         recipients=[os.getenv('MAIL_USERNAME')])
             msg.body = """
             From: %s <%s>
@@ -51,6 +51,29 @@ def contact_page():
 
     elif request.method == 'GET':
         return render_template('contact_page.html', form=form)
+
+@app.route('/get_involved', methods=['GET', 'POST'])
+def get_involved():
+    form = GetInvolvedForm()
+
+    if request.method == 'POST':
+        if form.validate() == False:
+            flash('All fields are required.')
+            return render_template('get_involved.html', form=form)
+        else:
+            msg = Message(subject=form.subject.data,
+                        sender=form.name.data,
+                        recipients=[os.getenv('MAIL_USERNAME')])
+            msg.body = """
+            From: %s <%s>
+            %s
+            """ % (form.name.data, form.org_name.data, form.country.data, form.role.data, form.email.data, form.found.data, form.reason.data, form.info.data)
+            mail.send(msg)
+
+            return render_template('get_involved.html', success=True)
+
+    elif request.method == 'GET':
+        return render_template('get_involved.html', form=form)
 
 @app.route('/about')
 def about_page():

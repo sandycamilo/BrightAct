@@ -1,0 +1,42 @@
+Get Involved
+<form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+<p>
+    {{ form.name.label }}
+    {{ form.name }}
+<p>
+    {{ form.org_name.label }}
+    {{ form.org_name }}
+<p>
+    {{ form.country.label }}
+    {{ form.country }}
+<p>
+    {{ form.role.label }}
+    {{ form.role }}
+<p>
+    {{ form.email.label }}
+    {{ form.email }}
+<p>
+    {{ form.phone.label }}
+    {{ form.phone }}
+<p>
+    {{ form.found.label }}
+    {{ form.found }}
+<p>
+    {{ form.reason.label }}
+    {% for reason in form.reason %}
+
+            {{ reason }}<br />
+
+    {% endfor %}
+<p>
+    {{ form.info.label }}
+    {% for option in form.info %}
+        <ul>
+            <li>{{ info }}</li>
+
+        </ul>
+    {% endfor %}
+<p>
+    {{ form.submit }}
+</form>
