@@ -13,7 +13,17 @@ scopes = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
 credentials = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scopes)
                                                               
+client = gspread.authorize(credentials)
+gsheet = client.open("BrightAct Get Involved Form").sheet1
 
+app = Flask(__name__)
+mail = Mail()
+# config
+# app.run('host'=localhost, debug=True)
+# app.config.from_pyfile('config.py')
+
+lst_of_hashes = gsheet.get_all_records()
+print(lst_of_hashes)
 
 app.secret_key = os.getenv('SECRET_KEY')
 
