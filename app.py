@@ -2,15 +2,18 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, request, flash, jsonify, request, abort
 from form import ContactForm
 from flask_mail import Message, Mail
+# Google Sheets API setup
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
 
-app = Flask(__name__)
-mail = Mail()
-# config
-# app.run('host'=localhost, debug=True)
-# app.config.from_pyfile('config.py')
+scopes = ['https://spreadsheets.google.com/feeds',
+         'https://www.googleapis.com/auth/drive']
+credentials = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scopes)
+                                                              
+
 
 app.secret_key = os.getenv('SECRET_KEY')
 
