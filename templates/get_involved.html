@@ -24,16 +24,16 @@ Get Involved
     {{ form.found }}
 <p>
     {{ form.reason.label }}
-    {% for reason in form.reason %}
+    {% for option in form.reason %}
 
-            {{ reason }}<br />
+            {{ option }}<br />
 
     {% endfor %}
 <p>
     {{ form.info.label }}
     {% for option in form.info %}
         <ul>
-            <li>{{ info }}</li>
+            <li>{{ option}}</li>
 
         </ul>
     {% endfor %}
