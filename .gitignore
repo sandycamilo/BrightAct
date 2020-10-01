@@ -1,4 +1,6 @@
+/venv
 /env
+.env
 __pycache__
 /react-app/app/node_modules/
 

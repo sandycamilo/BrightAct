@@ -66,3 +66,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Tutorial Sources
+
+https://blog.mailtrap.io/react-contact-form/
+
+https://blog.mailtrap.io/sending-emails-in-python-tutorial-with-code-examples/
