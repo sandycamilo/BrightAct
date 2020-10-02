@@ -1,42 +1,55 @@
-Get Involved
+<h1>Get Involved</h1>
 <form method="POST" enctype="multipart/form-data">
     {{ form.hidden_tag() }}
 <p>
     {{ form.name.label }}
     {{ form.name }}
+    </p>
 <p>
     {{ form.org_name.label }}
     {{ form.org_name }}
+    </p>
 <p>
     {{ form.country.label }}
     {{ form.country }}
+    </p>
 <p>
     {{ form.role.label }}
     {{ form.role }}
+    </p>
 <p>
     {{ form.email.label }}
     {{ form.email }}
+    </p>
 <p>
     {{ form.phone.label }}
     {{ form.phone }}
+    </p>
 <p>
     {{ form.found.label }}
     {{ form.found }}
+    </p>
 <p>
     {{ form.reason.label }}
     {% for option in form.reason %}
-
-            {{ option }}<br />
+        <tr>
+            <td>{{ option }}</td>
+            <td>{{ option.label }}</td>
+        </tr>
 
     {% endfor %}
+    </p>
 <p>
     {{ form.info.label }}
     {% for option in form.info %}
-        <ul>
-            <li>{{ option}}</li>
+        <tr>
+            <td>{{ option }}</td>
+            <td>{{ option.label }}</td>
 
-        </ul>
+        </tr>
     {% endfor %}
+    </p>
 <p>
     {{ form.submit }}
+</p>
 </form>
