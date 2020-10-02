@@ -40,6 +40,16 @@
     {% endfor %}
     </p>
 <p>
+    {{ form.sector.label }}
+    {% for option in form.sector %}
+        <tr>
+            <td>{{ option }}</td>
+            <td>{{ option.label }}</td>
+        </tr>
+
+    {% endfor %}
+    </p>
+<p>
     {{ form.info.label }}
     {% for option in form.info %}
         <tr>

@@ -35,4 +35,5 @@ class GetInvolvedForm(FlaskForm):
     #     option_widget=None)
     reason = RadioField("Reason for Contact:", choices=[('collaboration'),('information'), ('research'), ('support'), ('sales'), ('other')])
     info = RadioField("I want more information:", default="Yes", choices=[("yes, please"), ('no thank you')])
+    sector = RadioField("To which sector does your organization belong?:", choices=[("NGO/Help"), ("Public Sector"), ("University"), ("Civic/Law")])
     submit = SubmitField("Submit")
