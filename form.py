@@ -13,13 +13,13 @@ class ContactForm(FlaskForm):
     submit = SubmitField("Submit")
 
 class GetInvolvedForm(FlaskForm):
-    name = StringField("Your Name:", validators=[DataRequired("Enter your name")])
-    org_name = StringField("Name of Organization:", validators=[DataRequired("Enter the name of your organization")])
-    country = StringField("Country:", validators=[DataRequired("Please enter the name of the country in which your organization exists")])
-    role = StringField("Role:", validators=[DataRequired("Enter your job title or organizational role")])
-    email = StringField("Email:", validators=[DataRequired("Enter a valid email address"), Email("Please entera valid email address")])
-    phone = TelField("Phone Number:", validators=[DataRequired()])
-    found = StringField("How you found BrightAct:")
+    name = StringField("Your Name:", validators=[DataRequired("Enter your name", coerce="unicode")])
+    org_name = StringField("Name of Organization:", validators=[DataRequired("Enter the name of your organization")], coerce="unicode")
+    country = StringField("Country:", validators=[DataRequired("Please enter the name of the country in which your organization exists")], coerce="unicode")
+    role = StringField("Role:", validators=[DataRequired("Enter your job title or organizational role")], coerce="unicode")
+    email = StringField("Email:", validators=[DataRequired("Enter a valid email address"), Email("Please entera valid email address")], coerce="unicode")
+    phone = TelField("Phone Number:", validators=[DataRequired()], coerce="unicode")
+    found = StringField("How you found BrightAct:", coerce="unicode")
     # reason_list = [
     #     ('collaboration', 'collaboration'),
     #     ('information', 'information'),
@@ -33,7 +33,7 @@ class GetInvolvedForm(FlaskForm):
     #     choices=reason_list,
     #     coerce='unicode',
     #     option_widget=None)
-    reason = RadioField("Reason for Contact:", choices=[('collaboration'),('information'), ('research'), ('support'), ('sales'), ('other')])
-    info = RadioField("I want more information:", default="Yes", choices=[("yes, please"), ('no thank you')])
-    sector = RadioField("To which sector does your organization belong?:", choices=[("NGO/Help"), ("Public Sector"), ("University"), ("Civic/Law")])
+    reason = RadioField("Reason for Contact:", choices=[('collaboration'),('information'), ('research'), ('support'), ('sales'), ('other')], coerce="unicode")
+    info = RadioField("I want more information:", choices=[("yes, please"), ('no thank you')], coerce="unicode")
+    sector = RadioField("To which sector does your organization belong?:", choices=[("NGO/Help"), ("Public Sector"), ("University"), ("Civic/Law")], coerce="unicode")
     submit = SubmitField("Submit")

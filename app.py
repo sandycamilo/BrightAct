@@ -61,7 +61,7 @@ def get_involved():
             flash('All fields are required.')
             return render_template('get_involved.html', form=form)
         else:
-            msg = Message(subject=form.subject.data,
+            msg = Message(subject="Get Involved Form",
                         sender=form.name.data,
                         recipients=[os.getenv('MAIL_USERNAME')])
             msg.body = """
