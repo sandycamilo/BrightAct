@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,20 +5,413 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About BrightAct</title>
 
-    <!-- Bootstrap -->
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <!--Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link href="../static/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- Custom CSS -->
-    <link href="../static/css/about_page.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/about_page.css">
     <!-- Social Media CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+    body {
+        /* remove the margin on the body */
+        margin: 0;
+    }
+
+    .story {
+        /* The story takes 1 fraction of the space */
+        flex: 1;
+        margin: .7rem;
+        height: 800px;
+        background-color: rgb(255, 255, 255);
+        overflow: scroll; 
+        top: 2px;       
+    }
+
+    .founders {
+        /* Arrange the founders section video and story in a row */
+        display: flex;
+        /* This flips the video to the right side */
+        flex-direction: row-reverse;
+    }
+
+    .video {
+        /* Use flex to make the video take up 1 fraction */
+        flex: 1;
+        margin: .5rem;
+        top: -20px;
+    }
+
+    .clouds {
+        position: relative;
+        height: 800px;
+        border-radius: 10px; 
+        overflow: hidden; 
+    }
+
+    .navbar {
+        display: flex;
+        padding: 1rem;
+        justify-content: space-between;
+    }
+
+    .navbar-brand {
+        font-size: 90px;
+        position: relative;
+        left: 100px;
+        top: 13px;
+    }
+
+    .navButtons {
+        /* display: flex; */
+        padding: .5rem;
+        /* flex-direction: row-reverse; */
+        position: relative;
+        left: 665px;
+        top: 26px;
+    }
+
+    .search {
+        position: relative;
+        left: 5px;
+        top: 25px;
+    }
+
+    button {
+        padding:10px;
+        text-align: center;
+        font-size: 18px;
+        margin: 15px;
+        background-color: rgb(244, 235, 235);
+        border: none;
+        border-radius: 6px;
+    }
+
+    .founderstory {
+        font-size: 22px;
+        padding: 60px;
+        position: relative;
+        top: 100px;
+        width: 760px;
+        left: 100px;
+        color: rgb(4, 4, 4);
+    }
+
+    .founderstory2 {
+        font-size: 22px;
+        padding: 60px;
+        position: relative;
+        top: 200px;
+        width: 700px;
+        left: 90px;
+        color: rgb(4, 4, 4);
+    }
+
+    .cultureTeam {
+        display: flex;
+        padding: 1rem;
+        height: 300px;
+        background-color: rgb(242, 245, 241)
+    }
+
+    .culturecards1 {
+        display: flex;
+        padding: 1rem;
+        height: 850px;
+        background-color:azure; 
+    }
+
+    .culturecards2 {
+        display: flex;
+        padding: 1rem;
+        height: 800px;
+        background-color:azure; 
+    }
+
+    .culTitle {
+        font-size: 55px;
+        position: relative;
+        top: 20px;
+        left: 100px;
+        color:black;
+    }
+
+    .pvalues {
+        font-size: 20px;
+        background-color: whitesmoke;
+        position: relative;
+        height: 40px;
+        top: 150px;
+        left: -310px;
+    }
+
+    .card {
+        max-width: 300px;
+        margin: 150px;
+        text-align: center;
+        border: none;
+        position: relative;
+        left: 20px;
+        padding: 0;
+        top: -540px;
+    }
+    
+    .teamcards1 {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: 250px;
+        top: 480px;
+    }
+
+    .teamcards2 {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: 250px;
+        top: 400px;
+    }
+
+    .teamitle {
+        color: grey;
+        font-size: 18px;
+        position: relative;
+        top: 100px;
+    }
+
+    small {
+        color: rgb(12, 12, 101);
+    } 
+
+    .techforgood {
+        display: flex;
+        padding: 3rem;
+        height: 950px;
+    }
+
+    .techtitle {
+        font-size: 70px;
+        position: relative;
+        top: 20px;
+        left: 57%;
+        color:black;
+        width: 100%;
+    }
+
+    .techgoodinfo {
+        /* background-color: rgb(255, 140, 0); */
+        height: 400px;
+        position: relative;
+        left: -202px;
+        font-size: 23px;
+        top: 160px;
+    }
+
+    /* .equalityinfo { */
+        /* height: 400px;
+        position: relative;
+        left: -850px;
+        font-size: 23px;
+        top: 50px;
+
+    } */
+
+    .techlogo {
+        position: relative;
+        top: 100px;
+        left: -600px;
+    }
+
+    .giveback {
+        display: flex;
+        padding: 3rem;
+        height: 950px;
+        background-color: azure;
+    }
+
+    .givebacktitle {
+        font-size: 70px;
+        position: relative;
+        top: 20px;
+        left: 6%;
+        color:black;
+        width: 100%;
+    }
+
+    .givebackinfo {
+        /* background-color: rgb(255, 140, 0); */
+        height: 400px;
+        position: relative;
+        left:-1402px;
+        font-size: 23px;
+        top: 160px;
+        height: 700px;
+    }
+
+    .givelogo {
+        position: relative;
+        top: 100px;
+        left: 600px;
+    }
+    </style>
 </head>
 <body>
-    <h1>About</h1>
+    <!--Nav Bar-->
+    <nav class="navbar navbar-light" style="background-color:orange">
+        <a class="navbar-brand" style="color:white;">BrightAct</a>
+        <div class="navButtons">
+            <button type="button">changemakers</button>
+            <button type="button">product</button>
+            <button type="button">updates</button>
+        </div>
+         <!-- Search form -->
+        <div class="search">
+            <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
+                <!-- <i class="fas fa-search" aria-hidden="true"></i> -->
+                <input class="form-control form-control-lg ml-3 w-75" type="text" placeholder="search"
+                aria-label="Search">
+            </form>
+        </div>
+    </nav>
+    <!--Founder/Storytelling-->
+    <div class="founders">
+         <!--Video -->
+        <div class="video">
+            <video class= "clouds" autoplay loop muted>
+                <source src="../static/video/IMG_9229.mov" type="video/MP4">
+            </video>
+        </div>
+         <!--story-->
+        <div class="story">
+            <div class="founderstory">
+                <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit</h1>
+                <br>
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     A possimus iusto error praesentium repellendus repudiandae alias 
+                     cupiditate officiis eligendi voluptates odio illum doloremque accusamus 
+                     sequi, enim cumque autem voluptate blanditiis.
+                </small>
+                <br>
+                <br>
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        A possimus iusto error praesentium repellendus repudiandae alias 
+                        cupiditate officiis eligendi voluptates odio illum doloremque accusamus 
+                        sequi, enim cumque autem voluptate blanditiis.
+                </small>
+           </div>
+           <div class="founderstory2">
+                <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit</h1>
+                <br>
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     A possimus iusto error praesentium repellendus repudiandae alias 
+                     cupiditate officiis eligendi voluptates odio illum doloremque accusamus 
+                     sequi, enim cumque autem voluptate blanditiis.
+                </small>
+                <br>
+                <br>
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        A possimus iusto error praesentium repellendus repudiandae alias 
+                        cupiditate officiis eligendi voluptates odio illum doloremque accusamus 
+                        sequi, enim cumque autem voluptate blanditiis.
+                </small>
+                <br>
+                <br>
+                <br>
+                <br>
+           </div>
+        </div>
+    </div>
+     <!--Culture & Team-->
+     <div class="cultureTeam">
+        <div class="culturetitle">
+            <p class="culTitle">Culture and Team</p>
+        </div>
+        <div class="values">
+            <p class="pvalues">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae natus voluptate asperiores numquam vitae dolor.numquam vitae dolor.numquam vitae dolor.
+                lore
+            </p>
+        </div>
+     </div>
+    <div class="culturecards1">
+        <div class="teamcards1">
+            <div class="card">
+                <img src="../static/img/BAlogo.png" style="width:100%">
+                <h1>John Doe</h1>
+                <p class="teamtitle">CEO & Founder, Example</p>
+            </div>
+            <div class="card">
+                <img src="../static/img/BAlogo.png" style="width:100%">
+                <h1>John Doe</h1>
+                <p class="teamtitle">CEO & Founder, Example</p>
+            </div>
+            <div class="card">
+                <img src="../static/img/BAlogo.png" style="width:100%">
+                <h1>John Doe</h1>
+                <p class="teamtitle">CEO & Founder, Example</p>
+            </div>
+        </div>
+    </div> 
+    <div class="culturecards2">
+        <div class="teamcards2">
+            <div class="card">
+                <img src="../static/img/BAlogo.png" style="width:100%">
+                <h1>John Doe</h1>
+                <p class="teamtitle">CEO & Founder, Example</p>
+            </div>
+            <div class="card">
+                <img src="../static/img/BAlogo.png" style="width:100%">
+                <h1>John Doe</h1>
+                <p class="teamtitle">CEO & Founder, Example</p>
+            </div>
+            <div class="card">
+                <img src="../static/img/BAlogo.png" style="width:100%">
+                <h1>John Doe</h1>
+                <p class="teamtitle">CEO & Founder, Example</p>
+            </div>
+        </div>
+    </div> 
+    <!--Tech for Good-->
+    <div class="techforgood">
+        <div class="techtitle">
+            <p>Tech for Good</p>
+        </div>
+        <div class="techlogo">
+            <img width="800px" height="600px" src="/static/img/BAlogo.png" alt="logo">
+        </div>
+        <div class="techgoodinfo">
+            <h1>Lorem ipsum dolor sanditiis quos nobis quod, similique et maiores,.</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa corporis praesentium, iure et iste eaque? Voluptas eos, aut accusamus architecto provident, corporis, nobis fugit nemo voluptatem labore esse sit fuga.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non porro ab quia deserunt aut nulla, eaque explicabo quae quis distinctio. Reprehenderit, molestiae saepe? Tempore facere aut perferendis, omnis impedit accusantium.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, neque? Odit accusamus quos provident tempora mollitia quas debitis rerum! Obcaecati laboriosam ipsa dolor aliquam qui eum voluptate, error rem atque!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur consequuntur nobis beatae dolores maxime magnam provident, distinctio, doloremque illo incidunt totam corrupti accusamus veniam, tenetur sunt earum assumenda iure ducimus.</p>
+        </div>
+        <!-- <div class="equalityinfo"> -->
+            <!-- <h1>lorem ipsum</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque accusamus molestias placeat assumenda laborum. Sequi dignissimos facere molestiae numquam beatae dolores saepe quos? Debitis repellendus laudantium eum est necessitatibus ratione?</p>
+        </div> -->
+    </div>
+    <!--Giveback-->
+    <div class="giveback">
+        <div class="givebacktitle">
+            <p>Giveback</p>
+        </div>
+        <div class="givelogo">
+            <img width="800px" height="600px" src="/static/img/BAlogo.png" alt="logo">
+        </div>
+        <div class="givebackinfo">
+            <h1>Lorem ipsum dolor sanditiis quos nobis quod, similique et maiores,.</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa corporis praesentium, iure et iste eaque? Voluptas eos, aut accusamus architecto provident, corporis, nobis fugit nemo voluptatem labore esse sit fuga.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non porro ab quia deserunt aut nulla, eaque explicabo quae quis distinctio. Reprehenderit, molestiae saepe? Tempore facere aut perferendis, omnis impedit accusantium.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, neque? Odit accusamus quos provident tempora mollitia quas debitis rerum! Obcaecati laboriosam ipsa dolor aliquam qui eum voluptate, error rem atque!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur consequuntur nobis beatae dolores maxime magnam provident, distinctio, doloremque illo incidunt totam corrupti accusamus veniam, tenetur sunt earum assumenda iure ducimus.</p>
+        </div>
+    </div>
     {% include 'footer.html' %}
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap plugins -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
 </body>
 </html>
