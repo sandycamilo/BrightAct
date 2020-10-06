@@ -8,13 +8,200 @@
     <!-- Bootstrap -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="../static/css/about_page.css" rel="stylesheet">
+    <link href="../static/css/landing_page.css" rel="stylesheet">
     <!-- Social Media CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- Header: Navbar w/ Logo and About Us Link -->
+    {% include 'header.html' %}
     <!-- Storytelling section -->
+    <div class="storytelling">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h3>Domestic Violence</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Domestic violence is a constant concern. The people it hurts often carry emotional wounds for a lifetime.</p>
+                    </div>
+                    <div class="card-footer">
+                        Unless otherwise noted, all data is for EU member states
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h3>One in Three Women</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">in the <span class="uppercase">EU</span><br />
+                            has experienced physical and/or sexual violence<br />
+                            since she was 15 years old <a tabindex="0" id="one-in-three-source">*</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h3>22% of All women</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">who ever had a partner had experienced physical or sexual violence by a partner.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h3>16.7 Million</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">women have experienced physical/sexual violence in the course of 12 months before the survey interviews.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h3>Differences in EU States</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="EUStateCarousel" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="card-text item active">
+                                    <h3>Gender equality</h3>
+                                    <p>could lead to higher levels of disclosure 
+                                        about violence against women. Incidents of 
+                                        violence against women are more likely to be
+                                        openly addressed and challenged in societies 
+                                        with greater equality.</p>
+                                </div>
+                                <div class="card-text item">
+                                    <h3>exposure to violence</h3>
+                                    <p>Women’s exposure to risk factors for violence 
+                                        can be examined at the Member State level with 
+                                        respect to factors that might increase exposure 
+                                        to violence These include patterns in employment 
+                                        (working outside the home), as well as socialisation 
+                                        and lifestyle patterns (going out and dating).</p>
+                                </div>
+                                <div class="card-text item">
+                                    <h3>drinking habits</h3>
+                                    <p>There is evidence of the relationship between 
+                                        perpetrators’ drinking habits and women’s 
+                                        experiences of domestic violence. Different 
+                                        drinking patterns in Member States may help 
+                                        to explain certain aspects of violence against 
+                                        women, which, in turn, need to be looked at 
+                                        alongside patterns in individual perpetrators’ 
+                                        violent behaviour, which may not be limited to 
+                                        violence against women.</p>
+                                </div>
+                                <div class="card-text item">
+                                    <h3>urbanisation</h3>
+                                    <p>Differences between countries in overall levels 
+                                        of violent crime need to be looked at alongside 
+                                        findings on violence against women. Urbanisation 
+                                        in a Member State is generally related to higher 
+                                        crime rates.</p>
+                                </div>
+                                <div class="card-text item">
+                                    <h3>private matter</h3>
+                                    <p>in societies in which intimate partner violence 
+                                        is considered largely a private matter incidents 
+                                        of violence against women are unlikely to be
+                                        shared with family and friends and are also 
+                                        rarely reported to the police. Such reticence 
+                                        may inhibit talking to survey interviewers.</p>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#EUStateCarousel" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#EUStateCarousel" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6"></div>
+            <div class="col-sm-6">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h3>An Increasing Problem</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">During the COVID-19 pandemic, victims of domestic abuse are more likely to be stuck inside with their partners.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <h2>Increase in Hotline Calls</h2>
+                <h2>-During COVID-19 Crisis, Worldwide</h2>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 text-right">
+                <div class="card">
+                    <h3>WHO</h3>
+                </div>
+            </div>
+            <div class="col-sm-6 text-left">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Emergency Calls</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">by women subjected to violence by their intimate partners jumped</p>
+                        <h1 class="card-text">60%</h1>
+                        <p class="card-text">across European member states in April, compared to the same period last year.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 text-right">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Online Inquiries</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">to violence prevention support hotlines have increased up to</p>
+                        <h3 class="card-text">five times</h3>
+                        <p class="card-text">during COVID-19 restrictions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 text-left">
+                <div class="card">
+                    <h3>WHO</h3>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Story: DataViz -->
     <!-- Contact types with form buttons -->
     <!-- Contact Form (Modal?) -->
@@ -24,6 +211,8 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap plugins -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../static/js/landing_page.js"></script>
 </body>
 </html>
