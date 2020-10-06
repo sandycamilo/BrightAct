@@ -1,7 +1,11 @@
 /env
 __pycache__
 .env
+env
 /venv
 venv
+<<<<<<< HEAD
 
 credentials.json
+=======
+>>>>>>> b8434fb7e80ff69a521d46c4e62ebc6e416efbe4
