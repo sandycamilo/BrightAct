@@ -17,3 +17,6 @@ mail = Mail()
 
 lst_of_hashes = gsheet.get_all_records()
 print(lst_of_hashes)
+row = ["Minimoni","BH","America","exampl@yahoo.com","78910"]
+index = 3
+gsheet.insert_row(row, index)
