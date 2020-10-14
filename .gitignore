@@ -1,6 +1,7 @@
 /venv
 /env
 .env
+
 __pycache__
 
 /react-app
@@ -30,3 +31,8 @@ yarn-debug.log*
 yarn-error.log*
 
 credentials.json
+=======
+env
+/venv
+venv
+
