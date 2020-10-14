@@ -32,7 +32,7 @@
 
 <p>
     {{ form.sector.label }}
-    {% for option in form.sector.choices %}
+    {% for option in form.sector %}
         <tr>
             <td>{{ option }}</td>
             <td>{{ option.label }}</td>
@@ -50,10 +50,10 @@
 
     {% endfor %}
     </p>
-    
+
     <p>
     {{ form.info.label }}
-    {% for option in form.info.choices %}
+    {% for option in form.info %}
         <tr>
             <td>{{ option }}</td>
             <td>{{ option.label }}</td>
