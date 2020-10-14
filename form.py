@@ -33,7 +33,7 @@ class GetInvolvedForm(FlaskForm):
     #     choices=reason_list,
     #     coerce='unicode',
     #     option_widget=None)
-    # reason = RadioField("Reason for Contact:", choices=[('collaboration'),('information'), ('research'), ('support'), ('sales'), ('other')], coerce="unicode")
-    info = RadioField("I want more information:", choices=[("yes, please"), ('no thank you')], coerce="unicode")
+    reason = RadioField("Reason for Contact:", choices=[('collaboration'),('information'), ('research'), ('support'), ('sales'), ('other')], coerce="unicode")
+    info = RadioField("I want more information:", choices=[("yes, please"), ('no thank you')])
     sector = RadioField("To which sector does your organization belong?:", choices=[("NGO/Help"), ("Public Sector"), ("University"), ("Civic/Law")], coerce="unicode")
     submit = SubmitField("Submit")

@@ -41,6 +41,16 @@
     {% endfor %}
     </p>
 <p>
+    {{ form.reason.label }}
+    {% for option in form.reason.choices %}
+        <tr>
+            <td>{{ option }}</td>
+            <td>{{ option.label }}</td>
+        </tr>
+
+    {% endfor %}
+    </p>
+<p>
     {{ form.info.label }}
     {% for option in form.info.choices %}
         <tr>
