@@ -42,7 +42,7 @@
     </p>
 <p>
     {{ form.reason.label }}
-    {% for option in form.reason.choices %}
+    {% for option in form.reason %}
         <tr>
             <td>{{ option }}</td>
             <td>{{ option.label }}</td>
@@ -50,7 +50,8 @@
 
     {% endfor %}
     </p>
-<p>
+    
+    <p>
     {{ form.info.label }}
     {% for option in form.info.choices %}
         <tr>

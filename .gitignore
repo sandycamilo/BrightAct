@@ -28,5 +28,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.env
->>>>>>> 73952023702578445aeb9f8bf9d1636a7b17a8ba
+credentials.json
