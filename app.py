@@ -67,7 +67,8 @@ def get_involved():
             msg.body = """
             From: %s <%s>
             %s
-            """ % (form.name.data, form.org_name.data, form.country.data, form.role.data, form.email.data, form.found.data, form.reason.data, form.info.data)
+            """ % (form.name.data, form.org_name.data, form.country.data, form.role.data, form.email.data, form.found.data, form.info.data)
+            # removed:  form.reason.data, for debugging
             mail.send(msg)
 
             return render_template('get_involved.html', success=True)

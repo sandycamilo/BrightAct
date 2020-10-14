@@ -29,19 +29,10 @@
     {{ form.found.label }}
     {{ form.found }}
     </p>
-<p>
-    {{ form.reason.label }}
-    {% for option in form.reason %}
-        <tr>
-            <td>{{ option }}</td>
-            <td>{{ option.label }}</td>
-        </tr>
 
-    {% endfor %}
-    </p>
 <p>
     {{ form.sector.label }}
-    {% for option in form.sector %}
+    {% for option in form.sector.choices %}
         <tr>
             <td>{{ option }}</td>
             <td>{{ option.label }}</td>
@@ -51,7 +42,7 @@
     </p>
 <p>
     {{ form.info.label }}
-    {% for option in form.info %}
+    {% for option in form.info.choices %}
         <tr>
             <td>{{ option }}</td>
             <td>{{ option.label }}</td>

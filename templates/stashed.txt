@@ -1,0 +1,10 @@
+<!-- <p>
+    {{ form.reason.label }}
+    {% for option in form.reason %}
+        <tr>
+            <td>{{ option }}</td>
+            <td>{{ option.label }}</td>
+        </tr>
+
+    {% endfor %}
+    </p> -->
