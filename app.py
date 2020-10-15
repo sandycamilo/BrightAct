@@ -125,14 +125,14 @@ def ngo_details():
         return render_template('ngo_details.html', form=form)
 
 
-@app.route('/public_details', methods=['GET', 'POST'])
+@app.route('/pub_details', methods=['GET', 'POST'])
 def pub_details():
     form = GetInvolvedForm()
 
     if request.method == 'POST':
         if form.validate() == False:
             flash('All fields are required.')
-            return render_template('public_details.html', form=form)
+            return render_template('pub_details.html', form=form)
         else:
             msg = Message(subject="Get Involved - Public Sector Details",
                         sender=form.name.data,
@@ -151,7 +151,7 @@ def pub_details():
             return redirect('/')
 
     elif request.method == 'GET':
-        return render_template('public_details.html', form=form)
+        return render_template('pub_details.html', form=form)
 
 
 @app.route('/uni_details', methods=['GET', 'POST'])
