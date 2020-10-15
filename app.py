@@ -209,7 +209,7 @@ def civ_details():
     elif request.method == 'GET':
         return render_template('civic_details.html', form=form)
 
-
+# wtf ... comment to push new changes
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=os.eviron.get('PORT', 5000))
