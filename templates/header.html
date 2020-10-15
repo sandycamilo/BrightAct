@@ -6,7 +6,7 @@
     }
     .container {
         /* height: 800px; */
-        width: 100%; 
+        width: 100%;
         /* background-color: rgb(206, 255, 244); */
     }
 
@@ -64,7 +64,7 @@
         left: 20px;
     }
 
-   
+
 </style>
 
 
@@ -72,11 +72,11 @@
 <div class="container" id="animation-logo">
     <video class= "clouds" autoplay loop muted>
         <source src="../static/video/video.mp4" type="video/MP4">
-    </video>    
+    </video>
     <div class="brightActtitle">
         <p class="brighttitle">BrightAct</p>
         <small>App against abuse.</small>
-    </div>  
+    </div>
     <!-- <div class="col-xs-12 text-center"> -->
         <!-- <img src="../static/img/BAlogo.png"> -->
     <!-- </div> -->
@@ -91,6 +91,9 @@
                     </form>
                     <form method="get" action="{{ url_for('contact_page') }}">
                         <button class="contactbutton" type="submit">contact us</button>
+                    </form>
+                    <form method="get" action="{{ url_for('get_involved') }}">
+                        <button class= "aboutbutton" type="submit">get involved</button>
                     </form>
                 </div>
                 <!-- <a href="{{ url_for('about_page') }}">About Us</a> -->

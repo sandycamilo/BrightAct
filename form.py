@@ -42,9 +42,19 @@ class GetInvolvedForm(FlaskForm):
     # NGO Details form fields
     target_group = StringField("What is your organization's target group? ", validators=[DataRequired("Please type a target group, i.e. students, staff, security")])
     branded_profile = RadioField("Are you interested in a branded profile for your organization in the app/website? ", choices=[('1',"yes, please"), ('2','no thank you')])
-    collab_options = [('1', 'Chat Functions'), ('2', 'Education'), ('3', 'Other Support'), ('4', 'Profile Page'), ('5', 'Network'),('6', 'Other')]
-    collaboration = SelectMultipleField("What kind of collaboration are you interested in? ", choices=collab_options)
+    # collab_options = [('1', 'Chat Functions'), ('2', 'Education'), ('3', 'Other Support'), ('4', 'Profile Page'), ('5', 'Network'),('6', 'Other')]
+    collaboration = SelectMultipleField("What kind of collaboration are you interested in? ", choices=[('1', 'Chat Functions'), ('2', 'Education'), ('3', 'Other Support'), ('4', 'Profile Page'), ('5', 'Network'),('6', 'Other')])
     other = StringField("If 'Other', please specify: ")
+
+    # Public Sector details fields
+    org_type = StringField("What kind of organization? (municipality, local government, government, police, legal etc)", validators=[DataRequired("Please share what type of organization you represent")])
+    org_part = StringField("What part of the organization do you represent? ")
+
+    # University details fields
+    department = StringField("What department of the university? ", validators=[DataRequired("Please share the department within the University with which you are associated")])
+    level = StringField("What is the level of your studies? ")
+    research = RadioField("Is it for new or upcoming research? ", choices=[('yes', 'yes'), ('no', 'no')])
+
 
 
     submit = SubmitField("Submit")

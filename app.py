@@ -92,6 +92,10 @@ def get_involved():
             else:
                 return redirect('/')
 
+    elif request.method == 'GET':
+        return render_template('get_involved.html', form=form)
+
+
 @app.route('/ngo_details', methods=['GET', 'POST'])
 def ngo_details():
     form = GetInvolvedForm()
@@ -109,7 +113,7 @@ def ngo_details():
             msg.body = """
             From: %s <%s>
             %s
-            """ % (form.branded_profile.data, form.target_group.data, form.collaboration.data)
+            """ % (form.branded_profile.data, form.target_group.data, form.collaboration.data, form.other.data)
 
             mail.send(msg)
             print("Sector:", sector)
@@ -137,7 +141,7 @@ def pub_details():
             # One %s per data field!
             msg.body = """
             From: %s <%s>
-            %s %s %s %s %s %s
+            %s
             """ % (form.form_field.data)
             # replace form_field with actual name of the form fields, seperate each with a comma
 
@@ -150,14 +154,14 @@ def pub_details():
         return render_template('public_details.html', form=form)
 
 
-@app.route('/university_details', methods=['GET', 'POST'])
+@app.route('/uni_details', methods=['GET', 'POST'])
 def uni_details():
     form = GetInvolvedForm()
 
     if request.method == 'POST':
         if form.validate() == False:
             flash('All fields are required.')
-            return render_template('university_details.html', form=form)
+            return render_template('uni_details.html', form=form)
         else:
             msg = Message(subject="Get Involved - University Details",
                         sender=form.name.data,
@@ -177,7 +181,7 @@ def uni_details():
             return redirect('/')
 
     elif request.method == 'GET':
-        return render_template('university_details.html', form=form)
+        return render_template('uni_details.html', form=form)
 
 
 @app.route('/civic_details', methods=['GET', 'POST'])

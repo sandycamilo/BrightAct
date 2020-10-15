@@ -5,6 +5,32 @@
         {{ form.target_group.label }}
         {{ form.target_group }}
         </p>
+    <p>
+        {{ form.branded_profile.label }}
+        {% for option in form.branded_profile %}
+            <tr>
+                <td>{{ option }}</td>
+                <td>{{ option.label }}</td>
+            </tr>
 
+        {% endfor %}
+        </p>
+    <p>
+        {{ form.collaboration.label }}
+        {% for option in form.collaboration %}
+            <tr>
+                <td>{{ option }}</td>
+                <td>{{ option.label }}</td>
+            </tr>
 
+        {% endfor %}
+        </p>
+
+    <p>
+        {{ form.other.label }}
+        {{ form.other }}
+        </p>
+    <p>
+        {{ form.submit }}
+        </p>
 </form>

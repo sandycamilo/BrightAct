@@ -1,15 +1,16 @@
 <h1>Get Involved - NGO Details</h1>
 <form method="POST" enctype="multipart/form-data">
     {{ form.hidden_tag() }}
+
+    <p>
+        <!-- StringField -->
+        {{ form.department.label }}
+        {{ form.department }}
+        </p>
     <p>
         <!-- StringField -->
         {{ form.org_type.label }}
         {{ form.org_type }}
-        </p>
-    <p>
-        <!-- StringField -->
-        {{ form.org_part.label }}
-        {{ form.org_part }}
         </p>
     <p>
         <!-- RadioField -->
@@ -25,4 +26,5 @@
     <p>
         {{ form.submit }}
         </p>
+
 </form>
