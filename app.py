@@ -184,14 +184,14 @@ def uni_details():
         return render_template('uni_details.html', form=form)
 
 
-@app.route('/civic_details', methods=['GET', 'POST'])
+@app.route('/civ_details', methods=['GET', 'POST'])
 def civ_details():
     form = GetInvolvedForm()
 
     if request.method == 'POST':
         if form.validate() == False:
             flash('All fields are required.')
-            return render_template('civic_details.html', form=form)
+            return render_template('civ_details.html', form=form)
         else:
             msg = Message(subject="Get Involved - Civic Sector Details",
                         sender=form.name.data,
@@ -211,7 +211,7 @@ def civ_details():
             return redirect('/')
 
     elif request.method == 'GET':
-        return render_template('civic_details.html', form=form)
+        return render_template('civ_details.html', form=form)
 
 # wtf ... comment to push new changes
 

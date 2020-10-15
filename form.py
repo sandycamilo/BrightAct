@@ -55,6 +55,8 @@ class GetInvolvedForm(FlaskForm):
     level = StringField("What is the level of your studies? ")
     research = RadioField("Is it for new or upcoming research? ", choices=[('yes', 'yes'), ('no', 'no')])
 
-
+    # Civic Sector details
+    support = RadioField("What kind of legal support does your firm have documented experience in? ", choices = [('1',"Domestic abuse or violence"), ('2', "Financial"), ('3', "Other")])
+    offer = RadioField("What do we want to offer for the users? ", choices=[('1', "Free chat support"), ('2', "Pro bono cases"), ('3', "Other")])
 
     submit = SubmitField("Submit")
