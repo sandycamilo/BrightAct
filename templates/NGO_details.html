@@ -16,16 +16,23 @@
 
         {% endfor %}
         </p>
-    <p>
-        {{ form.collaboration.label }}
-        {% for option in form.collaboration %}
-            <tr>
-                <td>{{ option }}</td>
-                <td>{{ option.label }}</td>
-            </tr>
 
-        {% endfor %}
-        </p>
+    <!-- alternative code for checkboxes -->
+    {{ form.collaboration.label }}
+    <br>
+    <input type="checkbox" id="chat" name="chat" value="chat">
+    <label for="vehicle1"> Chat Functions</label><br>
+    <input type="checkbox" id="education" name="education" value="education">
+    <label for="vehicle2"> Education</label><br>
+    <input type="checkbox" id="other-support" name="other-support" value="other-support">
+    <label for="vehicle3"> Other Support</label><br>
+    <input type="checkbox" id="profile" name="profile" value="profile">
+    <label for="vehicle1"> Profile Page</label><br>
+    <input type="checkbox" id="network" name="network" value="network">
+    <label for="vehicle2"> Network</label><br>
+    <input type="checkbox" id="other-input" name="other-input" value="other-input">
+    <label for="vehicle3"> Other</label>
+
 
     <p>
         {{ form.other.label }}
