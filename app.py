@@ -81,25 +81,25 @@ def get_involved():
             mail.send(msg)
             print("Sector:", sector)
             flash('Submitted Successfully')
-            if sector = '1':
-                return redirect(/NGO_details)
-            elif sector = '2':
-                return redirect(/public_details)
-            elif sector = '3':
-                return redirect(/university_details)
-            elif sector = '4':
-                return redirect(/civic_details)
+            if sector == '1':
+                return redirect(ngo_details)
+            elif sector == '2':
+                return redirect(public_details)
+            elif sector == '3':
+                return redirect(university_details)
+            elif sector == '4':
+                return redirect(civic_details)
             else:
                 return redirect('/')
 
-@app.route('/NGO_details', methods=['GET', 'POST'])
+@app.route('/ngo_details', methods=['GET', 'POST'])
 def ngo_details():
     form = GetInvolvedForm()
 
     if request.method == 'POST':
         if form.validate() == False:
             flash('All fields are required.')
-            return render_template('get_involved.html', form=form)
+            return render_template('ngo_details.html', form=form)
         else:
             msg = Message(subject="Get Involved - NGO Details",
                         sender=form.name.data,
@@ -118,7 +118,7 @@ def ngo_details():
             return redirect('/')
 
     elif request.method == 'GET':
-        return render_template('NG0_details.html', form=form)
+        return render_template('ngo_details.html', form=form)
 
 
 @app.route('/public_details', methods=['GET', 'POST'])

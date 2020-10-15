@@ -38,7 +38,8 @@ class GetInvolvedForm(FlaskForm):
     reason = RadioField("Reason for Contact:", choices=reason_list)
     info = RadioField("I want more information:", choices=[('1',"yes, please"), ('2','no thank you')])
     sector = RadioField("To which sector does your organization belong?:", choices=[('1', "NGO/Help"), ('2', "Public Sector"), ('3', "University"), ('4', "Civic/Law")])
-    # prefix U indicates University
+
+    # NGO Details form fields
     target_group = StringField("What is your organization's target group? ", validators=[DataRequired("Please type a target group, i.e. students, staff, security")])
     branded_profile = RadioField("Are you interested in a branded profile for your organization in the app/website? ", choices=[('1',"yes, please"), ('2','no thank you')])
     collab_options = [('1', 'Chat Functions'), ('2', 'Education'), ('3', 'Other Support'), ('4', 'Profile Page'), ('5', 'Network'),('6', 'Other')]
