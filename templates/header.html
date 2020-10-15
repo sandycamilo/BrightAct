@@ -1,22 +1,103 @@
+<style>
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        /* height: 800px; */
+        width: 100%; 
+        /* background-color: rgb(206, 255, 244); */
+    }
+
+    .clouds {
+        width: 100%;
+        height: 878px;
+    }
+
+    .container2 {
+        width: 100%;
+        height: 200px;
+        background-color:azure;
+    }
+
+    .brighttitle {
+        color: rgb(254, 115, 2);
+        position: absolute;
+    }
+
+    .brightActtitle {
+        font-size: 200px;
+        position: absolute;
+        top: 200px;
+        left: 800px;
+    }
+
+    .navbuttons {
+        display: flex;
+        flex-direction: row;
+        padding: 15px;
+    }
+
+    .contactbutton {
+        position: relative;
+        left: 690px;
+        padding: 10px;
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    .aboutbutton {
+        position: relative;
+        left: 690px;
+        padding: 10px;
+        font-size: 20px;
+        margin: 10px;
+
+    }
+
+    small {
+        font-size: 50px;
+        color: whitesmoke;
+        position: relative;
+        top: 100px;
+        left: 20px;
+    }
+
+   
+</style>
+
+
 
 <div class="container" id="animation-logo">
-    <div class="row">
-        <div class="col-xs-12 text-center">
-            <img src="../static/img/BAlogo.png">
-            <br>
-            <h2>
-                <a href="{{ url_for('about_page') }}">About Us</a>
-            </h2>
-        </div>
-    </div>
+    <video class= "clouds" autoplay loop muted>
+        <source src="../static/video/video.mp4" type="video/MP4">
+    </video>    
+    <div class="brightActtitle">
+        <p class="brighttitle">BrightAct</p>
+        <small>App against abuse.</small>
+    </div>  
+    <!-- <div class="col-xs-12 text-center"> -->
+        <!-- <img src="../static/img/BAlogo.png"> -->
+    <!-- </div> -->
 </div>
-<!-- <div class="container" id="navigation">
+<div class="container2" id="navigation">
     <div class="row">
         <div class="col-xs-12 text-center">
             <ul class="nav nav-pills">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-
+                <div class="navbuttons">
+                    <form method="get" action="{{ url_for('about_page') }}">
+                        <button class= "aboutbutton" type="submit">about us</button>
+                    </form>
+                    <form method="get" action="{{ url_for('contact_page') }}">
+                        <button class="contactbutton" type="submit">contact us</button>
+                    </form>
+                </div>
+                <!-- <a href="{{ url_for('about_page') }}">About Us</a> -->
+                 <!-- testing contact form -->
+                <!-- <a class="btn btn-dark" href="{{ url_for('contact_page') }}">Contact</a> -->
+                <!-- <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li> -->
             </ul>
         </div> -->
     </div>
