@@ -1,0 +1,31 @@
+<h1>Get Involved - University Details</h1>
+<form method="POST" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+    {{ form.hidden_tag() }}
+
+    <p>
+        <!-- StringField -->
+        {{ form.department.label }}
+        {{ form.department }}
+        </p>
+    <p>
+        <!-- StringField -->
+        {{ form.level.label }}
+        {{ form.level }}
+        </p>
+    <p>
+        <!-- RadioField -->
+        {{ form.branded_profile.label }}
+        {% for option in form.branded_profile %}
+            <tr>
+                <td>{{ option }}</td>
+                <td>{{ option.label }}</td>
+            </tr>
+
+        {% endfor %}
+        </p>
+    <p>
+        {{ form.submit }}
+        </p>
+
+</form>
