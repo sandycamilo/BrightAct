@@ -112,7 +112,7 @@ def ngo_details():
             # One %s per data field!
             msg.body = """
             From: %s <%s>
-            %s
+            %s %s
             """ % (form.branded_profile.data, form.target_group.data, form.collaboration.data, form.other.data)
 
             mail.send(msg)
@@ -170,7 +170,7 @@ def uni_details():
             # One %s per data field! <<<<<<
             msg.body = """
             From: %s <%s>
-            %s %s %s %s %s %s
+            %s 
             """ % (form.form_field.data)
             # replace form_field with actual name of the form fields, seperate each with a comma
 
@@ -199,7 +199,7 @@ def civ_details():
             # One %s per data field!
             msg.body = """
             From: %s <%s>
-            %s %s %s %s %s %s
+            %s %s
             """ % (form.form_field.data)
             # ^^ change this to current data fields ^^
             # replace form_field with actual name of the form fields, seperate each with a comma
