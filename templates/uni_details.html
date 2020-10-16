@@ -14,6 +14,17 @@
         {{ form.level }}
         </p>
     <p>
+            <!-- RadioField -->
+        {{ form.research.label }}
+        {% for option in form.research %}
+            <tr>
+                <td>{{ option }}</td>
+                <td>{{ option.label }}</td>
+            </tr>
+
+        {% endfor %}
+        </p>
+    <p>
         <!-- RadioField -->
         {{ form.branded_profile.label }}
         {% for option in form.branded_profile %}
@@ -24,6 +35,8 @@
 
         {% endfor %}
         </p>
+
+
     <p>
         {{ form.submit }}
         </p>
