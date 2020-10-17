@@ -6,11 +6,9 @@
 
   <title>Form To Google Sheets Demo</title>
   <meta name="description" content="Store HTML form submissions in Google Sheets">
-  <link href="./favicon.png" rel="shortcut icon">
 
   <link rel="stylesheet" href="../static/css/style.css">
   <script src="https://unpkg.com/prefixfree@1.0.0/prefixfree.min.js"></script>
-
   <script src="https://wzrd.in/standalone/formdata-polyfill@latest"></script>
   <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
   <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
@@ -24,6 +22,7 @@
       <input name="lastName" type="text" placeholder="Last Name">
       <button type="submit">Submit</button>
     </form>
+
 
     <div class="loading js-loading is-hidden">
       <div class="loading-spinner">
@@ -73,38 +72,6 @@
       }, 500)
     }
   </script>
-  <!-- <script src="../static/js/app.js"></script> -->
+  <script src="../static/js/app.js"></script>
 </body>
 </html> 
-<!-- <!DOCTYPE html>
-<head></head>
-<body>
-  <form id="test-form">
-  
-    <div>
-      <label>Field 1</label>
-      <input type="text" name="form_field_1" placeholder="Field 1"/>
-    </div>
-  
-    <div>
-      <label>Field 2</label>
-      <input type="text" name="form_field_2" placeholder="Field 2"/>
-    </div>
-    
-    <div>
-      <label>Field 3</label>
-      <input type="text" name="form_field_3" placeholder="Field 3"/>
-    </div>
-    
-    <div>
-      <label>Field 4</label>
-      <input type="text" name="form_field_4" placeholder="Field 4"/>
-    </div>
-  
-    <div>
-      <button type="submit"id="submit-form">Submit</button>
-    </div>
-    <script src="../static/js/app.js"></script>
-  </form>
-</body>
-</html> -->

@@ -4,6 +4,7 @@ load_dotenv()
 
 from flask import Flask, render_template, request, flash, redirect
 from form import ContactForm, GetInvolvedForm
+from form import UnivForm, CivForm, NgoForm, PubForm
 from flask_mail import Message, Mail
 
 app = Flask(__name__)
@@ -63,6 +64,8 @@ def get_involved():
     if request.method == 'POST':
         if form.validate() == False:
             flash('All fields are required.')
+            print("**** Validate False ****")
+            print(form.errors)
             return render_template('get_involved.html', form=form)
         else:
             msg = Message(subject="Get Involved Form",
@@ -82,13 +85,13 @@ def get_involved():
             print("Sector:", sector)
             flash('Submitted Successfully')
             if sector == '1':
-                return redirect(ngo_details)
+                return redirect('/ngo_details')
             elif sector == '2':
-                return redirect(public_details)
+                return redirect('/pub_details')
             elif sector == '3':
-                return redirect(university_details)
+                return redirect('/uni_details')
             elif sector == '4':
-                return redirect(civic_details)
+                return redirect('/civ_details')
             else:
                 return redirect('/')
 
@@ -98,7 +101,7 @@ def get_involved():
 
 @app.route('/ngo_details', methods=['GET', 'POST'])
 def ngo_details():
-    form = GetInvolvedForm()
+    form = NgoForm()
 
     if request.method == 'POST':
         if form.validate() == False:
@@ -112,7 +115,7 @@ def ngo_details():
             # One %s per data field!
             msg.body = """
             From: %s <%s>
-            %s
+            %s %s
             """ % (form.branded_profile.data, form.target_group.data, form.collaboration.data, form.other.data)
 
             mail.send(msg)
@@ -127,7 +130,7 @@ def ngo_details():
 
 @app.route('/pub_details', methods=['GET', 'POST'])
 def pub_details():
-    form = GetInvolvedForm()
+    form = PubForm()
 
     if request.method == 'POST':
         if form.validate() == False:
@@ -156,7 +159,7 @@ def pub_details():
 
 @app.route('/uni_details', methods=['GET', 'POST'])
 def uni_details():
-    form = GetInvolvedForm()
+    form = UnivForm()
 
     if request.method == 'POST':
         if form.validate() == False:
@@ -170,7 +173,7 @@ def uni_details():
             # One %s per data field! <<<<<<
             msg.body = """
             From: %s <%s>
-            %s %s %s %s %s %s
+            %s
             """ % (form.form_field.data)
             # replace form_field with actual name of the form fields, seperate each with a comma
 
@@ -186,7 +189,7 @@ def uni_details():
 
 @app.route('/civ_details', methods=['GET', 'POST'])
 def civ_details():
-    form = GetInvolvedForm()
+    form = CivForm()
 
     if request.method == 'POST':
         if form.validate() == False:
@@ -199,7 +202,7 @@ def civ_details():
             # One %s per data field!
             msg.body = """
             From: %s <%s>
-            %s %s %s %s %s %s
+            %s %s
             """ % (form.form_field.data)
             # ^^ change this to current data fields ^^
             # replace form_field with actual name of the form fields, seperate each with a comma
