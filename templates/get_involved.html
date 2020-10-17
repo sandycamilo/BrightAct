@@ -1,73 +1,85 @@
-<h1>Get Involved</h1>
-<form method="POST" enctype="multipart/form-data">
-    {{ form.csrf_token }}
-    {{ form.hidden_tag() }}
-<p>
-    {{ form.name.label }}
-    {{ form.name }}
-    </p>
-<p>
-    {{ form.org_name.label }}
-    {{ form.org_name }}
-    </p>
-<p>
-    {{ form.country.label }}
-    {{ form.country }}
-    </p>
-<p>
-    {{ form.role.label }}
-    {{ form.role }}
-    </p>
-<p>
-    {{ form.email.label }}
-    {{ form.email }}
-    </p>
-<p>
-    {{ form.phone.label }}
-    {{ form.phone }}
-    </p>
-<p>
-    {{ form.found.label }}
-    {{ form.found }}
-    </p>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+    </head>
+    <body>
 
-<p>
-    {{ form.sector.label }}
-    {% for option in form.sector %}
-        <tr>
-            <td>{{ option }}</td>
-            <td>{{ option.label }}</td>
-        </tr>
+        <h1>Get Involved</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.csrf_token }}
+            {{ form.hidden_tag() }}
+        <p>
+            {{ form.name.label }}
+            {{ form.name }}
+            </p>
+        <p>
+            {{ form.org_name.label }}
+            {{ form.org_name }}
+            </p>
+        <p>
+            {{ form.country.label }}
+            {{ form.country }}
+            </p>
+        <p>
+            {{ form.role.label }}
+            {{ form.role }}
+            </p>
+        <p>
+            {{ form.email.label }}
+            {{ form.email }}
+            </p>
+        <p>
+            {{ form.phone.label }}
+            {{ form.phone }}
+            </p>
+        <p>
+            {{ form.found.label }}
+            {{ form.found }}
+            </p>
 
-    {% endfor %}
-    </p>
-<p>
-    {{ form.reason.label }}
-    {% for option in form.reason %}
-        <tr>
-            <td>{{ option }}</td>
-            <td>{{ option.label }}</td>
-        </tr>
+        <p>
+            {{ form.sector.label }}
+            {% for option in form.sector %}
+                <tr>
+                    <td>{{ option }}</td>
+                    <td>{{ option.label }}</td>
+                </tr>
 
-    {% endfor %}
-    </p>
-<p>
-    {{ form.other.label }}
-    {{ form.other }}
-    </p>
-    <p>
-    {{ form.info.label }}
-    {% for option in form.info %}
-        <tr>
-            <td>{{ option }}</td>
-            <td>{{ option.label }}</td>
+            {% endfor %}
+            </p>
+        <p>
+            {{ form.reason.label }}
+            {% for option in form.reason %}
+                <tr>
+                    <td>{{ option }}</td>
+                    <td>{{ option.label }}</td>
+                </tr>
 
-        </tr>
-    {% endfor %}
-    </p>
-<p>
-    {{ form.submit }}
-</p>
+            {% endfor %}
+            </p>
+        <p>
+            {{ form.other.label }}
+            {{ form.other }}
+            </p>
+            <p>
+            {{ form.info.label }}
+            {% for option in form.info %}
+                <tr>
+                    <td>{{ option }}</td>
+                    <td>{{ option.label }}</td>
 
+                </tr>
+            {% endfor %}
+            </p>
+        <p>
+            {{ form.submit }}
+        </p>
+        <!-- {# render the validation errors associated with the field #} -->
+        {% for error in form.field_name.errors %}
+            {{ error }}
+        {% endfor %}
 
-</form>
+        </form>
+    </body>
+</html>

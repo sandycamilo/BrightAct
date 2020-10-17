@@ -1,29 +1,42 @@
-<h1>Get Involved - Public Sector Details</h1>
-<form method="POST" enctype="multipart/form-data">
-    {{ form.csrf_token }}
-    {{ form.hidden_tag() }}
-    <p>
-        <!-- StringField -->
-        {{ form.org_type.label }}
-        {{ form.org_type }}
-        </p>
-    <p>
-        <!-- StringField -->
-        {{ form.org_part.label }}
-        {{ form.org_part }}
-        </p>
-    <p>
-        <!-- RadioField -->
-        {{ form.branded_profile.label }}
-        {% for option in form.branded_profile %}
-            <tr>
-                <td>{{ option }}</td>
-                <td>{{ option.label }}</td>
-            </tr>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+    </head>
+    <body>
 
-        {% endfor %}
-        </p>
-    <p>
-        {{ form.submit }}
-        </p>
-</form>
+        <h1>Get Involved - Public Sector Details</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.csrf_token }}
+            {{ form.hidden_tag() }}
+            <p>
+                <!-- StringField -->
+                {{ form.org_type.label }}
+                {{ form.org_type }}
+                </p>
+            <p>
+                <!-- StringField -->
+                {{ form.org_part.label }}
+                {{ form.org_part }}
+                </p>
+            <p>
+                <!-- RadioField -->
+                {{ form.branded_profile.label }}
+                {% for option in form.branded_profile %}
+                    <tr>
+                        <td>{{ option }}</td>
+                        <td>{{ option.label }}</td>
+                    </tr>
+
+                {% endfor %}
+                </p>
+            <p>
+                {{ form.submit }}
+                </p>
+            <!-- {# render the validation errors associated with the field #} -->
+            {% for error in form.field_name.errors %}
+                {{ error }}
+            {% endfor %}
+        </form>
+    </body>
+</html>
