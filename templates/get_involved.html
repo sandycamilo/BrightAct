@@ -68,6 +68,9 @@
 <p>
     {{ form.submit }}
 </p>
-
+<!-- {# render the validation errors associated with the field #} -->
+{% for error in form.field_name.errors %}
+    {{ error }}
+{% endfor %}
 
 </form>
