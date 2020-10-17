@@ -1,0 +1,39 @@
+<h1>Get Involved - Civic Sector Details</h1>
+<form method="POST" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+    {{ form.hidden_tag() }}
+
+    <p>
+        <!-- RadioField -->
+        {{ form.support.label }}
+        {% for option in form.support %}
+            <tr>
+                <td>{{ option }}</td>
+                <td>{{ option.label }}</td>
+            </tr>
+
+        {% endfor %}
+        </p>
+    <p>
+        {{ form.other.label }}
+        {{ form.other }}
+        </p>
+    <p>
+        <!-- RadioField -->
+        {{ form.support.label }}
+        {% for option in form.support %}
+            <tr>
+                <td>{{ option }}</td>
+                <td>{{ option.label }}</td>
+            </tr>
+
+        {% endfor %}
+        </p>
+    <p>
+        {{ form.other.label }}
+        {{ form.other }}
+        </p>
+    <p>
+        {{ form.submit }}
+        </p>
+</form>
