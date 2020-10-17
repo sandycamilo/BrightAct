@@ -51,7 +51,10 @@
 
     {% endfor %}
     </p>
-
+<p>
+    {{ form.other.label }}
+    {{ form.other }}
+    </p>
     <p>
     {{ form.info.label }}
     {% for option in form.info %}
