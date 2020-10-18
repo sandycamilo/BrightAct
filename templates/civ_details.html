@@ -1,43 +1,52 @@
-<h1>Get Involved - Civic Sector Details</h1>
-<form method="POST" enctype="multipart/form-data">
-    {{ form.csrf_token }}
-    {{ form.hidden_tag() }}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+    </head>
+    <body>
 
-    <p>
-        <!-- RadioField -->
-        {{ form.support.label }}
-        {% for option in form.support %}
-            <tr>
-                <td>{{ option }}</td>
-                <td>{{ option.label }}</td>
-            </tr>
+        <h1>Get Involved - Civic Sector Details</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.csrf_token }}
+            {{ form.hidden_tag() }}
 
-        {% endfor %}
-        </p>
-    <p>
-        {{ form.other1.label }}
-        {{ form.other2 }}
-        </p>
-    <p>
-        <!-- RadioField -->
-        {{ form.support.label }}
-        {% for option in form.support %}
-            <tr>
-                <td>{{ option }}</td>
-                <td>{{ option.label }}</td>
-            </tr>
+            <p>
+                <!-- RadioField -->
+                {{ form.support.label }}
+                {% for option in form.support %}
+                    <tr>
+                        <td>{{ option }}</td>
+                        <td>{{ option.label }}</td>
+                    </tr>
 
-        {% endfor %}
-        </p>
-    <p>
-        {{ form.other1.label }}
-        {{ form.other1 }}
-        </p>
-    <p>
-        {{ form.submit }}
-        </p>
-    <!-- {# render the validation errors associated with the field #} -->
-    {% for error in form.field_name.errors %}
-        {{ error }}
-    {% endfor %}
-</form>
+                {% endfor %}
+                </p>
+            <p>
+                {{ form.other1.label }}
+                {{ form.other2 }}
+                </p>
+            <p>
+                <!-- RadioField -->
+                {{ form.support.label }}
+                {% for option in form.support %}
+                    <tr>
+                        <td>{{ option }}</td>
+                        <td>{{ option.label }}</td>
+                    </tr>
+
+                {% endfor %}
+                </p>
+            <p>
+                {{ form.other1.label }}
+                {{ form.other1 }}
+                </p>
+            <p>
+                {{ form.submit }}
+                </p>
+            <!-- {# render the validation errors associated with the field #} -->
+            {% for error in form.field_name.errors %}
+                {{ error }}
+            {% endfor %}
+        </form>
+    </body>
+</html>

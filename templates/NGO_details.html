@@ -1,48 +1,57 @@
-<h1>Get Involved - NGO Details</h1>
-<form method="POST" enctype="multipart/form-data">
-    {{ form.csrf_token }}
-    {{ form.hidden_tag() }}
-    <p>
-        {{ form.target_group.label }}
-        {{ form.target_group }}
-        </p>
-    <p>
-        {{ form.branded_profile.label }}
-        {% for option in form.branded_profile %}
-            <tr>
-                <td>{{ option }}</td>
-                <td>{{ option.label }}</td>
-            </tr>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+    </head>
+    <body>
 
-        {% endfor %}
-        </p>
+        <h1>Get Involved - NGO Details</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.csrf_token }}
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.target_group.label }}
+                {{ form.target_group }}
+                </p>
+            <p>
+                {{ form.branded_profile.label }}
+                {% for option in form.branded_profile %}
+                    <tr>
+                        <td>{{ option }}</td>
+                        <td>{{ option.label }}</td>
+                    </tr>
 
-    <!-- alternative code for checkboxes -->
-    {{ form.collaboration.label }}
-    <br>
-    <input type="checkbox" id="chat" name="chat" value="chat">
-    <label for="vehicle1"> Chat Functions</label><br>
-    <input type="checkbox" id="education" name="education" value="education">
-    <label for="vehicle2"> Education</label><br>
-    <input type="checkbox" id="other-support" name="other-support" value="other-support">
-    <label for="vehicle3"> Other Support</label><br>
-    <input type="checkbox" id="profile" name="profile" value="profile">
-    <label for="vehicle1"> Profile Page</label><br>
-    <input type="checkbox" id="network" name="network" value="network">
-    <label for="vehicle2"> Network</label><br>
-    <input type="checkbox" id="other-input" name="other-input" value="other-input">
-    <label for="vehicle3"> Other</label>
+                {% endfor %}
+                </p>
+
+            <!-- alternative code for checkboxes -->
+            {{ form.collaboration.label }}
+            <br>
+            <input type="checkbox" id="chat" name="chat" value="chat">
+            <label for="vehicle1"> Chat Functions</label><br>
+            <input type="checkbox" id="education" name="education" value="education">
+            <label for="vehicle2"> Education</label><br>
+            <input type="checkbox" id="other-support" name="other-support" value="other-support">
+            <label for="vehicle3"> Other Support</label><br>
+            <input type="checkbox" id="profile" name="profile" value="profile">
+            <label for="vehicle1"> Profile Page</label><br>
+            <input type="checkbox" id="network" name="network" value="network">
+            <label for="vehicle2"> Network</label><br>
+            <input type="checkbox" id="other-input" name="other-input" value="other-input">
+            <label for="vehicle3"> Other</label>
 
 
-    <p>
-        {{ form.other.label }}
-        {{ form.other }}
-        </p>
-    <p>
-        {{ form.submit }}
-        </p>
-        <!-- {# render the validation errors associated with the field #} -->
-    {% for error in form.field_name.errors %}
-        {{ error }}
-    {% endfor %}
-</form>
+            <p>
+                {{ form.other.label }}
+                {{ form.other }}
+                </p>
+            <p>
+                {{ form.submit }}
+                </p>
+                <!-- {# render the validation errors associated with the field #} -->
+            {% for error in form.field_name.errors %}
+                {{ error }}
+            {% endfor %}
+        </form>
+    </body>
+</html>

@@ -1,48 +1,57 @@
-<h1>Get Involved - University Details</h1>
-<form method="POST" enctype="multipart/form-data">
-    {{ form.csrf_token }}
-    {{ form.hidden_tag() }}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+    </head>
+    <body>
 
-    <p>
-        <!-- StringField -->
-        {{ form.department.label }}
-        {{ form.department }}
-        </p>
-    <p>
-        <!-- StringField -->
-        {{ form.level.label }}
-        {{ form.level }}
-        </p>
-    <p>
-            <!-- RadioField -->
-        {{ form.research.label }}
-        {% for option in form.research %}
-            <tr>
-                <td>{{ option }}</td>
-                <td>{{ option.label }}</td>
-            </tr>
+        <h1>Get Involved - University Details</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.csrf_token }}
+            {{ form.hidden_tag() }}
 
-        {% endfor %}
-        </p>
-    <p>
-        <!-- RadioField -->
-        {{ form.branded_profile.label }}
-        {% for option in form.branded_profile %}
-            <tr>
-                <td>{{ option }}</td>
-                <td>{{ option.label }}</td>
-            </tr>
+            <p>
+                <!-- StringField -->
+                {{ form.department.label }}
+                {{ form.department }}
+                </p>
+            <p>
+                <!-- StringField -->
+                {{ form.level.label }}
+                {{ form.level }}
+                </p>
+            <p>
+                    <!-- RadioField -->
+                {{ form.research.label }}
+                {% for option in form.research %}
+                    <tr>
+                        <td>{{ option }}</td>
+                        <td>{{ option.label }}</td>
+                    </tr>
 
-        {% endfor %}
-        </p>
+                {% endfor %}
+                </p>
+            <p>
+                <!-- RadioField -->
+                {{ form.branded_profile.label }}
+                {% for option in form.branded_profile %}
+                    <tr>
+                        <td>{{ option }}</td>
+                        <td>{{ option.label }}</td>
+                    </tr>
+
+                {% endfor %}
+                </p>
 
 
-    <p>
-        {{ form.submit }}
-        </p>
-    <!-- {# render the validation errors associated with the field #} -->
-    {% for error in form.field_name.errors %}
-        {{ error }}
-    {% endfor %}
+            <p>
+                {{ form.submit }}
+                </p>
+            <!-- {# render the validation errors associated with the field #} -->
+            {% for error in form.field_name.errors %}
+                {{ error }}
+            {% endfor %}
 
-</form>
+        </form>
+    </body>
+</html>
