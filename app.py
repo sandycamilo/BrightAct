@@ -6,6 +6,7 @@ from flask import Flask, render_template, request, flash, redirect
 from form import ContactForm, GetInvolvedForm
 from form import UnivForm, CivForm, NgoForm, PubForm
 from flask_mail import Message, Mail
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 mail = Mail()
