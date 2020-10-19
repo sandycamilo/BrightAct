@@ -6,16 +6,92 @@
     <title>BrightAct</title>
 
     <!-- Bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="../static/css/landing_page.css" rel="stylesheet">
     <!-- Social Media CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* header */
+        .nav-wrapper{
+            display: flex;
+            flex-direction: column;
+            padding-top: 15px;
+            padding-bottom:1px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .brand-logo{
+            font-size: 70px;
+            color: black;
+            font-weight: bold;
+            position: relative;
+            padding: 0;
+            margin: 0;
+            left: 1%;
+            text-decoration: none;
+        }
+        
+        .sub-logo {
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            right: -98px;
+            top: -18px;
+        }
+        
+        .new1 {
+            border-top: 1px solid black;
+            padding: 0;
+            margin: 0;
+        } 
+
+        li {
+            position: relative;
+            right: -10%;
+            padding: 0;
+            margin: 0px;
+            margin-left: 200px;
+            font-size: 20px;
+        }
+
+        .nav {
+            padding: 0;
+            margin: 0px;
+            
+        }
+    </style>
 </head>
 <body>
+    <!-- Escape to Safety -->
+    <!-- {% include 'easy_out.html' %} -->
     <!-- Header: Navbar w/ Logo and About Us Link -->
-    {% include 'header.html' %}
+    <!-- {% include 'header.html' %} -->
 
+    <!-- header -->
+    <div class="nav-wrapper">
+        <p class="brand-logo">BrightAct</p>
+        <p class="sub-logo">An app against abuse.</p>
+    </div>
+    <hr class="new1">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Changemakers</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Updates</a></li>
+            </ul>
+        </div>
+    </nav>
     <!-- Storytelling section -->
     <div class="storytelling">
         <div class="row">
@@ -84,48 +160,48 @@
                             <div class="carousel-inner">
                                 <div class="card-text item active">
                                     <h3>Gender equality</h3>
-                                    <p>could lead to higher levels of disclosure 
-                                        about violence against women. Incidents of 
+                                    <p>could lead to higher levels of disclosure
+                                        about violence against women. Incidents of
                                         violence against women are more likely to be
-                                        openly addressed and challenged in societies 
+                                        openly addressed and challenged in societies
                                         with greater equality.</p>
                                 </div>
                                 <div class="card-text item">
                                     <h3>exposure to violence</h3>
-                                    <p>Women’s exposure to risk factors for violence 
-                                        can be examined at the Member State level with 
-                                        respect to factors that might increase exposure 
-                                        to violence These include patterns in employment 
-                                        (working outside the home), as well as socialisation 
+                                    <p>Women’s exposure to risk factors for violence
+                                        can be examined at the Member State level with
+                                        respect to factors that might increase exposure
+                                        to violence These include patterns in employment
+                                        (working outside the home), as well as socialisation
                                         and lifestyle patterns (going out and dating).</p>
                                 </div>
                                 <div class="card-text item">
                                     <h3>drinking habits</h3>
-                                    <p>There is evidence of the relationship between 
-                                        perpetrators’ drinking habits and women’s 
-                                        experiences of domestic violence. Different 
-                                        drinking patterns in Member States may help 
-                                        to explain certain aspects of violence against 
-                                        women, which, in turn, need to be looked at 
-                                        alongside patterns in individual perpetrators’ 
-                                        violent behaviour, which may not be limited to 
+                                    <p>There is evidence of the relationship between
+                                        perpetrators’ drinking habits and women’s
+                                        experiences of domestic violence. Different
+                                        drinking patterns in Member States may help
+                                        to explain certain aspects of violence against
+                                        women, which, in turn, need to be looked at
+                                        alongside patterns in individual perpetrators’
+                                        violent behaviour, which may not be limited to
                                         violence against women.</p>
                                 </div>
                                 <div class="card-text item">
                                     <h3>urbanisation</h3>
-                                    <p>Differences between countries in overall levels 
-                                        of violent crime need to be looked at alongside 
-                                        findings on violence against women. Urbanisation 
-                                        in a Member State is generally related to higher 
+                                    <p>Differences between countries in overall levels
+                                        of violent crime need to be looked at alongside
+                                        findings on violence against women. Urbanisation
+                                        in a Member State is generally related to higher
                                         crime rates.</p>
                                 </div>
                                 <div class="card-text item">
                                     <h3>private matter</h3>
-                                    <p>in societies in which intimate partner violence 
-                                        is considered largely a private matter incidents 
+                                    <p>in societies in which intimate partner violence
+                                        is considered largely a private matter incidents
                                         of violence against women are unlikely to be
-                                        shared with family and friends and are also 
-                                        rarely reported to the police. Such reticence 
+                                        shared with family and friends and are also
+                                        rarely reported to the police. Such reticence
                                         may inhibit talking to survey interviewers.</p>
                                 </div>
                             </div>
@@ -208,6 +284,7 @@
     <!-- Contact Form (Modal?) -->
 
     {% include 'footer.html' %}
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
