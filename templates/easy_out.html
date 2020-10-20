@@ -18,14 +18,25 @@ div.sticky {
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
 }
+button.escape-btn {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10;
+    right: 10;
+    display: block;
+    border: 3px solid rounded shadow;
+    text-align: right;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+
+}
 </style>
 <script>
 alert('Internet usage can be monitored and is impossible to erase completely. Remember to clear your browser history. If you need to leave this website quickly, click on the Play Flappy Bird button.');
 </script>
-<div class="sticky">
-    <h3 class="text-right">
-        <button type="button" class="btn-light text-white">
-        <a href="https://flappybird.io">Play Flappy Bird</a>
-        </button>
-    </h3>
-</div>
+
+
+    <button class="escape-btn">
+            <a href="https://flappybird.io">Play Flappy Bird</a>
+    </button>

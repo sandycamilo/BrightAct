@@ -1,44 +1,17 @@
-<style>
-  .nav-wrapper{
-    display: flex;
-    flex-direction: column;
-    padding-top: 15px;
-    padding-bottom:1px;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .brand-logo{
-     font-size: 90px;
-     color: black;
-     font-weight: bold;
-     position: relative;
-     padding: 0;
-     margin: 0;
-     left: 1%;
-     text-decoration: none;
-  }
-
-  .sub-logo {
-      font-size: 20px;
-      padding: 0;
-      margin: 0;
-      position: relative;
-      right: -98px;
-      top: -18px;
-  }
-
-  .new1 {
-    border-top: 1px solid black;
-    padding: 0;
-    margin: 0;
-  }
-
-</style>
-<body>
-    <div class="nav-wrapper">
-        <p class="brand-logo">BrightAct</p>
-        <p class="sub-logo">An app against abuse.</p>
+<div class="container">
+     <div class="row">
+         <div class="col-xs-12 text-center">
+             <img src="../static/img/BAlogo.png">
+         </div>
     </div>
-    <hr class="new1">
-</body>
+    <div class="row text-center">
+        <!-- Contact Form Link -->
+        <button class="btn btn-secondary rounded shadow">
+            <a href="{{ url_for('contact_page') }}">Contact</a>
+        </button>
+        <!-- Get Involved Link -->
+        <button class="btn btn-secondary rounded shadow">
+            <a href="{{ url_for('get_involved') }}">Get Involved</a>
+        </button>
+    </div>
+ </div>
