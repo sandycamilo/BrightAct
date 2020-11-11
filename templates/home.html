@@ -14,13 +14,19 @@
 </head>
 <body>
     <div id="test-form" class="form-container">
-        <form name="contact-form" method="POST">
-          <input name="name" type="text" placeholder="Name" required>
-          <input name="email" type="email" placeholder="Email" required>
-          <input name="subject" type="text" placeholder="Subject">
-          <input name="message" type="textarea" required>
-          <button type="submit">Submit</button>
-        </form>
+        {% if success %}
+            <!-- <p class="js-success-message is-hidden">{{ confirm_msg }}</p> -->
+            <p>We appreciate you contacting us. Your message has been sent!</p>
+        {% else %}
+            <form name="contact-form" method="POST">
+            <input name="name" type="text" placeholder="Name" required>
+            <input name="email" type="email" placeholder="Email" required>
+            <input name="subject" type="text" placeholder="Subject">
+            <input name="message" type="textarea" required>
+            <button type="submit">Submit</button>
+            </form>
+        {% endif %}
+
     
     
         <div class="loading js-loading is-hidden">
@@ -29,7 +35,6 @@
           </div>
         </div>
     
-        <p class="js-success-message is-hidden">{{ confirm_msg }}</p>
       </div>
     
     
