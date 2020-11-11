@@ -6,9 +6,10 @@ from flask import Flask, render_template, request, flash, redirect
 from form import ContactForm, GetInvolvedForm
 from form import UnivForm, CivForm, NgoForm, PubForm
 from flask_mail import Message, Mail
+# from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
-mail = Mail()
+mail = Mail(app)
 # config
 # app.run('host'=localhost, debug=True)
 # app.config.from_pyfile('config.py')
@@ -43,6 +44,7 @@ def contact_page():
             flash('All fields are required.')
             return render_template('contact_page.html', form=form)
         else:
+            name = request.form.get('name')
             msg = Message(subject=form.subject.data,
                         sender=form.name.data,
                         recipients=[os.getenv('MAIL_USERNAME')])
@@ -52,10 +54,39 @@ def contact_page():
             """ % (form.name.data, form.email.data, form.message.data)
             mail.send(msg)
 
-            return render_template('contact_page.html', success=True)
+            confirm_message = "We appreciate you contacting us. Your message has been sent!"
+
+            return render_template('contact_page.html', success=True, confirm_msg=confirm_msg)
 
     elif request.method == 'GET':
         return render_template('contact_page.html', form=form)
+
+
+@app.route("/send_message", methods=['GET', 'POST'])
+def send_message():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        email = request.form.get('email')
+        message = request.form.get('message')
+        subject = request.form.get('subject')
+
+        msg = Message(
+            subject=subject,
+            sender=name,
+            recipients=
+            [os.getenv('MAIL_USERNAME')],
+            html=render_template("home.html"))
+        msg.body = """
+            From: %s <%s>
+            %s
+            """ % (name, email, message)
+
+        mail.send(msg)
+        confirm_msg = "We appreciate you contacting us. Your message has been sent!"
+        return render_template("home.html", confirm_msg=confirm_msg)
+    elif request.method == 'GET':
+        return render_template('home.html')
+
 
 @app.route('/get_involved', methods=['GET', 'POST'])
 def get_involved():

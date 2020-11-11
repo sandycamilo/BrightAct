@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Send Message</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/contact_test.css">
+    <script src="https://unpkg.com/prefixfree@1.0.0/prefixfree.min.js"></script>
+    <script src="https://wzrd.in/standalone/formdata-polyfill@latest"></script>
+    <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+    <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+
+</head>
+<body>
+    <div id="test-form" class="form-container">
+        <form name="contact-form" method="POST">
+          <input name="name" type="text" placeholder="Name" required>
+          <input name="email" type="email" placeholder="Email" required>
+          <input name="subject" type="text" placeholder="Subject">
+          <input name="message" type="textarea" required>
+          <button type="submit">Submit</button>
+        </form>
+    
+    
+        <div class="loading js-loading is-hidden">
+          <div class="loading-spinner">
+            <svg><circle cx="25" cy="25" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg>
+          </div>
+        </div>
+    
+        <p class="js-success-message is-hidden">{{ confirm_msg }}!</p>
+      </div>
+    
+    
+      <!-- <script>
+        const form = document.forms['contact-form']
+        const loading = document.querySelector('.js-loading')
+        const successMessage = document.querySelector('.js-success-message')
+        const errorMessage = document.querySelector('.js-error-message')
+    
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          showLoadingIndicator()
+        //   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        //     .then(response => showSuccessMessage(response))
+        //     .catch(error => showErrorMessage(error))
+        })
+    
+        function showLoadingIndicator () {
+          form.classList.add('is-hidden')
+          loading.classList.remove('is-hidden')
+        }
+    
+        function showSuccessMessage (response) {
+          console.log('Success!', response)
+          setTimeout(() => {
+            successMessage.classList.remove('is-hidden')
+            loading.classList.add('is-hidden')
+          }, 500)
+        }
+    
+        
+      </script>
+       -->
+</body>
+</html>

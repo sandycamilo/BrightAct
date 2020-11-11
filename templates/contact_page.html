@@ -9,13 +9,21 @@
   </head>
   <body>
 
-    <aside class="profile-card">
+    <div class="form-container">
         <!-- <div class="signup"> -->
           <div class="profile-bio">
           {% if success %}
           <div class="thankyou">
-            <p style="color: #FF5722;">Thank you for your message. I will get back to you shortly.</p>
-            <a style="padding-top:10px" href="{{ url_for('landing_page') }}">Go Back</a>
+            <!-- <p style="color: #FF5722;">Thank you for your message. I will get back to you shortly.</p>
+            <a style="padding-top:10px" href="{{ url_for('landing_page') }}">Go Back</a> -->
+          
+          <!-- <div class="loading js-loading is-hidden">
+            <div class="loading-spinner">
+              <svg><circle cx="25" cy="25" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg>
+            </div>
+          </div> -->
+      
+            <p class="js-success-message is-hidden">We appreciate you contacting us. One of our colleagues will get back in touch with you soon! Have a great day!</p>
 
           </div>
             {% else %}
@@ -36,7 +44,7 @@
               <div style="color:#FF5722" class="flash">{{ message }}</div>
             {% endfor %}
 
-          <form action="{{ url_for('contact_page') }}" method=POST>
+          <form action="{{ url_for('contact_page') }}" method=POST name="contact-form">
             {{ form.hidden_tag() }}
 
             {{ form.name.label }}
@@ -53,9 +61,39 @@
 
             {{ form.submit }}
           </form>
-          <a style="margin-top:10px" class="card-link" href="{{ url_for('landing_page') }}">Cancel</a>
-        {% endif %}
+
+          <a style="margin-top:10px" class="card-link" href="{{ url_for('landing_page') }}">Home</a>
+
+          {% endif %}
         </div>
-    </aside>
+      </div>
+
+      <!-- <script>
+        const form = document.forms['contact-form']
+        const loading = document.querySelector('.js-loading')
+        const successMessage = document.querySelector('.js-success-message')
+        const errorMessage = document.querySelector('.js-error-message')
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          showLoadingIndicator()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => showSuccessMessage(response))
+            .catch(error => showErrorMessage(error))
+        })
+
+        function showLoadingIndicator () {
+          form.classList.add('is-hidden')
+          loading.classList.remove('is-hidden')
+        }
+
+        function showSuccessMessage (response) {
+          console.log('Success!', response)
+          setTimeout(() => {
+            successMessage.classList.remove('is-hidden')
+            loading.classList.add('is-hidden')
+          }, 500)
+        }
+      </script> -->
   </body>
 </html>

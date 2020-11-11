@@ -1,107 +1,44 @@
 <style>
+  .nav-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-bottom:1px;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    body {
-        margin: 0;
-        padding: 0;
-    }
-    .container {
-        /* height: 800px; */
-        width: 100%;
-        /* background-color: rgb(206, 255, 244); */
-    }
+  .brand-logo{
+     font-size: 90px;
+     color: black;
+     font-weight: bold;
+     position: relative;
+     padding: 0;
+     margin: 0;
+     left: 1%;
+     text-decoration: none;
+  }
 
-    .clouds {
-        width: 100%;
-        height: 878px;
-    }
+  .sub-logo {
+      font-size: 20px;
+      padding: 0;
+      margin: 0;
+      position: relative;
+      right: -98px;
+      top: -18px;
+  }
 
-    .container2 {
-        width: 100%;
-        height: 200px;
-        background-color:azure;
-    }
-
-    .brighttitle {
-        color: rgb(254, 115, 2);
-        position: absolute;
-    }
-
-    .brightActtitle {
-        font-size: 200px;
-        position: absolute;
-        top: 200px;
-        left: 800px;
-    }
-
-    .navbuttons {
-        display: flex;
-        flex-direction: row;
-        padding: 15px;
-    }
-
-    .contactbutton {
-        position: relative;
-        left: 690px;
-        padding: 10px;
-        margin: 10px;
-        font-size: 20px;
-    }
-
-    .aboutbutton {
-        position: relative;
-        left: 690px;
-        padding: 10px;
-        font-size: 20px;
-        margin: 10px;
-
-    }
-
-    small {
-        font-size: 50px;
-        color: whitesmoke;
-        position: relative;
-        top: 100px;
-        left: 20px;
-    }
-
+  .new1 {
+    border-top: 1px solid black;
+    padding: 0;
+    margin: 0;
+  }
 
 </style>
-
-
-
-<div class="container" id="animation-logo">
-    <video class= "clouds" autoplay loop muted>
-        <source src="../static/video/video.mp4" type="video/MP4">
-    </video>
-    <div class="brightActtitle">
-        <p class="brighttitle">BrightAct</p>
-        <small>App against abuse.</small>
+<body>
+    <div class="nav-wrapper">
+        <p class="brand-logo">BrightAct</p>
+        <p class="sub-logo">An app against abuse.</p>
     </div>
-    <!-- <div class="col-xs-12 text-center"> -->
-        <!-- <img src="../static/img/BAlogo.png"> -->
-    <!-- </div> -->
-</div>
-<div class="container2" id="navigation">
-    <div class="row">
-        <div class="col-xs-12 text-center">
-            <ul class="nav nav-pills">
-                <div class="navbuttons">
-                    <form method="get" action="{{ url_for('about_page') }}">
-                        <button class= "aboutbutton" type="submit">about us</button>
-                    </form>
-                    <form method="get" action="{{ url_for('contact_page') }}">
-                        <button class="contactbutton" type="submit">contact us</button>
-                    </form>
-                    <form method="get" action="{{ url_for('get_involved') }}">
-                        <button class= "aboutbutton" type="submit">get involved</button>
-                    </form>
-                </div>
-                <!-- <a href="{{ url_for('about_page') }}">About Us</a> -->
-                 <!-- testing contact form -->
-                <!-- <a class="btn btn-dark" href="{{ url_for('contact_page') }}">Contact</a> -->
-                <!-- <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li> -->
-            </ul>
-        </div> -->
-    </div>
-</div>
+    <hr class="new1">
+</body>
