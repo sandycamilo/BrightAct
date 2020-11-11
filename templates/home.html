@@ -33,18 +33,19 @@
       </div>
     
     
-      <!-- <script>
+      <script>
         const form = document.forms['contact-form']
         const loading = document.querySelector('.js-loading')
         const successMessage = document.querySelector('.js-success-message')
         const errorMessage = document.querySelector('.js-error-message')
     
         form.addEventListener('submit', e => {
-          e.preventDefault()
-          showLoadingIndicator()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => showSuccessMessage(response))
-            .catch(error => showErrorMessage(error))
+            console.log('success!!!')
+        //   e.preventDefault()
+        //   showLoadingIndicator()
+        //   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        //     .then(response => showSuccessMessage(response))
+        //     .catch(error => showErrorMessage(error))
         })
     
         function showLoadingIndicator () {
@@ -61,7 +62,7 @@
         }
     
         
-      </script> -->
+      </script>
       
 </body>
 </html>

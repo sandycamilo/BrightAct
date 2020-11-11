@@ -44,7 +44,6 @@ def contact_page():
             flash('All fields are required.')
             return render_template('contact_page.html', form=form)
         else:
-            name = request.form.get('name')
             msg = Message(subject=form.subject.data,
                         sender=form.name.data,
                         recipients=[os.getenv('MAIL_USERNAME')])
@@ -54,13 +53,10 @@ def contact_page():
             """ % (form.name.data, form.email.data, form.message.data)
             mail.send(msg)
 
-            confirm_message = "We appreciate you contacting us. Your message has been sent!"
-
-            return render_template('contact_page.html', success=True, confirm_msg=confirm_msg)
+            return render_template('contact_page.html', success=True)
 
     elif request.method == 'GET':
         return render_template('contact_page.html', form=form)
-
 
 @app.route("/send_message", methods=['GET', 'POST'])
 def send_message():

@@ -1,4 +1,17 @@
 
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: #eee;
+    color: #252431;
+    padding: 10% 5%;
+    font-family: system, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.4;
+  }
 
   .form-container {
     position: relative;
@@ -32,17 +45,17 @@
   }
 
   input:focus {
-    outline: 1px solid var(--accent);
+    outline: 1px solid #F18260;
   }
 
   button {
-    color: #fff;
+    color: black;
     cursor: pointer;
-    background-color: var(--purple);
+    background-color: #252431;
   }
 
   button:hover {
-    background-color: var(--accent);
+    background-color: #F18260;
   }
 
   .is-hidden {
@@ -53,7 +66,7 @@
     display: block;
     width: max-content;
     margin: 0 auto;
-    color: var(--accent);
+    color: #F18260;
     text-decoration: none;
     margin-bottom: 0.5rem;
   }
@@ -93,11 +106,9 @@
   }
 
   .loading-spinner circle {
-    stroke: var(--accent);
+    stroke: #F18260;
     stroke-dasharray: 1,200;
     stroke-dashoffset: 0;
     stroke-linecap: round;
     animation: dash 1.5s ease-in-out infinite;
   }
-
-  
