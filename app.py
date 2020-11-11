@@ -69,13 +69,13 @@ def send_message():
         email = request.form.get('email')
         message = request.form.get('message')
         subject = request.form.get('subject')
+        print(name, email, message, subject)
 
         msg = Message(
             subject=subject,
             sender=name,
             recipients=
-            [os.getenv('MAIL_USERNAME')],
-            html=render_template("home.html"))
+            [os.getenv('MAIL_USERNAME')])
         msg.body = """
             From: %s <%s>
             %s

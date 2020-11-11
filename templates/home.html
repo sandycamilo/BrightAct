@@ -29,7 +29,7 @@
           </div>
         </div>
     
-        <p class="js-success-message is-hidden">{{ confirm_msg }}!</p>
+        <p class="js-success-message is-hidden">{{ confirm_msg }}</p>
       </div>
     
     
@@ -42,9 +42,9 @@
         form.addEventListener('submit', e => {
           e.preventDefault()
           showLoadingIndicator()
-        //   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        //     .then(response => showSuccessMessage(response))
-        //     .catch(error => showErrorMessage(error))
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => showSuccessMessage(response))
+            .catch(error => showErrorMessage(error))
         })
     
         function showLoadingIndicator () {
@@ -61,7 +61,7 @@
         }
     
         
-      </script>
-       -->
+      </script> -->
+      
 </body>
 </html>
