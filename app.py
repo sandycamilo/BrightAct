@@ -35,6 +35,18 @@ def landing_page():
 def about_page():
     return render_template('about_page.html')
 
+@app.route('/changemakers')
+def changemakers_page():
+    return render_template('change_makers.html')
+
+@app.route('/product')
+def product_page():
+    return render_template('product_page.html')
+
+@app.route('/updates')
+def updates_page():
+    return render_template('updates_page.html')
+
 @app.route('/contact', methods=['GET', 'POST'])
 def contact_page():
     form = ContactForm()

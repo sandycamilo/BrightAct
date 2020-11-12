@@ -35,7 +35,7 @@
             position: relative;
             padding: 0;
             margin: 0;
-            left: 1%;
+            left: 2%;
             text-decoration: none;
         }
         
@@ -44,7 +44,7 @@
             padding: 0;
             margin: 0;
             position: relative;
-            right: -98px;
+            left: 120px;
             top: -18px;
         }
         
@@ -56,27 +56,165 @@
 
         li {
             position: relative;
-            right: -10%;
+            right: -5%;
             padding: 0;
             margin: 0px;
-            margin-left: 200px;
+            margin-left: 250px;
             font-size: 20px;
         }
 
         .nav {
             padding: 0;
             margin: 0px;
-            
+        }
+
+        /* slides */
+        #slides {
+            width: 100%;
+            height: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .play-slide-indicators {
+            z-index: 1;
+            height:100%;
+            width: 100%;
+            display: flex; 
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .slide-item {
+            position: relative;
+            top: 7px;
+            left: 240px;
+            padding: 30px;
+            margin: 20px;
+        }
+
+        .slide-item2 {
+            position: relative;
+            top: 7px;
+            left: 745px;
+            padding: 30px;
+            margin: 20px;
+        }
+
+        .slides-inner {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            position: absolute;
+            -webkit-transform: translate3d(0, 0, 0);
+                    transform: translate3d(0, 0, 0);
+            -webkit-transition: 100ms;
+            transition: 1000ms;
+        }
+
+        .play-slide-show {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .play-next-button, .play-previous-button {
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 119, 0, 0.5);
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translate(0, -50%);
+                    transform: translate(0, -50%);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .play-next-button {
+            right: 1em;
+        }
+
+        .play-next-button::after {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-top: 4px solid #eee;
+            border-right: 4px solid #eee;
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+        }
+
+        .play-previous-button {
+            left: 1em;
+        }
+
+        .play-previous-button::after {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-bottom: 4px solid #eee;
+            border-left: 4px solid #eee;
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+        }
+
+
+        /* quiz */
+        .quiz {
+            border: solid orange 1px;
+            position: relative;
+            left: 400px;
+            top: 100px;
+            width: 800px;
+            height: 500px;
+            padding: 40px;
+            margin: 100px;
+
+        }
+
+        .quiz-title {
+            position: relative;
+            left: 150px;
+            top: 100px;
+            font-size: 40px;
+         }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            position: relative;
+            top: 100px;
+            left: -280px;
         }
     </style>
 </head>
 <body>
     <!-- Escape to Safety -->
-    <!-- {% include 'easy_out.html' %} -->
-    <!-- Header: Navbar w/ Logo and About Us Link -->
-    <!-- {% include 'header.html' %} -->
+    {% include 'easy_out.html' %}
 
-    <!-- header -->
+    <!-- unique header for landing page -->
     <div class="nav-wrapper">
         <p class="brand-logo">BrightAct</p>
         <p class="sub-logo">An app against abuse.</p>
@@ -85,13 +223,26 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <ul class="nav navbar-nav">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Changemakers</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Updates</a></li>
+                <li><a href="{{ url_for('about_page') }}">About Us</a></li>
+                <li><a href="{{ url_for('changemakers_page') }}">Changemakers</a></li>
+                <li><a href="{{ url_for('product_page') }}">Product</a></li>
+                <li><a href="{{ url_for('updates_page') }}">Updates</a></li>
             </ul>
         </div>
     </nav>
+     <!-- Image slides -->
+     <div id="slides" class="play-slide-show" data-delay="3000" data-transition="400">
+        <div class="slides-inner">
+            <div class="slide-item">
+                <img src="static/video/IMG_3799.MOV" width="1200" height="auto" alt="BA">
+            </div>
+            <div class="slide-item2">
+                <img src="static/video/IMG_3799.MOV" width="1200" height="auto" at="BA">
+            </div>
+        </div>
+        <a href="#" class="play-next-button"></a>
+        <a href="#" class="play-previous-button"></a> 
+    </div>
     <!-- Storytelling section -->
     <div class="storytelling">
         <div class="row">
@@ -283,8 +434,15 @@
     <!-- Contact types with form buttons -->
     <!-- Contact Form (Modal?) -->
 
-    {% include 'footer.html' %}
 
+
+    <!-- quiz -->
+    <div class="quiz">
+        <p class="quiz-title">How much do you know?</h1>
+        <a href="#" class="button">Play</a>
+    </div>
+
+    {% include 'footer.html' %}
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -292,5 +450,59 @@
     <script src="../static/js/bootstrap.min.js"></script>
     <!-- Custom JS -->
     <script src="../static/js/landing_page.js"></script>
+
+    <script>
+        (function() {
+
+        const slides = document.getElementById('slides')
+        const slidesInner = slides.querySelector('.slides-inner')
+        const images = slidesInner.querySelectorAll('img')
+        const slideWidth = slides.clientWidth
+
+        const nextButton = slides.querySelector('.play-next-button')
+        const prevButton = slides.querySelector('.play-previous-button')
+
+        let index = 0
+
+        if (nextButton !== null) {
+            nextButton.addEventListener('click', function(e) {
+                e.preventDefault()
+
+                nextSlide()
+            })
+        }
+
+        if (prevButton !== null) {
+            prevButton.addEventListener('click', function(e) {
+                e.preventDefault()
+
+                prevSlide()
+            })
+        }
+
+        function nextSlide() {
+            index +=1 
+            if (index === images.length) {
+                index = 0 
+            }
+            slidesInner.style.transform = `translate3d(${index * -slideWidth}px,0,0)`
+        }
+
+        function prevSlide() {
+            if(index < 0) {
+                index = images.length -1
+            } else  {
+                index -= 1
+            }
+            slidesInner.style.transform = `translate3d(${index * -slideWidth}px,0,0)`
+        }
+
+        setInterval(function() {
+            nextSlide()
+        }, 5000)
+
+
+        }) ()
+    </script>
 </body>
 </html>

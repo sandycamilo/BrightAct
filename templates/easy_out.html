@@ -3,9 +3,8 @@ div.sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: red;
+  /* background-color: rgba(255, 89, 0, 0.125); */
   padding: 5px;
-  font-size: 20px;
 }
 #overlay {
   position: fixed; /* Sit on top of the page content */
@@ -14,18 +13,33 @@ div.sticky {
   height: 10%; /* Full height (cover the whole page) */
   top: 0;
   right: 0;
-
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
 }
+
+button {
+  font-size: 15px;
+  padding: 10px;
+  margin: 0;
+  position: relative;
+  right: 30px;  
+}
+
+.flappy {
+  color: rgb(255, 9, 9);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
 </style>
-<script>
+<!-- <script>
 alert('Internet usage can be monitored and is impossible to erase completely. Remember to clear your browser history. If you need to leave this website quickly, click on the Play Flappy Bird button.');
-</script>
+</script> -->
 <div class="sticky">
     <h3 class="text-right">
         <button type="button" class="btn-light text-white">
-        <a href="https://flappybird.io">Play Flappy Bird</a>
+        <a class= "flappy" href="https://flappybird.io">Play Flappy Bird</a>
         </button>
     </h3>
 </div>
