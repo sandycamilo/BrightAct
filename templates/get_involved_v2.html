@@ -17,17 +17,24 @@
             </button>
 
             <!-- The Modal -->
-            <div id="myModal" class="modal">
+            <div id="myModal" class="modal" id="get-involved" tabindex="-1" role="dialog">
 
              <!-- Modal content -->
                  <div class="modal-content">
                      <div class="modal-header">
                           <span class="close">&times;</span>
-                          <h2>Modal Header</h2>
+                          <h2>Get Involved</h2>
                     </div>
                     <div class="modal-body">
-                         <p>Some text in the Modal Body</p>
-                         <p>Some other text...</p>
+                        <form>
+                            <div class="form-group">
+                                <label for="name" class="col-form-label">Your Name:</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                                <p>
+                                    <button class="btn btn-success text-right">Next</button>
+                                </p>
+                            </div>
+                         </form>
                     </div>
                     <div class="modal-footer">
                          <h3>Modal Footer</h3>
