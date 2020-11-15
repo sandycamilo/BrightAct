@@ -77,7 +77,7 @@ def send_message():
 
         mail.send(msg)
         confirm_msg = "We appreciate you contacting us. Your message has been sent!"
-        return render_template("home.html", confirm_msg=confirm_msg)
+        return render_template("home.html", success=True, confirm_msg=confirm_msg)
     elif request.method == 'GET':
         return render_template('home.html')
 
