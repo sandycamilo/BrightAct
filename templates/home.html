@@ -12,58 +12,62 @@
     <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
 
 </head>
-<body>
-    <div id="contact-form" class="form-container">
-            <form id="contact-form" method="POST">
-                <input name="name" type="text" placeholder="Name" required>
-                <input name="email" type="email" placeholder="Email" required>
-                <input name="subject" type="text" placeholder="Subject">
-                <!-- <input name="message" type="textarea" placeholder="Message" required> -->
-                <textarea name="message" placeholder="Message"></textarea>
-                <button type="submit">Submit</button>
-            </form>
+  <body>
+    <div class="form-container">
 
-            <div class="loading js-loading is-hidden">
-                <div class="loading-spinner">
-                  <svg><circle cx="25" cy="25" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg>
-                </div>
-            </div>
+      <form id="contact-form" method="POST">
+          <input name="name" type="text" placeholder="Name" required>
+          <input name="email" type="email" placeholder="Email" required>
+          <input name="subject" type="text" placeholder="Subject">
+          <!-- <input name="message" type="textarea" placeholder="Message" required> -->
+          <textarea name="message" placeholder="Message"></textarea>
+          <button type="submit" id="form-button">Submit</button>
+      </form>
 
-            <p class="js-success-message is-hidden">{{ confirm_msg }}</p>
-            <p>{{ confirm_msg }}</p>
-            
-    
+      <div class="loading js-loading is-hidden">
+          <div class="loading-spinner">
+            <svg><circle cx="25" cy="25" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg>
+          </div>
+      </div>
+      
+      <p class="js-success-message">{{ confirm_msg }}</p>
+      <!-- <p>{{ confirm_msg }}</p> -->
     </div>
     
     
-      <script>
-        const url = ''
-        const form = document.getElementById('contact-form')
-        const loading = document.querySelector('.js-loading')
-        const successMessage = document.querySelector('.js-success-message')
-        
-        form.addEventListener('submit', event => {
-            showLoadingIndicator()
-            fetch("info_get.php", { method: 'POST', body: new FormData(form)})
-                .then(response => showSuccessMessage(response))
-                .catch(error => showErrorMessage(error))
-   
-        })
-    
-        function showLoadingIndicator () {
-          form.classList.add('is-hidden')
-          loading.classList.remove('is-hidden')
-        }
-
-        function showSuccessMessage (response) {
-            console.log('Success!', response)
-            setTimeout(() => {
-                successMessage.classList.remove('is-hidden')
-                loading.classList.add('is-hidden')
-            }, 500)
-        }
-    
-      </script>
+    <script>
+      const form = document.getElementById('contact-form')
+      const loading = document.querySelector('.js-loading')
+      // const successMessage = document.querySelector('.js-success-message')
       
-</body>
+      // form.addEventListener('submit', event => {
+      //   showLoadingIndicator()
+      // })
+      form.addEventListener('submit', e => {
+        showLoadingIndicator()
+      })
+      
+      function showLoadingIndicator() {
+        form.classList.add('is-hidden')
+        loading.classList.remove('is-hidden')
+      }
+
+      function showSuccessMessage (response) {
+        console.log('Success!', response)
+        setTimeout(() => {
+          successMessage.classList.remove('is-hidden')
+          loading.classList.add('is-hidden')
+        }, 500)
+      }
+
+      // $(document).read(function() {
+      //   $("#formButton").click(function() {
+      //     $("contact-form").classList.add('is-hidden')
+      //     $("loading").classList.remove('is-hidden')
+      //   })
+      // })
+  
+    </script>
+      
+  </body>
 </html>
