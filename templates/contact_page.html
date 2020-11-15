@@ -1,61 +1,55 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="../static/css/contact.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<link rel="stylesheet" href="../static/css/contact.css">
-  </head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Send Message</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/contact_test.css">
+    <script src="https://unpkg.com/prefixfree@1.0.0/prefixfree.min.js"></script>
+    <script src="https://wzrd.in/standalone/formdata-polyfill@latest"></script>
+    <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+    <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+
+</head>
   <body>
+    <div class="form-container">
+      {% if success %}
+        <p class="js-success-message">We appreciate you contacting us. Your message has been sent!</p>
+      {% else %}
+        <form id="contact-form" method="POST">
+            <input name="name" type="text" placeholder="Name" required>
+            <input name="email" type="email" placeholder="Email" required>
+            <input name="subject" type="text" placeholder="Subject">
+            <!-- <input name="message" type="textarea" placeholder="Message" required> -->
+            <textarea name="message" placeholder="Message"></textarea>
+            <button type="submit" id="form-button">Submit</button>
+        </form>
 
-    <aside class="profile-card">
-        <!-- <div class="signup"> -->
-          <div class="profile-bio">
-          {% if success %}
-          <div class="thankyou">
-            <p style="color: #FF5722;">Thank you for your message. I will get back to you shortly.</p>
-            <a style="padding-top:10px" href="{{ url_for('landing_page') }}">Go Back</a>
-
-          </div>
-            {% else %}
-
-            {% for message in form.name.errors %}
-              <div style="color:#FF5722" class="flash">{{ message }}</div>
-            {% endfor %}
-
-            {% for message in form.email.errors %}
-              <div style="color:#FF5722" class="flash">{{ message }}</div>
-            {% endfor %}
-
-            {% for message in form.subject.errors %}
-              <div style="color:#FF5722" class="flash">{{ message }}</div>
-            {% endfor %}
-
-            {% for message in form.message.errors %}
-              <div style="color:#FF5722" class="flash">{{ message }}</div>
-            {% endfor %}
-
-          <form action="{{ url_for('contact_page') }}" method=POST>
-            {{ form.hidden_tag() }}
-
-            {{ form.name.label }}
-            {{ form.name }}
-
-            {{ form.email.label }}
-            {{ form.email }}
-
-            {{ form.subject.label }}
-            {{ form.subject }}
-
-            {{ form.message.label }}
-            {{ form.message }}
-
-            {{ form.submit }}
-          </form>
-          <a style="margin-top:10px" class="card-link" href="{{ url_for('landing_page') }}">Cancel</a>
-        {% endif %}
+        <div class="loading js-loading is-hidden">
+            <div class="loading-spinner">
+              <svg><circle cx="25" cy="25" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg>
+            </div>
         </div>
-    </aside>
+      {% endif %}
+      
+    </div>
+    
+    
+    <script>
+      const form = document.getElementById('contact-form')
+      const loading = document.querySelector('.js-loading')
+      const successMessage = document.querySelector('.js-success-message')
+
+      form.addEventListener('submit', e => {
+        showLoadingIndicator()
+      })
+      
+      function showLoadingIndicator() {
+        form.classList.add('is-hidden')
+        loading.classList.remove('is-hidden')
+      }
+    </script>
+      
   </body>
 </html>
