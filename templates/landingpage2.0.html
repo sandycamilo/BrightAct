@@ -18,6 +18,7 @@
     }
     b {
       color: black;
+      font-size: 80px;
     }
     button { 
       color: white;
@@ -56,7 +57,7 @@
     /* innovation for society */
     .innovation {
       background-color: rgb(235, 235, 235);
-      border: solid .5px black;
+      /* border: solid .5px black; */
       width: 100%;
       height: 800px;
       margin: 10px;
@@ -65,7 +66,7 @@
     /* equality globally */
     .equality {
       background-color: rgb(255, 249, 241);
-      border: solid .5px black;
+      /* border: solid .5px black; */
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -74,33 +75,33 @@
       margin: 10px;
     }
     .equality-Brightact {
-      border: solid black .5px;
       width: 150px;
       margin: 10px;
       height: 100px;
       position: relative;
-      left: 50%;
+      left: 47%;
       bottom: -10%;
     }
     .equality-paragraph h1 {
-      font-size: 68px;
+      font-size: 50px;
       margin: 10px;
-      border: solid black .5px;
       padding: 20px;
       position: relative;
-      left: 20%;
+      left: 25%;
     }
 
     /* carousel */
     .carousel {
-      background-color: rgb(235, 235, 235);
-      border: solid .5px black;
+      background-color: rgb(250, 250, 250);
       width: 100%;
       height: 800px;
+      position: relative;
+      margin: 10px;
+      top: 50px;
     }
     /* carousel~ slides */
     #slides {
-        width: 1200px;
+        width: 1000px;
         height: 800px;
         margin: auto;
     }
@@ -206,29 +207,44 @@
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg);
     }
-    .slide-text {
-      width: 1200px;
+  
+    .slide-text a {
+      font-size: 22px;
+    }
+
+    .slide-text b {
+      font-size: 32px;
     }
 
     /* domestic violence happens to anyone */
     .domestic-violence {
-      background-color: rgb(235, 235, 235);
+      background-color: rgb(240, 240, 240);
       border: solid .5px black;
       width: 100%;
       height: 800px;
     }
     .domestic-title {
-      border: solid black .5px;
-      width: 600px;
       height: 400px;
       margin: 20px;
       padding: 20px;
+      position: relative;
+      top: 25%;
+      text-align: center;
+    }
+    .domestic-title a {
+      font-size: 110px;
+      line-height: 100px;
     }
     .domestic-subtitle {
-      border: solid black .5px;
-      width: 600px;
+      /* border: solid black .5px; */
+      width: 700px;
       margin: 20px;
       padding: 20px;
+      font-size: 23px;
+      line-height: 35px;
+      position: relative;
+      left: 45%;
+      top: 15%;
     }
 
     /* assumptions quiz */
@@ -337,80 +353,85 @@
   </div>
 
   <!-- carousel -->
-  <div id="slides" class="play-slide-show" data-delay="3000" data-transition="400">
-    <div class="slides-inner">
-        <div class="slide-item">
+  <div class="carousel">
+    <div id="slides" class="play-slide-show" data-delay="3000" data-transition="400">
+      <div class="slides-inner">
+          <div class="slide-item">
+            <img src="../static/img/sample.jpg" width="1200" height="500px" alt="about">
+              <div class="slide-text">
+                <a>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
+                    organizations, cities and authorities that <b>inspire</b>. Specifically, we 
+                    enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
+                    the public sector provides services to inhabitants. We believe in people over profits-
+                    thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
+                </a>
+              </div>
+              <button type="button">ABOUT US</button> 
+          </div>
+          <div class="slide-item">
+            <img src="../static/img/sample.jpg" width="1200" height="500px" alt="about">
             <div class="slide-text">
-              <img src="../static/img/BAlogo.png" width="1200" height="500px" alt="about">
-              <h5>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
+              <a>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
                   organizations, cities and authorities that <b>inspire</b>. Specifically, we 
                   enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
                   the public sector provides services to inhabitants. We believe in people over profits-
                   thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
-              </h5>
+              </a>
             </div>
-            <button type="button">ABOUT US</button> 
-        </div>
-        <div class="slide-item">
-          <div class="slide-text">
-            <img src="../static/img/BAlogo.png" width="1200" height="500px" alt="about">
-            <h5>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
-                organizations, cities and authorities that <b>inspire</b>. Specifically, we 
-                enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
-                the public sector provides services to inhabitants. We believe in people over profits-
-                thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
-            </h5>
+              <button type="button">CHANGEMAKERS</button>
           </div>
-            <button type="button">CHANGEMAKERS</button>
-        </div>
-        <div class="slide-item">
-          <div class="slide-text">
-            <img src="../static/img/BAlogo.png" width="1200" height="500px" alt="about">
-            <h5>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
-                organizations, cities and authorities that <b>inspire</b>. Specifically, we 
-                enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
-                the public sector provides services to inhabitants. We believe in people over profits-
-                thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
-            </h5>
+          <div class="slide-item">
+            <img src="../static/img/sample.jpg" width="1200" height="500px" alt="about">
+            <div class="slide-text">
+              <a>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
+                  organizations, cities and authorities that <b>inspire</b>. Specifically, we 
+                  enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
+                  the public sector provides services to inhabitants. We believe in people over profits-
+                  thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
+              </a>
+            </div>
+            <button type="button">PRODUCT</button>
           </div>
-          <button type="button">PRODUCT</button>
-        </div>
-        <div class="slide-item">
-          <div class="slide-text">
-            <img src="../static/img/BAlogo.png" width="1200" height="500px" alt="about">
-            <h5>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
-                organizations, cities and authorities that <b>inspire</b>. Specifically, we 
-                enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
-                the public sector provides services to inhabitants. We believe in people over profits-
-                thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
-            </h5>
+          <div class="slide-item">
+            <img src="../static/img/sample.jpg" width="1200" height="500px" alt="about">
+            <div class="slide-text">
+              <a>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
+                  organizations, cities and authorities that <b>inspire</b>. Specifically, we 
+                  enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
+                  the public sector provides services to inhabitants. We believe in people over profits-
+                  thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
+              </a>
+            </div>
+            <button type="button">UPDATES</button>
           </div>
-          <button type="button">UPDATES</button>
-        </div>
-        <div class="slide-item">
-          <div class="slide-text">
-            <img src="../static/img/BAlogo.png" width="1200" height="500px" alt="about">
-            <h5>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
-                organizations, cities and authorities that <b>inspire</b>. Specifically, we 
-                enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
-                the public sector provides services to inhabitants. We believe in people over profits-
-                thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
-            </h5>
+          <div class="slide-item">
+            <img src="../static/img/sample.jpg" width="1200" height="500px" alt="about">
+            <div class="slide-text">
+              <a>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
+                  organizations, cities and authorities that <b>inspire</b>. Specifically, we 
+                  enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
+                  the public sector provides services to inhabitants. We believe in people over profits-
+                  thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
+              </a>
+            </div>
+            <button type="button">APPLY</button>
           </div>
-          <button type="button">APPLY</button>
-        </div>
+      </div>
+      <a href="#" class="play-next-button"></a>
+      <a href="#" class="play-previous-button"></a>
     </div>
-    <a href="#" class="play-next-button"></a>
-    <a href="#" class="play-previous-button"></a>
   </div>
 
   <!-- domestic violence happens to anyone -->
   <div class="domestic-violence">
     <div class="domestic-title">
-      <h1>Domestic violence can happen to everyone.</h1>
+      <a>Domestic violence<br>
+        can happen<br>
+        to everyone</a>
     </div>
     <div class="domestic-subtitle">
-      <h5>Regardless of nationality, gender, ethnicity, sexual preference, religion, social status or age.</h5>
+      <a>Regardless of nationality, gender, ethnicity,<br>
+         sexual preference, religion, social status or age.</a>
     </div>
   </div>
 
