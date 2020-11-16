@@ -10,28 +10,30 @@
     }
     h1 {
       color: tomato;
-      font-size: 40px;
+      font-size: 32px;
     } 
     h5 {
       color: tomato;
-      font-size: 25px;
+      font-size: 18px;
     }
     b {
       color: black;
-      font-size: 80px;
+      font-size: 50px;
     }
     button { 
       color: white;
       background-color: tomato;
       border: none;
-      width: 130px;
-      height: 70px;
+      width: 120px;
+      height: 60px;
       padding: 20px;
-      border-radius: 18px;
+      border-radius: 22px;
       display: inline-block;
       text-align: center;
       margin: 4px 2px;
       font-size: 18px;
+      position: relative;
+      top: 10px;
     }
 
    /* navbar styles */
@@ -51,7 +53,10 @@
     }
     .navbar li {
       padding: 1em;
-      font-size: 29px;
+      justify-items: center;
+      font-size: 22px;
+      position: relative;
+      top: 10px;
     }
 
     /* innovation for society */
@@ -70,8 +75,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      padding: 2px;
-      height: 450px;
+      height: 300px;
       margin: 10px;
     }
     .equality-Brightact {
@@ -79,25 +83,27 @@
       margin: 10px;
       height: 100px;
       position: relative;
-      left: 47%;
-      bottom: -10%;
+      left: 50%;
+      top: 40px;
     }
     .equality-paragraph h1 {
-      font-size: 50px;
+      font-size: 30px;
       margin: 10px;
       padding: 20px;
       position: relative;
-      left: 25%;
+      left: 32%;
+      top: -45px;
     }
 
     /* carousel */
     .carousel {
       background-color: rgb(250, 250, 250);
+      /* border: solid black .5px; */
       width: 100%;
       height: 800px;
       position: relative;
       margin: 10px;
-      top: 50px;
+      top: 30px;
     }
     /* carousel~ slides */
     #slides {
@@ -219,9 +225,12 @@
     /* domestic violence happens to anyone */
     .domestic-violence {
       background-color: rgb(240, 240, 240);
-      border: solid .5px black;
+      /* border: solid .5px black; */
+      position: relative;
+      top: 10px;
       width: 100%;
-      height: 800px;
+      height: 600px;
+      margin: 10px;
     }
     .domestic-title {
       height: 400px;
@@ -232,27 +241,55 @@
       text-align: center;
     }
     .domestic-title a {
-      font-size: 110px;
-      line-height: 100px;
+      font-size: 90px;
+      line-height: 80px;
     }
     .domestic-subtitle {
       /* border: solid black .5px; */
       width: 700px;
       margin: 20px;
       padding: 20px;
-      font-size: 23px;
-      line-height: 35px;
+      font-size: 22px;
+      line-height: 30px;
       position: relative;
       left: 45%;
-      top: 15%;
+      top: -5%;
     }
 
     /* assumptions quiz */
     .quiz {
-      background-color: rgb(255, 188, 147);
-      border: solid .5px black;
+      background-color: rgb(255, 171, 119);
+      /* border: solid .5px black; */
       width: 100%;
-      height: 300px;
+      height: 400px;
+    }
+    .quiz-title a {
+      width: 300px;
+      height: 200px;
+      color: rgb(0, 33, 133);
+      font-size: 40px;
+      position: relative;
+      left: 17%;
+      top: 120px
+    }
+    .quiz-subtitle {
+      color: rgb(0, 33, 133);
+      font-size: 22px;
+      position: relative;
+      top: 33%;
+      left:17%;
+    }
+    .quiz-button {
+      position: relative;
+      left: 18%;
+      top: 28%;
+    }
+    .quiz-button button {
+     width: 200px;
+     position: relative;
+     left: 100px;
+     top: 50px;
+     font-size: 15px;
     }
 
     /* get involved */
@@ -437,9 +474,16 @@
 
   <!-- assumptions quiz -->
   <div class="quiz">
-    <h1>We did not know much about domestic violence either.. </h1>
-    <h5>Take the quiz to test your assumptions.</h5>
-    <button type="button">TAKE QUIZ</button>
+    <div class="quiz-title">
+      <a>We did not know much about<br>
+        domestic violence either.. </a>
+    </div>
+    <div class="quiz-subtitle">
+      <a>Take the quiz to test your assumptions.</a>
+    </div>
+    <div class="quiz-button">
+      <button type="button">TAKE QUIZ</button>
+    </div>
   </div>
 
   <!-- get involved -->
