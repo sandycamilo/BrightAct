@@ -37,12 +37,140 @@
       padding: 2px;
       height: 450px;
     }
+
+    .equality-text {
+      background-color: white;
+      display: flex;
+      width: 600px;
+      height: 300px;
+      padding: 20px;
+    }
+
     /* carousel */
     .carousel {
-      background-color: brown;
+      background-color: rgb(72, 3, 3);
       width: 100%;
       height: 800px;
     }
+    /* carousel slides */
+    #slides {
+        width: 1200px;
+        height: 800px;
+        margin: auto;
+    }
+
+    .play-slide-indicators {
+        z-index: 1;
+        height:100%;
+        width: 100%;
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center
+    }
+    .slide-layout {
+      position: relative;
+      top: -782px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+
+    .slide-layout-2 {
+      position: relative;
+      top: -1048px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+
+    .carousel-caption {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%;
+      font-size: 20px;
+    }
+
+    .slides-inner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      position: absolute;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+      -webkit-transition: 1000ms;
+      transition: 1000ms;
+    }
+
+    .play-slide-show {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .play-next-button, .play-previous-button {
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+
+    .play-next-button {
+      right: 1em;
+    }
+
+    .play-next-button::after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-top: 4px solid #eee;
+      border-right: 4px solid #eee;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+    }
+
+    .play-previous-button {
+      left: 1em;
+    }
+
+    .play-previous-button::after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-bottom: 4px solid #eee;
+      border-left: 4px solid #eee;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+    }
+    
     /* domestic violence happens to anyone */
     .domestic-violence {
       background-color: rgb(255, 179, 166);
@@ -103,6 +231,7 @@
       width: 100%;
       height: 700px;
     }
+
   </style>
 
 </head>
@@ -119,16 +248,41 @@
   </div>
   <!-- innovation for society -->
   <div class="innovation">
+    
 
   </div>
   <!-- equality globally -->
   <div class="equality">
-
+    <div class="equality-text">
+      <small>BrightAct</small>
+      <p>We advocate for <b>equality</b> with thoughtful tech to address domestic violence <b>globally</b></p>  
+    </div>
   </div>
+
   <!-- carousel -->
-  <div class="carousel">
+  <div id="slides" class="play-slide-show" data-delay="3000" data-transition="400">
+    <div class="slides-inner">
+        <div class="slide-item">
+            <img src="../static/img/BAlogo.png" width="1200" height="auto" alt="about">
+        </div>
+        <div class="slide-item">
+            <img src="../static/img/BAlogo.png" width="1200" height="auto" at="changemakers">
+        </div>
+        <div class="slide-item">
+          <img src="../static/img/BAlogo.png" width="1200" height="auto" at="product">
+        </div>
+        <div class="slide-item">
+          <img src="../static/img/BAlogo.png" width="1200" height="auto" at="updates">
+        </div>
+        <div class="slide-item">
+          <img src="../static/img/BAlogo.png" width="1200" height="auto" at="apply">
+        </div>
+    </div>
 
+    <a href="#" class="play-next-button"></a>
+    <a href="#" class="play-previous-button"></a>
   </div>
+
   <!-- domestic violence happens to anyone -->
   <div class="domestic-violence">
 
@@ -169,5 +323,59 @@
   <div class="eu-innovation">
 
   </div>
+
+
+  <!-- carousel -->
+  <script>
+  (function() {
+
+    const slides = document.getElementById('slides')
+    const slidesInner = slides.querySelector('.slides-inner')
+    const images = slidesInner.querySelectorAll('img')
+    const slideWidth = slides.clientWidth
+
+    const nextButton = slides.querySelector('.play-next-button')
+    const prevButton = slides.querySelector('.play-previous-button')
+
+    let index = 0
+
+    if (nextButton !== null) {
+        nextButton.addEventListener('click', function(e) {
+            e.preventDefault()
+
+            nextSlide()
+        })
+    }
+
+    if (prevButton !== null) {
+        prevButton.addEventListener('click', function(e) {
+            e.preventDefault()
+
+            prevSlide()
+        })
+    }
+
+    function nextSlide() {
+        index +=1 
+        if (index === images.length) {
+            index = 0 
+        }
+        slidesInner.style.transform = `translate3d(${index * -slideWidth}px,0,0)`
+    }
+
+    function prevSlide() {
+        if(index < 0) {
+            index = images.length -1
+        } else  {
+            index -= 1
+        }
+        slidesInner.style.transform = `translate3d(${index * -slideWidth}px,0,0)`
+    }
+
+  setInterval(function() {
+      nextSlide()
+  }, 5000)
+  }) ()
+</script>
 </body>
 </html>
