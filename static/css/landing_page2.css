@@ -1,0 +1,55 @@
+header {
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.navbar {
+    font-weight: bold;
+    background-color: rgba(225, 225, 225, 1);
+    transition: 0.3s;
+}
+
+.navbar:hover {
+    background-color: #FF5400;
+}
+
+.navbar a {
+    color: #FF5400;
+}
+
+.navbar:hover a {
+    color: white;
+}
+
+.navbar li a:hover {
+    background-color: #FF5400;
+    color: rgba(225, 225, 225, 1);
+}
+
+.navbar #apply {
+    background-color: #FF5400;
+    color: white;
+    margin-top: 10px;
+    padding: 5px 45px;
+    border-radius: 25%;
+}
+
+.navbar:hover #apply {
+    background-color: white;
+    color: #FF5400;
+}
+
+.navbar #apply:hover {
+    background-color: rgba(225, 225, 225, 1);
+    color: #FF5400;
+}
+
+.advocate {
+    color: #FF5400;
+}
+
+.advocate .special {
+    color: black;
+    font-size: 150%;
+}
