@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container">
      <div class="row">
          <div class="col-xs-12 text-center">
@@ -15,3 +16,86 @@
         </button>
     </div>
  </div>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .nav-wrapper{
+            display: flex;
+            flex-direction: row;
+            padding-top: 15px;
+            padding-bottom:1px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .brand-logo{
+            font-size: 70px;
+            color: black;
+            font-weight: bold;
+            position: relative;
+            padding: 0;
+            margin: 0;
+            left: -14%;
+            text-decoration: none;
+        }
+        .new1 {
+            border-top: 1px solid black;
+            padding: 0;
+            margin: 0;
+        } 
+
+        li {
+            position: relative;
+            right: -5%;
+            top: 35px;
+            left: 280px;
+            padding: 0;
+            margin: 0px;
+            margin-left: 100px;
+            font-size: 15px;
+        }
+
+        .nav {
+            padding: 0;
+            margin: 0px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container-fluid {
+            display: flex;
+            flex-direction: column;
+        }
+
+        a:hover {
+         text-decoration: none;
+         color: black;
+
+        }
+    </style>
+<body>
+     <!-- Escape to Safety -->
+     {% include 'easy_out.html' %}
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <a class="brand-logo" href="{{ url_for('landing_page') }}">BrightAct</a>
+                <li><a href="{{ url_for('about_page') }}">About Us</a></li>
+                <li><a href="{{ url_for('changemakers_page') }}">Changemakers</a></li>
+                <li><a href="{{ url_for('product_page') }}">Product</a></li>
+                <li><a href="{{ url_for('updates_page') }}">Updates</a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+
+>>>>>>> 3b7fae8b3526e65c3aa29e31a75b7499d5c71575

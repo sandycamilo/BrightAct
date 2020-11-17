@@ -29,11 +29,25 @@ mail = Mail(app)
 
 @app.route('/')
 def landing_page():
-    return render_template('landing_page.html')
+    return render_template('landingpage2.0.html')
+
+#     return render_template('landing_page2.html')
 
 @app.route('/about')
 def about_page():
     return render_template('about_page.html')
+
+@app.route('/changemakers')
+def changemakers_page():
+    return render_template('change_makers.html')
+
+@app.route('/product')
+def product_page():
+    return render_template('product_page.html')
+
+@app.route('/updates')
+def updates_page():
+    return render_template('updates_page.html')
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact_page():

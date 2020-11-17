@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changemakers</title>
+
+    <!--Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link href="../static/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../static/css/about_page.css">
+    <!-- Social Media CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+    body {
+        /* remove the margin on the body */
+        margin: 0;
+    }
+
+    .giveback {
+        display: flex;
+        padding: 10px;
+        margin: 0;
+        height: 720px;
+        /* border: solid black 1px; */
+    }
+
+    .givebacktitle {
+        font-size: 56px;
+        position: relative;
+        margin: 20px;
+        left: 90px;
+        color:black;
+        width: 100%;
+        height: 100px;
+    }
+
+    .givebackinfo {
+        height: 450px;
+        width: 100%;
+        padding: 2px;
+        position: relative;
+        left: -980px;
+        font-size: 15px;
+        top: 130px;
+        /* border: solid .5px black; */
+    }
+
+    .givelogo {
+        position: relative;
+        top: 70;
+        padding: 0;
+        margin: 0;
+        left: 400px;
+    }
+
+    .offering-vid {
+        padding: 40px;
+        border: solid black 1px;
+    }
+
+    .offvid {
+        position: relative;
+        left: 400px;
+        top: 100px;
+    }
+ 
+    .offertitle {
+        font-size: 50px;
+        /* border: solid black 1px; */
+        width: 500px;
+        position: relative;
+        left: 600px;
+        height: 500px;
+    }
+
+    .give { 
+        font-size: 56px;
+        position: relative;
+        top: 150px;
+        width: 100%;
+        height: 100px;
+    }
+
+    .offerdes {
+        /* border: solid black 1px; */
+        height: 300px;
+        padding: 10px;
+        font-size: 15px;
+        position: relative;
+        left: 200px;
+        top: 140px;
+        width: 100%;
+    }
+
+    .offerdes2 {
+        height: 300px;
+        padding: 10px;
+        font-size: 15px;
+        position: relative;
+        left: -290px;
+        top: -170px;
+        width: 100%;
+        /* border: solid black 1px; */
+    }
+
+    .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .getinvform {
+        width: 300px;
+        height: 100px;
+        /* border: solid black; */
+        position: relative;
+        top: 200px;
+        left: 500px;
+    }
+
+    .getinvinfo {
+        height: 300px;
+        padding: 10px;
+        font-size: 15px;
+        position: relative;
+        left: -750px;
+        top: 140px;
+        width: 100%;
+    }
+
+    .culturecards1 {
+        display: flex;
+        padding: 20px;
+        height: 500px;
+        border: solid 1px black;
+    }
+    
+    .card {
+        max-width: 200px;
+        margin: 100px;
+        height: 250px;
+        text-align: center;
+        position: relative;
+        left: -200px;
+        padding: 0;
+        top: -540px;
+    }
+
+    .teamcards1 {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: 260px;
+        top: 500px;
+    }
+
+    </style>
+</head>
+
+
+<body>
+    {% include 'header.html' %}
+
+    <!-- Global Movement -->
+    <div class="giveback">
+        <div class="givebacktitle">
+            <p class="givebacktitle">Global Movement</p>
+        </div>
+        <div class="givelogo">
+            <img width="600px" height="700px" src="/static/img/grass.jpg" alt="logo">
+        </div>
+        <div class="givebackinfo">
+            <h1>Lorem ipsum dolor sanditiis quos nobis quod, similique et maiores,.</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa corporis praesentium, iure et iste eaque? Voluptas eos, aut accusamus architecto provident, corporis, nobis fugit nemo voluptatem labore esse sit fuga.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non porro ab quia deserunt aut nulla, eaque explicabo quae quis distinctio. Reprehenderit, molestiae saepe? Tempore facere aut perferendis, omnis impedit accusantium.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, neque? Odit accusamus quos provident tempora mollitia quas debitis rerum! Obcaecati laboriosam ipsa dolor aliquam qui eum voluptate, error rem atque!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur consequuntur nobis beatae dolores maxime magnam provident, distinctio, doloremque illo incidunt totam corrupti accusamus veniam, tenetur sunt earum assumenda iure ducimus.</p>
+        </div>
+    </div>
+
+    <!-- offering video -->
+    
+    <div class="offering-vid">
+        <video class= "offvid" width="50%" height="50%" controls>
+            <source src="../static/video/IMG_3799.MOV" type="video/MP4">
+        </video>
+        <div class= "offertitle">
+            <p class="give">Offering Video </h1>
+            <p class="offerdes">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, debitis similique rerum reprehenderit fugiat consectetur cum officiis ea? Eveniet, praesentium voluptas commodi consequuntur iusto quasi voluptatem veniam. Necessitatibus, eum veritatis?</p>
+            <p class="offerdes2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, debitis similique rerum reprehenderit fugiat consectetur cum officiis ea? Eveniet, praesentium voluptas commodi consequuntur iusto quasi voluptatem veniam. Necessitatibus, eum veritatis?</p>
+        </div>
+    </div>
+
+     <!-- get involved -->
+     <div class="giveback">
+        <div class="givebacktitle">
+            <p class="givebacktitle">Get Involved</p>
+        </div>
+        <div class="getinvform">
+            <a href="#" class="button">Involved Form</a>
+        </div>
+        <div class="getinvinfo">
+            <h1>Lorem ipsum dolor sanditiis quos nobis quod, similique et maiores,.</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa corporis praesentium, iure et iste eaque? Voluptas eos, aut accusamus architecto provident, corporis, nobis fugit nemo voluptatem labore esse sit fuga.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non porro ab quia deserunt aut nulla, eaque explicabo quae quis distinctio. Reprehenderit, molestiae saepe? Tempore facere aut perferendis, omnis impedit accusantium.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, neque? Odit accusamus quos provident tempora mollitia quas debitis rerum! Obcaecati laboriosam ipsa dolor aliquam qui eum voluptate, error rem atque!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur consequuntur nobis beatae dolores maxime magnam provident, distinctio, doloremque illo incidunt totam corrupti accusamus veniam, tenetur sunt earum assumenda iure ducimus.</p>
+        </div>
+    </div>
+
+    <!-- testimonials -->
+    <div class="culturecards1">
+            <div class="teamcards1">
+                <div class="card">
+                    <img src="../static/img/BAlogo.png" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="teamtitle">CEO & Founder, Example</p>
+                </div>
+                <div class="card">
+                    <img src="../static/img/BAlogo.png" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="teamtitle">CEO & Founder, Example</p>
+                </div>
+                <div class="card">
+                    <img src="../static/img/BAlogo.png" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="teamtitle">CEO & Founder, Example</p>
+                </div>
+                <div class="card">
+                    <img src="../static/img/BAlogo.png" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="teamtitle">CEO & Founder, Example</p>
+                </div>
+            </div>
+        </div>
+
+
+        {% include 'footer.html' %}
+</body>

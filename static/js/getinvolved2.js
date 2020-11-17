@@ -22,4 +22,9 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-} 
+}
+
+// Intended to be a way to get the next question in a series of questions stored in an array of strings
+function(nextQ) {
+    document.getElementById("nextBtn");
+}
