@@ -174,7 +174,7 @@
 
   <!-- visualization worldmap -->
   <div class="worldmap">
-    <!-- svg -->
+    <!-- javascript map-->
   </div>
 
   <!-- men abuse get involved -->
@@ -184,7 +184,6 @@
     </div>
     <h1>There is limited data on abuse against <b>men</b>. We want to change that.</h1>
     <button type="button">GET INVOLVED</button>
-
   </div>
 
   <!-- covid19 get involved -->
@@ -222,12 +221,12 @@
 
   <!-- visualization for crisis phone calls  -->
   <div class="hotline-calls">
-    <!-- svg -->
+    <!-- javascript file -->
   </div>
 
   <!-- stats for covid19 abuse  -->
   <div class="covid-impact-stats">
-  <!-- svg -->
+  <!-- javsctipy file -->
   </div>
 
   <!-- eu innovation council recognition -->
@@ -237,6 +236,7 @@
     </h1>
   </div>
 
+  <!-- footer -->
   {% include 'footer.html' %}
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -245,56 +245,56 @@
   <script src="../static/js/landing_page.js"></script>
 
   <!-- carousel javascript -->
-  <script>
-  (function() {
+    <script>
+    (function() {
 
-    const slides = document.getElementById('slides')
-    const slidesInner = slides.querySelector('.slides-inner')
-    const images = slidesInner.querySelectorAll('img')
-    const slideWidth = slides.clientWidth
+      const slides = document.getElementById('slides')
+      const slidesInner = slides.querySelector('.slides-inner')
+      const images = slidesInner.querySelectorAll('img')
+      const slideWidth = slides.clientWidth
 
-    const nextButton = slides.querySelector('.play-next-button')
-    const prevButton = slides.querySelector('.play-previous-button')
+      const nextButton = slides.querySelector('.play-next-button')
+      const prevButton = slides.querySelector('.play-previous-button')
 
-    let index = 0
+      let index = 0
 
-    if (nextButton !== null) {
-        nextButton.addEventListener('click', function(e) {
-            e.preventDefault()
+      if (nextButton !== null) {
+          nextButton.addEventListener('click', function(e) {
+              e.preventDefault()
 
-            nextSlide()
-        })
-    }
+              nextSlide()
+          })
+      }
 
-    if (prevButton !== null) {
-        prevButton.addEventListener('click', function(e) {
-            e.preventDefault()
+      if (prevButton !== null) {
+          prevButton.addEventListener('click', function(e) {
+              e.preventDefault()
 
-            prevSlide()
-        })
-    }
+              prevSlide()
+          })
+      }
 
-    function nextSlide() {
-        index +=1 
-        if (index === images.length) {
-            index = 0 
-        }
-        slidesInner.style.transform = `translate3d(${index * -slideWidth}px,0,0)`
-    }
+      function nextSlide() {
+          index +=1 
+          if (index === images.length) {
+              index = 0 
+          }
+          slidesInner.style.transform = `translate3d(${index * -slideWidth}px,0,0)`
+      }
 
-    function prevSlide() {
-        if(index < 0) {
-            index = images.length -1
-        } else  {
-            index -= 1
-        }
-        slidesInner.style.transform = `translate3d(${index * -slideWidth}px,0,0)`
-    }
+      function prevSlide() {
+          if(index < 0) {
+              index = images.length -1
+          } else  {
+              index -= 1
+          }
+          slidesInner.style.transform = `translate3d(${index * -slideWidth}px,0,0)`
+      }
 
-  setInterval(function() {
-      nextSlide()
-  }, 5000)
-  }) ()
-</script>
-</body>
+    setInterval(function() {
+        nextSlide()
+    }, 5000)
+    }) ()
+  </script>
+  </body>
 </html>
