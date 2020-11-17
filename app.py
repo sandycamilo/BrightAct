@@ -31,6 +31,8 @@ mail = Mail(app)
 def landing_page():
     return render_template('landing_page.html')
 
+#     return render_template('landing_page2.html')
+
 @app.route('/about')
 def about_page():
     return render_template('about_page.html')
