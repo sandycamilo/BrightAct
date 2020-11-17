@@ -29,7 +29,7 @@ mail = Mail(app)
 
 @app.route('/')
 def landing_page():
-    return render_template('landingpage2.0.html')
+    return render_template('landing_page.html')
 
 @app.route('/about')
 def about_page():

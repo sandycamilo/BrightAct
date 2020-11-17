@@ -1,366 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrightAct</title>
-
-    <!-- Bootstrap -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="../static/css/landing_page.css" rel="stylesheet">
-    <!-- Social Media CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        /* header */
-        .nav-wrapper{
-            display: flex;
-            flex-direction: column;
-            padding-top: 15px;
-            padding-bottom:1px;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand-logo{
-            font-size: 70px;
-            color: black;
-            font-weight: bold;
-            position: relative;
-            padding: 0;
-            margin: 0;
-            left: 2%;
-            text-decoration: none;
-        }
-
-        .sub-logo {
-            font-size: 16px;
-            padding: 0;
-            margin: 0;
-            position: relative;
-            left: 120px;
-            top: -18px;
-        }
-
-        .new1 {
-            border-top: 1px solid black;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            position: relative;
-            right: -5%;
-            padding: 0;
-            margin: 0px;
-            margin-left: 250px;
-            font-size: 20px;
-        }
-
-        .nav {
-            padding: 0;
-            margin: 0px;
-        }
-    </style>
 </head>
 <body>
-    <!-- Escape to Safety -->
-    {% include 'easy_out.html' %}
-    <!-- Header: Navbar w/ Logo and About Us Link -->
-    <!-- {% include 'header.html' %} -->
+  <!-- header & escape to safety feature -->
+  {% include 'header.html' %}
+  
+  <!-- innovation for society -->
+  <div class="innovation">
+    <img class= "placeholder" src="../static/img/team.png" width="auto" height="800px" alt="about">
+  </div>
 
-    <!-- unique header for landing page -->
-    <div class="nav-wrapper">
-        <p class="brand-logo">BrightAct</p>
-        <p class="sub-logo">An app against abuse.</p>
+  <!-- equality globally -->
+  <div class="equality">
+    <div class="equality-Brightact">
+      <h5>BrightAct</h5>
     </div>
-    <hr class="new1">
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <ul class="nav navbar-nav">
-                <li><a href="{{ url_for('about_page') }}">About Us</a></li>
-                <li><a href="{{ url_for('changemakers_page') }}">Changemakers</a></li>
-                <li><a href="{{ url_for('product_page') }}">Product</a></li>
-                <li><a href="{{ url_for('updates_page') }}">Updates</a></li>
-            </ul>
-        </div>
-    </nav>
-     <!-- Image slides -->
-     <div id="slides" class="play-slide-show" data-delay="3000" data-transition="400">
-        <div class="slides-inner">
-            <div class="slide-item">
-                <img src="static/video/IMG_3799.MOV" width="1200" height="auto" alt="BA">
-            </div>
-            <div class="slide-item2">
-                <img src="static/video/IMG_3799.MOV" width="1200" height="auto" at="BA">
-            </div>
-        </div>
-        <a href="#" class="play-next-button"></a>
-        <a href="#" class="play-previous-button"></a> 
+    <div class="equality-paragraph">
+      <h1>We advocate for <b>equality</b> with thoughtful <br>
+        tech to address domestic violence <b>globally</b></h1>  
     </div>
-    <!-- Storytelling section -->
-    <div class="storytelling">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="card text-center">
-                    <div class="card-header">
-                        <h3>Domestic Violence</h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">Domestic violence is a constant concern. The people it hurts often carry emotional wounds for a lifetime.</p>
-                    </div>
-                    <div class="card-footer">
-                        Unless otherwise noted, all data is for EU member states
-                    </div>
-                </div>
+  </div>
+
+  <!-- carousel -->
+  <div class="carousel">
+    <div id="slides" class="play-slide-show" data-delay="3000" data-transition="400">
+      <div class="slides-inner">
+          <div class="slide-item">
+            <img src="../static/img/2.png" width="1200" height="500px" alt="about">
+              <div class="slide-text">
+                <a>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
+                    organizations, cities and authorities that <b>inspire</b>. Specifically, we 
+                    enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
+                    the public sector provides services to inhabitants. We believe in people over profits-
+                    thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
+                </a>
+              </div>
+              <button type="button">ABOUT US</button> 
+          </div>
+          <div class="slide-item">
+            <img src="../static/img/2.png" width="1200" height="500px" alt="about">
+            <div class="slide-text">
+              <a>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
+                  organizations, cities and authorities that <b>inspire</b>. Specifically, we 
+                  enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
+                  the public sector provides services to inhabitants. We believe in people over profits-
+                  thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
+              </a>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-6">
-                <div class="card text-center">
-                    <div class="card-header">
-                        <h3>One in Three Women</h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">in the <span class="uppercase">EU</span><br />
-                            has experienced physical and/or sexual violence<br />
-                            since she was 15 years old <a tabindex="0" id="one-in-three-source">*</a>
-                        </p>
-                    </div>
-                </div>
+              <button type="button">CHANGEMAKERS</button>
+          </div>
+          <div class="slide-item">
+            <img src="../static/img/2.png" width="1200" height="500px" alt="about">
+            <div class="slide-text">
+              <a>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
+                  organizations, cities and authorities that <b>inspire</b>. Specifically, we 
+                  enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
+                  the public sector provides services to inhabitants. We believe in people over profits-
+                  thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
+              </a>
             </div>
-            <div class="col-sm-3"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="card text-center">
-                    <div class="card-header">
-                        <h3>22% of All women</h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">who ever had a partner had experienced physical or sexual violence by a partner.</p>
-                    </div>
-                </div>
+            <button type="button">PRODUCT</button>
+          </div>
+          <div class="slide-item">
+            <img src="../static/img/2.png" width="1200" height="500px" alt="about">
+            <div class="slide-text">
+              <a>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
+                  organizations, cities and authorities that <b>inspire</b>. Specifically, we 
+                  enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
+                  the public sector provides services to inhabitants. We believe in people over profits-
+                  thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
+              </a>
             </div>
-            <div class="col-sm-6">
-                <div class="card text-center">
-                    <div class="card-header">
-                        <h3>16.7 Million</h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">women have experienced physical/sexual violence in the course of 12 months before the survey interviews.</p>
-                    </div>
-                </div>
+            <button type="button">UPDATES</button>
+          </div>
+          <div class="slide-item">
+            <img src="../static/img/2.png" width="1200" height="500px" alt="about">
+            <div class="slide-text">
+              <a>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
+                  organizations, cities and authorities that <b>inspire</b>. Specifically, we 
+                  enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
+                  the public sector provides services to inhabitants. We believe in people over profits-
+                  thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
+              </a>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-6">
-                <div class="card text-center">
-                    <div class="card-header">
-                        <h3>Differences in EU States</h3>
-                    </div>
-                    <div class="card-body">
-                        <div id="EUStateCarousel" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="card-text item active">
-                                    <h3>Gender equality</h3>
-                                    <p>could lead to higher levels of disclosure
-                                        about violence against women. Incidents of
-                                        violence against women are more likely to be
-                                        openly addressed and challenged in societies
-                                        with greater equality.</p>
-                                </div>
-                                <div class="card-text item">
-                                    <h3>exposure to violence</h3>
-                                    <p>Women’s exposure to risk factors for violence
-                                        can be examined at the Member State level with
-                                        respect to factors that might increase exposure
-                                        to violence These include patterns in employment
-                                        (working outside the home), as well as socialisation
-                                        and lifestyle patterns (going out and dating).</p>
-                                </div>
-                                <div class="card-text item">
-                                    <h3>drinking habits</h3>
-                                    <p>There is evidence of the relationship between
-                                        perpetrators’ drinking habits and women’s
-                                        experiences of domestic violence. Different
-                                        drinking patterns in Member States may help
-                                        to explain certain aspects of violence against
-                                        women, which, in turn, need to be looked at
-                                        alongside patterns in individual perpetrators’
-                                        violent behaviour, which may not be limited to
-                                        violence against women.</p>
-                                </div>
-                                <div class="card-text item">
-                                    <h3>urbanisation</h3>
-                                    <p>Differences between countries in overall levels
-                                        of violent crime need to be looked at alongside
-                                        findings on violence against women. Urbanisation
-                                        in a Member State is generally related to higher
-                                        crime rates.</p>
-                                </div>
-                                <div class="card-text item">
-                                    <h3>private matter</h3>
-                                    <p>in societies in which intimate partner violence
-                                        is considered largely a private matter incidents
-                                        of violence against women are unlikely to be
-                                        shared with family and friends and are also
-                                        rarely reported to the police. Such reticence
-                                        may inhibit talking to survey interviewers.</p>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#EUStateCarousel" role="button" data-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#EUStateCarousel" role="button" data-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6"></div>
-            <div class="col-sm-6">
-                <div class="card text-center">
-                    <div class="card-header">
-                        <h3>An Increasing Problem</h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">During the COVID-19 pandemic, victims of domestic abuse are more likely to be stuck inside with their partners.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-10">
-                <h2>Increase in Hotline Calls</h2>
-                <h2>-During COVID-19 Crisis, Worldwide</h2>
-            </div>
-            <div class="col-sm-1"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 text-right">
-                <div class="card">
-                    <h3>WHO</h3>
-                </div>
-            </div>
-            <div class="col-sm-6 text-left">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Emergency Calls</h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">by women subjected to violence by their intimate partners jumped</p>
-                        <h1 class="card-text">60%</h1>
-                        <p class="card-text">across European member states in April, compared to the same period last year.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 text-right">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Online Inquiries</h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">to violence prevention support hotlines have increased up to</p>
-                        <h3 class="card-text">five times</h3>
-                        <p class="card-text">during COVID-19 restrictions.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 text-left">
-                <div class="card">
-                    <h3>WHO</h3>
-                </div>
-            </div>
-        </div>
+            <button type="button">APPLY</button>
+          </div>
+      </div>
+      <a href="#" class="play-next-button"></a>
+      <a href="#" class="play-previous-button"></a>
     </div>
-    <!-- Story: DataViz -->
-    <!-- Contact types with form buttons -->
-    <!-- Contact Form (Modal?) -->
-    <!-- quiz -->
-    <div class="quiz">
-        <p class="quiz-title">How much do you know?</h1>
-        <a href="#" class="button">Play</a>
+  </div>
+
+  <!-- domestic violence happens to anyone -->
+  <div class="domestic-violence">
+    <div class="domestic-title">
+      <a>Domestic violence<br>
+        can happen<br>
+        to everyone</a>
     </div>
+    <div class="domestic-subtitle">
+      <a>Regardless of nationality, gender, ethnicity,<br>
+         sexual preference, religion, social status or age.</a>
+    </div>
+  </div>
 
-    {% include 'footer.html' %}
+  <!-- assumptions quiz -->
+  <div class="quiz">
+    <div class="quiz-title">
+      <a>We did not know much about<br>
+        domestic violence either.. </a>
+    </div>
+    <div class="quiz-subtitle">
+      <a>Take the quiz to test your assumptions.</a>
+    </div>
+    <div class="quiz-button">
+      <button type="button">TAKE QUIZ</button>
+    </div>
+  </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Bootstrap plugins -->
-    <script src="../static/js/bootstrap.min.js"></script>
-    <!-- Custom JS -->
-    <script src="../static/js/landing_page.js"></script>
+  <!-- get involved -->
+  <div class="get-involved">
+    <div class="getinvolved-title">
+      <a>Make the 21st century about
+        equal rights for all</a>
+    </div>
+    <div class="getinvolved-subtitle">
+      <a>The folowing statistics are the <b>most recents</b> and reliable EU <br>
+        data-that we could find-that showcase the severity of domestic<br>
+        violence across national borders. The <b>data is 6 years old</b> and <br>
+        extracted from a report made by <i>FRA</i> in 2014.
+      </a>
+    </div>
+    <div class="getinvolved-button">
+      <button type="button">GET INVOLVED</button>
+    </div>
+  </div>
 
-    <script>
-        (function() {
+  <!-- visualization for abuse percentage -->
+  <div class="abuse-illustration">
+    <div class="ill1">
+      <img src="../static/img/2.png" width="550" height="400" alt="woman1">
+    </div>
+    <div class="ill2">
+      <img src="../static/img/2.png" width="550" height="400" alt="woman2">
+    </div>
+    <div class="ill3">
+      <img src="../static/img/2.png" width="550" height="400" alt="woman3">
+    </div>
+  </div>
+  <div class="abuse-percentage">
+    <div class="abuse-1">
+      <h1>1 in 3 women</h1>
+      <h5>globally are physicallyor sexually abused by an intimate partner, in her lifetime.</h5>
+      <small>*Women and girls affected globally, since age 15.</small>
+    </div>
+    <div class="abuse-2">
+      <h1>22% of women</h1>
+      <h5>in the EU who ever had a partner were physically or sexually abused by a partner.</h5>
+      <small>*Women and girls affected in the EU in 2014.</small>
+    </div>
+    <div class="abuse-3">
+      <h1>16.7M women</h1>
+      <h5>in the EU were physically or sexually abused over 12 months before the survey.</h5>
+      <small>*Women and girls affecred in the EU from 2013 - 2014.</small>
+    </div>
+  </div>
 
-        const slides = document.getElementById('slides')
-        const slidesInner = slides.querySelector('.slides-inner')
-        const images = slidesInner.querySelectorAll('img')
-        const slideWidth = slides.clientWidth
+  <!-- visualization worldmap -->
+  <div class="worldmap">
+    <!-- svg -->
+  </div>
 
-        const nextButton = slides.querySelector('.play-next-button')
-        const prevButton = slides.querySelector('.play-previous-button')
+  <!-- men abuse get involved -->
+  <div class="men">
+    <div class="men-img">
+      <img src="../static/img/sprague-2.jpg" width="360" height="350" alt="woman3">
+    </div>
+    <h1>There is limited data on abuse against <b>men</b>. We want to change that.</h1>
+    <button type="button">GET INVOLVED</button>
 
-        let index = 0
+  </div>
 
-        if (nextButton !== null) {
-            nextButton.addEventListener('click', function(e) {
-                e.preventDefault()
+  <!-- covid19 get involved -->
+  <div class="covid-19">
+    <div class="covid-title">
+      <h1>We must act urgently so save lives during COVID-19</h1>
+    </div>
+    <div class="covid-subtitle">
+      <h5>The shadow pandemic - There has been a significant escalation of domestic violence worldwide.</h5>
+    </div>
+    <div class= "covid1">
+      <small>We see a shadow pandemic growing, of domestic violence by an intimate partner or family member.  
+        As more countries report infection and lockdown, more domestic violence helplines and shelters 
+        accross the world are reporting rising calls for help.
+        <br>
+        <br>
+        Even before COVID-19, domestic violence was one of the greatest human rights violations. As the 
+        COVID-19 pandemic continues, the numbed of victims is likey to grow with mutiple impacts on women's 
+        wellbeing, sexual and reproductive health, mental health, and ability to participate and lead in the 
+        recovery of our sociaties and economy.
+      </small>
+    </div>
+    <div class="covid2">
+      <small>Confinement is fostering the tension and strain created by security, health, and money worries.
+        And it is increasing isolation for victims with violent partners, separating them from the people, 
+        and resources that can best help them. It's a perfect storm for controlling, violent behaviour behind closed doors. 
+        <br>
+        <br>
+        And in parallel, as health systems are stretching to breaking point, domestic violence shelters are also 
+        reaching capacity, a service deficit made worse when centres are repurposed for additional COVID-response. 
+      </small>
+    </div>
+    <button type="button">GET INVOLVED</button>
+  </div>
 
-                nextSlide()
-            })
-        }
+  <!-- visualization for crisis phone calls  -->
+  <div class="hotline-calls">
+    <!-- svg -->
+  </div>
 
-        if (prevButton !== null) {
-            prevButton.addEventListener('click', function(e) {
-                e.preventDefault()
+  <!-- stats for covid19 abuse  -->
+  <div class="covid-impact-stats">
+  <!-- svg -->
+  </div>
 
-                prevSlide()
-            })
-        }
+  <!-- eu innovation council recognition -->
+  <div class="eu-innovation">
+    <h1>We are awarded by the EU Innovation Council as: 
+        "A scalable solution to save lives during COVID-19."
+    </h1>
+  </div>
 
-        function nextSlide() {
-            index +=1 
-            if (index === images.length) {
-                index = 0 
-            }
-            slidesInner.style.transform = `translate3d(${index * -slideWidth}px,0,0)`
-        }
+  {% include 'footer.html' %}
 
-        function prevSlide() {
-            if(index < 0) {
-                index = images.length -1
-            } else  {
-                index -= 1
-            }
-            slidesInner.style.transform = `translate3d(${index * -slideWidth}px,0,0)`
-        }
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Custom JS -->
+  <script src="../static/js/landing_page.js"></script>
 
-        setInterval(function() {
+  <!-- carousel javascript -->
+  <script>
+  (function() {
+
+    const slides = document.getElementById('slides')
+    const slidesInner = slides.querySelector('.slides-inner')
+    const images = slidesInner.querySelectorAll('img')
+    const slideWidth = slides.clientWidth
+
+    const nextButton = slides.querySelector('.play-next-button')
+    const prevButton = slides.querySelector('.play-previous-button')
+
+    let index = 0
+
+    if (nextButton !== null) {
+        nextButton.addEventListener('click', function(e) {
+            e.preventDefault()
+
             nextSlide()
-        }, 5000)
+        })
+    }
 
+    if (prevButton !== null) {
+        prevButton.addEventListener('click', function(e) {
+            e.preventDefault()
 
-        }) ()
-    </script>
+            prevSlide()
+        })
+    }
+
+    function nextSlide() {
+        index +=1 
+        if (index === images.length) {
+            index = 0 
+        }
+        slidesInner.style.transform = `translate3d(${index * -slideWidth}px,0,0)`
+    }
+
+    function prevSlide() {
+        if(index < 0) {
+            index = images.length -1
+        } else  {
+            index -= 1
+        }
+        slidesInner.style.transform = `translate3d(${index * -slideWidth}px,0,0)`
+    }
+
+  setInterval(function() {
+      nextSlide()
+  }, 5000)
+  }) ()
+</script>
 </body>
 </html>
