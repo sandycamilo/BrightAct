@@ -9,7 +9,7 @@ from flask_mail import Message, Mail
 # from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
-mail = Mail()
+mail = Mail(app)
 # config
 # app.run('host'=localhost, debug=True)
 # app.config.from_pyfile('config.py')
@@ -53,24 +53,28 @@ def updates_page():
 def contact_page():
     form = ContactForm()
 
+@app.route("/send_message", methods=['GET', 'POST'])
+def send_message(): 
     if request.method == 'POST':
-        if form.validate() == False:
-            flash('All fields are required.')
-            return render_template('contact_page.html', form=form)
-        else:
-            msg = Message(subject=form.subject.data,
-                        sender=form.name.data,
-                        recipients=[os.getenv('MAIL_USERNAME')])
-            msg.body = """
+        name = request.form.get('name')
+        email = request.form.get('email')
+        message = request.form.get('message')
+        subject = request.form.get('subject')
+
+        msg = Message(
+            subject=subject,
+            sender=name,
+            recipients=[os.getenv('MAIL_USERNAME')])
+        msg.body = """
             From: %s <%s>
             %s
-            """ % (form.name.data, form.email.data, form.message.data)
-            mail.send(msg)
+            """ % (name, email, message)
 
-            return render_template('contact_page.html', success=True)
-
+        mail.send(msg)
+        return render_template("contact_page.html", success=True)
     elif request.method == 'GET':
-        return render_template('contact_page.html', form=form)
+        return render_template('contact_page.html')
+
 
 @app.route('/get_involved', methods=['GET', 'POST'])
 def get_involved():
