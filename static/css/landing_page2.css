@@ -1,0 +1,22 @@
+header {
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.navbar {
+    font-weight: bold;
+    background-color: rgba(225, 225, 225, 1);
+}
+
+.navbar a {
+    color: #FF5400;
+}
+
+.navbar #apply {
+    background-color: #FF5400;
+    color: white;
+    margin-top: 10px;
+    padding: 5px 45px;
+    border-radius: 25%;
+}
