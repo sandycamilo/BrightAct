@@ -1,12 +1,16 @@
 /* Style all font awesome icons */
 .fa {
   padding: 20px;
-  font-size: 30px;
+  font-size: 20px;
   width: 50px;
   text-align: center;
   text-decoration: none;
 }
 
+.list-unstyled {
+  position: relative;
+  left: 20px;
+}
 /* Add a hover effect if you want */
 .fa:hover {
   opacity: 0.7;
@@ -22,6 +26,7 @@
 
 /* Twitter */
 .fa-twitter {
+  height: 50px;
   background: #55ACEE;
   color: white;
 }

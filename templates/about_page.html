@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About BrightAct</title>
+    <title>About</title>
 
     <!--Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -37,7 +37,6 @@
     }
 
     .video {
-        /* Use flex to make the video take up 1 fraction */
         flex: 1;
         margin: .5rem;
         top: -20px;
@@ -45,8 +44,10 @@
 
     .clouds {
         position: relative;
-        height: 800px;
-        border-radius: 10px;
+        height: 600px;
+
+        border-radius: 20px;
+        padding: 0;
         overflow: hidden;
     }
 
@@ -64,9 +65,7 @@
     }
 
     .navButtons {
-        /* display: flex; */
         padding: .5rem;
-        /* flex-direction: row-reverse; */
         position: relative;
         left: 460px;
         top: 26px;
@@ -110,49 +109,49 @@
 
     .cultureTeam {
         display: flex;
-        padding: 1rem;
-        height: 300px;
-        background-color: rgb(242, 245, 241)
+        padding: 10px;
+        height: 200px;
+        border: solid 2px black;
     }
 
     .culturecards1 {
         display: flex;
-        padding: 1rem;
-        height: 850px;
-        background-color:azure;
+        padding: 20px;
+        height: 500px;
+        border: solid 1px black;
     }
 
     .culturecards2 {
         display: flex;
-        padding: 1rem;
-        height: 800px;
-        background-color:azure;
+        padding: 20px;
+        height: 500px;
+        border: solid 1px black;
     }
 
     .culTitle {
-        font-size: 55px;
+        font-size: 35px;
         position: relative;
         top: 20px;
-        left: 100px;
+        left: 45px;
         color:black;
     }
 
     .pvalues {
-        font-size: 20px;
-        background-color: whitesmoke;
+        font-size: 17px;
         position: relative;
         height: 40px;
-        top: 150px;
-        left: -310px;
+        top: 100px;
+        left: -100px;
     }
 
     .card {
-        max-width: 300px;
-        margin: 150px;
+        max-width: 200px;
+        margin: 100px;
+        height: 250px;
         text-align: center;
-        border: none;
+        border: solid grey 1px;
         position: relative;
-        left: 20px;
+        left: -200px;
         padding: 0;
         top: -540px;
     }
@@ -161,8 +160,8 @@
         display: flex;
         flex-direction: row;
         position: relative;
-        left: 250px;
-        top: 480px;
+        left: 260px;
+        top: 500px;
     }
 
     .teamcards2 {
@@ -170,7 +169,7 @@
         flex-direction: row;
         position: relative;
         left: 250px;
-        top: 400px;
+        top: 500px;
     }
 
     .teamitle {
@@ -186,105 +185,86 @@
 
     .techforgood {
         display: flex;
-        padding: 3rem;
-        height: 950px;
+        padding: 40px;
+        margin: 0;
+        height: 650px;
+        border: solid black 1px;
     }
 
     .techtitle {
-        font-size: 70px;
+        font-size: 56px;
         position: relative;
-        top: 20px;
-        left: 57%;
+        margin: 20px;
+        left: 550px;
         color:black;
         width: 100%;
+        height: 100px;
     }
 
     .techgoodinfo {
-        /* background-color: rgb(255, 140, 0); */
-        height: 400px;
+        height: 450px;
+        width: 100%;
+        padding: 2px;
         position: relative;
-        left: -202px;
-        font-size: 23px;
-        top: 160px;
+        left: -180px;
+        font-size: 15px;
+        top: 130px;
     }
-
-    /* .equalityinfo { */
-        /* height: 400px;
-        position: relative;
-        left: -850px;
-        font-size: 23px;
-        top: 50px;
-
-    } */
 
     .techlogo {
         position: relative;
         top: 100px;
-        left: -600px;
+        left: -450px;
     }
 
     .giveback {
         display: flex;
-        padding: 3rem;
-        height: 950px;
-        background-color: azure;
+        padding: 40px;
+        margin: 0;
+        height: 650px;
+        border: solid black 1px;
     }
 
     .givebacktitle {
-        font-size: 70px;
+        font-size: 56px;
         position: relative;
-        top: 20px;
-        left: 6%;
+        margin: 20px;
+        left: 50px;
         color:black;
         width: 100%;
+        height: 100px;
     }
 
     .givebackinfo {
-        /* background-color: rgb(255, 140, 0); */
-        height: 400px;
+        height: 450px;
+        width: 100%;
+        padding: 2px;
         position: relative;
-        left:-1402px;
-        font-size: 23px;
-        top: 160px;
-        height: 700px;
+        left: -980px;
+        font-size: 15px;
+        top: 130px;
     }
 
     .givelogo {
         position: relative;
         top: 100px;
-        left: 600px;
+        left: 400px;
     }
     </style>
 </head>
 <body>
-    <!-- Escape to Safety -->
-    {% include 'easy_out.html' %}
-    <!--Nav Bar-->
-    <nav class="navbar navbar-light" style="background-color: rgb(240, 107, 4);">
-        <a class="navbar-brand" style="color:white;">BrightAct</a>
-        <div class="navButtons">
-            <button type="button">changemakers</button>
-            <button type="button">product</button>
-            <button type="button">updates</button>
-        </div>
-         <!-- Search form -->
-        <div class="search">
-            <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
-                <!-- <i class="fas fa-search" aria-hidden="true"></i> -->
-                <input class="form-control form-control-ml ml-3 w-75" type="text" placeholder="search"
-                aria-label="Search">
-            </form>
-        </div>
-    </nav>
+    {% include 'aboutheader.html' %}
+
     <!--Founder/Storytelling-->
     <div class="founders">
-         <!--Video -->
+        <!--Video -->
         <div class="video">
             <video class= "clouds" autoplay loop muted>
                 <source src="../static/video/IMG_9229.mov" type="video/MP4">
             </video>
         </div>
-         <!--story-->
+
+        <!--story-->
         <div class="story">
             <div class="founderstory">
                 <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit</h1>
@@ -317,13 +297,10 @@
                         cupiditate officiis eligendi voluptates odio illum doloremque accusamus
                         sequi, enim cumque autem voluptate blanditiis.
                 </small>
-                <br>
-                <br>
-                <br>
-                <br>
            </div>
         </div>
     </div>
+
      <!--Culture & Team-->
      <div class="cultureTeam">
         <div class="culturetitle">
@@ -337,6 +314,11 @@
      </div>
     <div class="culturecards1">
         <div class="teamcards1">
+            <div class="card">
+                <img src="../static/img/BAlogo.png" style="width:100%">
+                <h1>John Doe</h1>
+                <p class="teamtitle">CEO & Founder, Example</p>
+            </div>
             <div class="card">
                 <img src="../static/img/BAlogo.png" style="width:100%">
                 <h1>John Doe</h1>
@@ -371,15 +353,20 @@
                 <h1>John Doe</h1>
                 <p class="teamtitle">CEO & Founder, Example</p>
             </div>
+            <div class="card">
+                <img src="../static/img/BAlogo.png" style="width:100%">
+                <h1>John Doe</h1>
+                <p class="teamtitle">CEO & Founder, Example</p>
+            </div>
         </div>
     </div>
     <!--Tech for Good-->
     <div class="techforgood">
         <div class="techtitle">
-            <p>Tech for Good</p>
+            <p class="techtitle">Tech for Good</p>
         </div>
         <div class="techlogo">
-            <img width="800px" height="600px" src="/static/img/BAlogo.png" alt="logo">
+            <img width="500px" height="400px" src="/static/img/BAlogo.png" alt="logo">
         </div>
         <div class="techgoodinfo">
             <h1>Lorem ipsum dolor sanditiis quos nobis quod, similique et maiores,.</h1>
@@ -388,18 +375,14 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, neque? Odit accusamus quos provident tempora mollitia quas debitis rerum! Obcaecati laboriosam ipsa dolor aliquam qui eum voluptate, error rem atque!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur consequuntur nobis beatae dolores maxime magnam provident, distinctio, doloremque illo incidunt totam corrupti accusamus veniam, tenetur sunt earum assumenda iure ducimus.</p>
         </div>
-        <!-- <div class="equalityinfo"> -->
-            <!-- <h1>lorem ipsum</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque accusamus molestias placeat assumenda laborum. Sequi dignissimos facere molestiae numquam beatae dolores saepe quos? Debitis repellendus laudantium eum est necessitatibus ratione?</p>
-        </div> -->
     </div>
     <!--Giveback-->
     <div class="giveback">
         <div class="givebacktitle">
-            <p>Giveback</p>
+            <p class="givebacktitle">Giveback</p>
         </div>
         <div class="givelogo">
-            <img width="800px" height="600px" src="/static/img/BAlogo.png" alt="logo">
+            <img width="500px" height="400px" src="/static/img/BAlogo.png" alt="logo">
         </div>
         <div class="givebackinfo">
             <h1>Lorem ipsum dolor sanditiis quos nobis quod, similique et maiores,.</h1>
@@ -409,11 +392,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur consequuntur nobis beatae dolores maxime magnam provident, distinctio, doloremque illo incidunt totam corrupti accusamus veniam, tenetur sunt earum assumenda iure ducimus.</p>
         </div>
     </div>
-    {% include 'footer.html' %}
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Bootstrap plugins -->
-    <script src="../static/js/bootstrap.min.js"></script>
+    {% include 'footer.html' %}
 </body>
 </html>

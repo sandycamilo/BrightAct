@@ -35,7 +35,7 @@
             position: relative;
             padding: 0;
             margin: 0;
-            left: 1%;
+            left: 2%;
             text-decoration: none;
         }
 
@@ -44,7 +44,7 @@
             padding: 0;
             margin: 0;
             position: relative;
-            right: -98px;
+            left: 120px;
             top: -18px;
         }
 
@@ -56,17 +56,16 @@
 
         li {
             position: relative;
-            right: -10%;
+            right: -5%;
             padding: 0;
             margin: 0px;
-            margin-left: 200px;
+            margin-left: 250px;
             font-size: 20px;
         }
 
         .nav {
             padding: 0;
             margin: 0px;
-
         }
     </style>
 </head>
@@ -74,9 +73,13 @@
     <!-- Escape to Safety -->
     {% include 'easy_out.html' %}
     <!-- Header: Navbar w/ Logo and About Us Link -->
-    <!-- {% include 'header.html' %} -->
+    {% include 'header.html' %}
 
-    <!-- header -->
+<<<<<<< HEAD
+    <!-- header
+=======
+    <!-- unique header for landing page -->
+>>>>>>> 3b7fae8b3526e65c3aa29e31a75b7499d5c71575
     <div class="nav-wrapper">
         <p class="brand-logo">BrightAct</p>
         <p class="sub-logo">An app against abuse.</p>
@@ -85,13 +88,31 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <ul class="nav navbar-nav">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Changemakers</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Updates</a></li>
+                <li><a href="{{ url_for('about_page') }}">About Us</a></li>
+                <li><a href="{{ url_for('changemakers_page') }}">Changemakers</a></li>
+                <li><a href="{{ url_for('product_page') }}">Product</a></li>
+                <li><a href="{{ url_for('updates_page') }}">Updates</a></li>
             </ul>
         </div>
+<<<<<<< HEAD
+    </nav> -->
+
+=======
     </nav>
+     <!-- Image slides -->
+     <div id="slides" class="play-slide-show" data-delay="3000" data-transition="400">
+        <div class="slides-inner">
+            <div class="slide-item">
+                <img src="static/video/IMG_3799.MOV" width="1200" height="auto" alt="BA">
+            </div>
+            <div class="slide-item2">
+                <img src="static/video/IMG_3799.MOV" width="1200" height="auto" at="BA">
+            </div>
+        </div>
+        <a href="#" class="play-next-button"></a>
+        <a href="#" class="play-previous-button"></a> 
+    </div>
+>>>>>>> 3b7fae8b3526e65c3aa29e31a75b7499d5c71575
     <!-- Storytelling section -->
     <div class="storytelling">
         <div class="row">
@@ -282,9 +303,13 @@
     <!-- Story: DataViz -->
     <!-- Contact types with form buttons -->
     <!-- Contact Form (Modal?) -->
+    <!-- quiz -->
+    <div class="quiz">
+        <p class="quiz-title">How much do you know?</h1>
+        <a href="#" class="button">Play</a>
+    </div>
 
     {% include 'footer.html' %}
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -292,5 +317,59 @@
     <script src="../static/js/bootstrap.min.js"></script>
     <!-- Custom JS -->
     <script src="../static/js/landing_page.js"></script>
+
+    <script>
+        (function() {
+
+        const slides = document.getElementById('slides')
+        const slidesInner = slides.querySelector('.slides-inner')
+        const images = slidesInner.querySelectorAll('img')
+        const slideWidth = slides.clientWidth
+
+        const nextButton = slides.querySelector('.play-next-button')
+        const prevButton = slides.querySelector('.play-previous-button')
+
+        let index = 0
+
+        if (nextButton !== null) {
+            nextButton.addEventListener('click', function(e) {
+                e.preventDefault()
+
+                nextSlide()
+            })
+        }
+
+        if (prevButton !== null) {
+            prevButton.addEventListener('click', function(e) {
+                e.preventDefault()
+
+                prevSlide()
+            })
+        }
+
+        function nextSlide() {
+            index +=1 
+            if (index === images.length) {
+                index = 0 
+            }
+            slidesInner.style.transform = `translate3d(${index * -slideWidth}px,0,0)`
+        }
+
+        function prevSlide() {
+            if(index < 0) {
+                index = images.length -1
+            } else  {
+                index -= 1
+            }
+            slidesInner.style.transform = `translate3d(${index * -slideWidth}px,0,0)`
+        }
+
+        setInterval(function() {
+            nextSlide()
+        }, 5000)
+
+
+        }) ()
+    </script>
 </body>
 </html>
