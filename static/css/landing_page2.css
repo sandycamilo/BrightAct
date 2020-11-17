@@ -53,3 +53,36 @@ header {
     color: black;
     font-size: 150%;
 }
+
+.carousel-section {
+    background-color: #CCCCFF;
+}
+
+.carousel-section p {
+    color: #FF5400;
+}
+
+.carousel-section .special {
+    color: black;
+    font-size: 110%;
+}
+
+.carousel-section .carousel-item a {
+    background-color: #FF5400;
+    color: white;
+    margin-top: 10px;
+    padding: 5px 45px;
+    border-radius: 25%;
+}
+
+.carousel-section .carousel {
+    margin-top: 50px;
+}
+
+.carousel-section .carousel-inner {
+    height: 300px;
+}
+
+.carousel-section .carousel-caption {
+    top: 50%;
+}
