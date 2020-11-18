@@ -9,7 +9,6 @@
 </head>
   <body>
     <div id="popup-btn">Contact Us</div>
-    <!-- <button id="popup-btn">Contact Us</button> -->
     <div id="form-container" class="is-hidden">
       {% if success %}
         <p class="js-success-message">We appreciate you contacting us. Your message has been sent!</p>
@@ -37,16 +36,16 @@
     <script>
       $(function() {
         $('#popup-btn').click(function() {
-          $('#form-container').fadeIn();
+          $('#form-container').removeClass('is-hidden');
         })
 
-        $(document).mouseup((e) => {
-          var container = $('#form-container');
+        // $(document).mouseup((e) => {
+        //   var container = $('#form-container');
 
-          if (!container.is(e.target) && container.has(e.target).length === 0) {
-            container.fadeOut();
-          }
-        });
+        //   if (!container.is(e.target) && container.has(e.target).length === 0) {
+        //     container.fadeOut();
+        //   }
+        // });
 
       });
 
@@ -64,6 +63,5 @@
       }
 
     </script>
-    <!-- <script src="../static/js/popup_form.js"></script>       -->
   </body>
 </html>
