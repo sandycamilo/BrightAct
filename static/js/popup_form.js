@@ -1,22 +1,12 @@
-// $(function() {
-//   $('#popup-btn').click(() => {
-//     alert('clicked');
-//     // $('.form-container').fadeToggle();
-//   })
-  
-//   $(document).mouseup((e) => {
-//     var container = $('.form-container');
+const form = document.getElementById('contact-form')
+const loading = document.querySelector('.js-loading')
+const successMessage = document.querySelector('.js-success-message')
 
-//     if (!container.is(e.target) && container.has(e.target).length === 0) {
-//       container.fadeOut();
-//     }
-//   });
-
-// });
-
-$(document).ready(function() {
-  $('#popup-btn').on('submit', function(e) {
-    e.prevenDefault()
-    alert("click")
-  })
+form.addEventListener('submit', () => {
+  showLoadingIndicator()
 })
+
+function showLoadingIndicator() {
+  form.classList.add('is-hidden')
+  loading.classList.remove('is-hidden')
+}

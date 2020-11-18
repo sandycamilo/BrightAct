@@ -6,6 +6,9 @@ app = Flask(__name__)
 def landing_page():
     return render_template('index.html')
 
+@app.route('/contact')
+def contact_page():
+    return render_template('contact.html')
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=os.eviron.get('PORT', 5000))

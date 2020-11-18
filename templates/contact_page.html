@@ -10,7 +10,7 @@
   <body>
     <div id="popup-btn">Contact Us</div>
     <!-- <button id="popup-btn">Contact Us</button> -->
-    <!-- <div class="form-container">
+    <div id="form-container" class="is-hidden">
       {% if success %}
         <p class="js-success-message">We appreciate you contacting us. Your message has been sent!</p>
       {% else %}
@@ -29,33 +29,41 @@
         </div>
       {% endif %}
       
-    </div> -->
+    </div>
     
     
-    <!-- <script>
-      const form = document.getElementById('contact-form')
-      const loading = document.querySelector('.js-loading')
-      const successMessage = document.querySelector('.js-success-message')
-
-      form.addEventListener('submit', e => {
-        showLoadingIndicator()
-      })
-      
-      function showLoadingIndicator() {
-        form.classList.add('is-hidden')
-        loading.classList.remove('is-hidden')
-      }
-
-    </script> -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
     <script>
       $(function() {
         $('#popup-btn').click(function() {
-          alert("click")
+          $('#form-container').fadeIn();
         })
+
+        $(document).mouseup((e) => {
+          var container = $('#form-container');
+
+          if (!container.is(e.target) && container.has(e.target).length === 0) {
+            container.fadeOut();
+          }
+        });
+
+      });
+
+      const form = document.getElementById('contact-form')
+      const loading = document.querySelector('.js-loading')
+      const successMessage = document.querySelector('.js-success-message')
+
+      form.addEventListener('submit', () => {
+        showLoadingIndicator()
       })
+
+      function showLoadingIndicator() {
+        form.classList.add('is-hidden')
+        loading.classList.remove('is-hidden')
+      }
+
     </script>
-<!-- <script src="../static/js/popup_form.js"></script>       -->
+    <!-- <script src="../static/js/popup_form.js"></script>       -->
   </body>
 </html>
