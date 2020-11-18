@@ -8,6 +8,7 @@
     
 </head>
   <body>
+    <button id="popup-btn">Contact Us</button>
     <div class="form-container">
       {% if success %}
         <p class="js-success-message">We appreciate you contacting us. Your message has been sent!</p>
@@ -43,7 +44,9 @@
         form.classList.add('is-hidden')
         loading.classList.remove('is-hidden')
       }
+
     </script>
-      
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src="../static/js/popup_form.js"></script>      
   </body>
 </html>

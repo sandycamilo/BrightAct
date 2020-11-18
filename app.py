@@ -49,10 +49,6 @@ def product_page():
 def updates_page():
     return render_template('updates_page.html')
 
-@app.route('/contact', methods=['GET', 'POST'])
-def contact_page():
-    form = ContactForm()
-
 @app.route("/send_message", methods=['GET', 'POST'])
 def send_message(): 
     if request.method == 'POST':
