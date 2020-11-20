@@ -97,11 +97,42 @@
 
 
                                 <datalist id="countries" name="country">
-                                  <option value="United States of America">
-                                  <option value="Sweden">
-                                  <option value="Norway">
-                                  <option value="England">
-                                  <option value="Ireland">
+
+                                    <option value="Austria">
+                                    <option value="Belgium">
+                                    <option value="Bulgaria">
+                                    <option value="Brazil">
+                                    <option value="Canada">
+                                    <option value="Croatia">
+                                    <option value="Cuba">
+                                    <option value="Cypress">
+                                    <option value="Czech Republic">
+                                    <option value="Denmark">
+                                    <option value="England">
+                                    <option value="Estonia">
+                                    <option value="Finland">
+                                    <option value="France">
+                                    <option value="Germany">
+                                    <option value="Greece">
+                                    <option value="Hungary">
+                                    <option value="Ireland">
+                                    <option value="Italy">
+                                    <option value="Latvia">
+                                    <option value="Lithuania">
+                                    <option value="Luxemburg">
+                                    <option value="Malta">
+                                    <option value="Mexico">
+                                    <option value="Netherlands">
+                                    <option value="Norway">
+                                    <option value="Poland">
+                                    <option value="Portugal">
+                                    <option value="Romania">
+                                    <option value="Slovakia">
+                                    <option value="Slovenia">
+                                    <option value="Spain">
+                                    <option value="Sweden">
+                                    <option value="United States of America">
+
                                 </datalist>
                                 </p>
                             </div>
@@ -164,7 +195,7 @@
                                 <input list="sectors" name="sector" id="sector">
                                 <p>
 
-                                <datalist id="countries" name="country">
+                                <datalist id="sectors" name="sector">
 
                                   <option value="Government (NGO)">
                                   <option value="Civic">
@@ -198,8 +229,8 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <label for="found" class="col-form-label">What is a good number where you can be reached?</label>
-                                <input type="text" class="form-control" id="found">
+                                <label for="phone" class="col-form-label">What is a good number where you can be reached?</label>
+                                <input type="text" class="form-control" id="phone">
                                 <p>
 
                                 </p>
@@ -245,6 +276,50 @@
 
             </div>
             <!-- End Found Modal -->
+
+            <!-- Begin Reason Modal -->
+            <div id="reasonModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="reason" class="col-form-label">Reason for contact:</label>
+                                <input list="reasons" name="reason" id="sector">
+                                <p>
+
+                                <datalist id="reasons" name="reason">
+
+                                  <option value="Collaboration">
+                                  <option value="Information">
+                                  <option value="Research">
+                                  <option value="Support">
+                                  <option value="Sales">
+                                  <option value="Other">
+
+                                </datalist>
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right" onclick="nextQ()">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Reason Modal -->
+
+            <!-- Begin Info Modal -->
+
+            <!-- End Info Modal -->
 
         </div>
         <script src="../static/js/getinvolved2.js"></script>
