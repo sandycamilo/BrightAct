@@ -1,5 +1,5 @@
 // Get the modal
-var modal = document.getElementById("myModal");
+var modal = document.getElementById("countryModal");
 
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
@@ -24,7 +24,7 @@ window.onclick = function(event) {
   }
 }
 
-// Intended to be a way to get the next question in a series of questions stored in an array of strings
-function(nextQ) {
-    document.getElementById("nextBtn");
-}
+// // Intended to be a way to get the next question in a series of questions stored in an array of strings
+// function(nextQ) {
+//     document.getElementById("nextBtn");
+// }

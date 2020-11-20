@@ -16,8 +16,8 @@
                 Get Started!
             </button>
 
-            <!-- The Modal -->
-            <div id="myModal" class="modal" id="get-involved" tabindex="-1" role="dialog">
+            <!-- Name Modal -->
+            <div id="nameModal" class="modal" tabindex="-1" role="dialog">
 
              <!-- Modal content -->
                  <div class="modal-content">
@@ -44,6 +44,185 @@
                  </div>
 
             </div>
+            <!-- End Name Modal -->
+
+            <!-- Orgaization Modal -->
+            <div id="nameModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="name" class="col-form-label">What is the name of your organization?</label>
+                                <input type="text" class="form-control" id="name">
+                                <p>
+
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right" onclick="nextQ()">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Organization Modal -->
+
+            <!-- Country Modal -->
+            <div id="countryModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="country" class="col-form-label">What is your country?</label>
+                                <input list="countries" name="country" id="country">
+                                <p>
+                                <!-- drop down auto-complete? data list?
+                                    https://www.w3schools.com/tags/tag_datalist.asp
+                                    - alphabetize countries -->
+
+
+                                <datalist id="countries" name="country">
+                                  <option value="United States of America">
+                                  <option value="Sweden">
+                                  <option value="Norway">
+                                  <option value="England">
+                                  <option value="Ireland">
+                                </datalist>
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right" onclick="nextQ()">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- end Country modal -->
+
+            <!-- Begin Role Modal -->
+            <div id="roleModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Form</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="role" class="col-form-label">What your role in that organization?</label>
+                                <input type="text" class="form-control" id="role">
+                                <p>
+
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right" onclick="nextQ()">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Role Modal -->
+
+            <!-- Sector Modal -->
+            <!-- It is from this input that the industry sector specific questions are determined -->
+            <div id="sectorModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Form</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="sector" class="col-form-label">What is your country?</label>
+                                <input list="sectors" name="sector" id="sector">
+                                <p>
+                                <!-- drop down auto-complete? data list?
+                                    https://www.w3schools.com/tags/tag_datalist.asp
+                                    - alphabetize countries -->
+
+
+                                <datalist id="countries" name="country">
+                                  <option value="Government (NGO)">
+                                  <option value="Civic">
+                                  <option value="University">
+                                  <option value="Public">
+
+                                </datalist>
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right" onclick="nextQ()">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Sector Modal-->
+
+            <!-- Begin Phone Modal -->
+            <div id="phoneModal" class="modal" id="get-involved" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Form</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="phone" class="col-form-label">What is a good number where you can be reached?</label>
+                                <input type="text" class="form-control" id="phone">
+                                <p>
+
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right" onclick="nextQ()">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Phone Modal -->
+
+            <!-- Begin Found Modal -->
+
+            <!-- End Found Modal -->
+
         </div>
         <script src="../static/js/getinvolved2.js"></script>
 
