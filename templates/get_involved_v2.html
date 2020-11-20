@@ -53,7 +53,7 @@
                  <div class="modal-content">
                      <div class="modal-header">
                           <span class="close">&times;</span>
-                          <h2>Get Involved</h2>
+                          <h2>Get Involved Questionaire</h2>
                     </div>
                     <div class="modal-body">
                         <form>
@@ -124,7 +124,7 @@
                  <div class="modal-content">
                      <div class="modal-header">
                           <span class="close">&times;</span>
-                          <h2>Get Involved Form</h2>
+                          <h2>Get Involved Questionaire</h2>
                     </div>
                     <div class="modal-body">
                         <form>
@@ -155,7 +155,7 @@
                  <div class="modal-content">
                      <div class="modal-header">
                           <span class="close">&times;</span>
-                          <h2>Get Involved Form</h2>
+                          <h2>Get Involved Questionaire</h2>
                     </div>
                     <div class="modal-body">
                         <form>
@@ -163,12 +163,9 @@
                                 <label for="sector" class="col-form-label">What is your country?</label>
                                 <input list="sectors" name="sector" id="sector">
                                 <p>
-                                <!-- drop down auto-complete? data list?
-                                    https://www.w3schools.com/tags/tag_datalist.asp
-                                    - alphabetize countries -->
-
 
                                 <datalist id="countries" name="country">
+
                                   <option value="Government (NGO)">
                                   <option value="Civic">
                                   <option value="University">
@@ -190,19 +187,19 @@
             <!-- End Sector Modal-->
 
             <!-- Begin Phone Modal -->
-            <div id="phoneModal" class="modal" id="get-involved" tabindex="-1" role="dialog">
+            <div id="phoneModal" class="modal" tabindex="-1" role="dialog">
 
              <!-- Modal content -->
                  <div class="modal-content">
                      <div class="modal-header">
                           <span class="close">&times;</span>
-                          <h2>Get Involved Form</h2>
+                          <h2>Get Involved Questionaire</h2>
                     </div>
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <label for="phone" class="col-form-label">What is a good number where you can be reached?</label>
-                                <input type="text" class="form-control" id="phone">
+                                <label for="found" class="col-form-label">What is a good number where you can be reached?</label>
+                                <input type="text" class="form-control" id="found">
                                 <p>
 
                                 </p>
@@ -220,7 +217,33 @@
             <!-- End Phone Modal -->
 
             <!-- Begin Found Modal -->
+            <div id="foundModal" class="modal" tabindex="-1" role="dialog">
 
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="found" class="col-form-label">How did you find BrightAct?</label>
+                                <input type="text" class="form-control" id="found">
+                                <p>
+
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right" onclick="nextQ()">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
             <!-- End Found Modal -->
 
         </div>
