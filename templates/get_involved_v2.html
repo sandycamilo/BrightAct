@@ -318,8 +318,35 @@
             <!-- End Reason Modal -->
 
             <!-- Begin Info Modal -->
+            <div id="infoModal" class="modal" tabindex="-1" role="dialog">
 
+                <!--Modal Content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                         <span class="close">&times;</span>
+                         <h2>Get Involved Questionaire</h2>
+                   </div>
+                   <div class="modal-body">
+                       <form>
+                           <div class="form-group">
+                               <label for="info" class="col-form-label">Would you like more information?</label>
+                               <p>
+                               <input type="checkbox" name="yes" id="yes"> Yes, please <br>
+                               <input type="checkbox" name="no" id="no"> No, thank you.
+                               </p>
+                           </div>
+                        </form>
+                   </div>
+                   <div class="modal-footer">
+                        <button class="btn btn-default text-right" onclick="nextQ()">
+                            NEXT
+                        </button>
+                   </div>
+                </div>
+
+           </div>
             <!-- End Info Modal -->
+
 
         </div>
         <script src="../static/js/getinvolved2.js"></script>
