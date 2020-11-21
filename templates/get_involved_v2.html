@@ -331,8 +331,8 @@
                            <div class="form-group">
                                <label for="info" class="col-form-label">Would you like more information?</label>
                                <p>
-                               <input type="checkbox" name="yes" id="yes"> Yes, please <br>
-                               <input type="checkbox" name="no" id="no"> No, thank you.
+                               <input type="checkbox" name="info-yes" id="info-yes" value="yes"> Yes, please <br>
+                               <input type="checkbox" name="info-no" id="info-no" value="no"> No, thank you.
                                </p>
                            </div>
                         </form>
@@ -346,6 +346,183 @@
 
            </div>
             <!-- End Info Modal -->
+
+            <!-- Begin NGO/Help Sector Specific Questions -->
+            <!-- Begin Target Group Modal -->
+            <div id="targetModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="target" class="col-form-label">What is your organization's target group?</label>
+                                <input type="text" class="form-control" id="target">
+                                <p>
+
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right" onclick="nextQ()">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Target Group Modal -->
+
+            <!-- Begin Branded Modal -->
+            <div id="brandedModal" class="modal" tabindex="-1" role="dialog">
+
+                <!--Modal Content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                         <span class="close">&times;</span>
+                         <h2>Get Involved Questionaire</h2>
+                   </div>
+                   <div class="modal-body">
+                       <form>
+                           <div class="form-group">
+                               <label for="branded" class="col-form-label">Are you interested in a branded profile for your organization in the app/website?</label>
+                               <p>
+                               <input type="checkbox" name="branded-yes" id="branded-yes" value="yes"> Yes, please <br>
+                               <input type="checkbox" name="branded-no" id="branded-no" value="no"> No, thank you.
+                               </p>
+                           </div>
+                        </form>
+                   </div>
+                   <div class="modal-footer">
+                        <button class="btn btn-default text-right" onclick="nextQ()">
+                            NEXT
+                        </button>
+                   </div>
+                </div>
+
+           </div>
+            <!-- End Branded Modal -->
+
+            <!-- Begin Collaboration Type Modal -->
+            <div id="collaborationModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="collaboration" class="col-form-label">What kind of collaboration are you interested in?</label>
+                                <input list="collaborationType" name="collaboration" id="collaboration">
+                                <p>
+
+                                <datalist id="collaborationType" name="collaborationType">
+
+                                  <option value="Chat Functions">
+                                  <option value="Education">
+                                  <option value="Other Support">
+                                  <option value="Profile Page">
+                                  <option value="Network">
+                                  <option value="Other">
+
+                                </datalist>
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right" onclick="nextQ()">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Collaboration Type Modal -->
+            <!-- End HGO/Help Sector Specific Questions -->
+
+            <!-- Begin Public Sector Specific Questions -->
+            <!-- Begin Organization Type Modal
+                    Input Type: Text -->
+            <div id="orgtypeModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="orgtype" class="col-form-label">What kind of organization? (municipality, local government, government, police, legal etc)</label>
+                                <input type="text" class="form-control" id="orgtype">
+                                <p>
+
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right" onclick="nextQ()">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Organization Type Modal -->
+
+            <!-- Begin Department Modal
+                Input Type: Text-->
+            <div id="deptModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="department" class="col-form-label">Within which department of your organization?</label>
+                                <input type="text" class="form-control" id="department">
+                                <p>
+
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right" onclick="nextQ()">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Department Modal -->
+
+            <!-- Branded Profile Question available in NGO/Help Sector Specific Questions -->
+
+            <!-- End Public Sector Specific Questions -->
+
+
+            <!-- Begin University Sector Specific Questions -->
+            <!-- department? -->
+
+            <!-- End University Sector Specific Questions -->
+
+            <!-- Civic -->
 
 
         </div>
