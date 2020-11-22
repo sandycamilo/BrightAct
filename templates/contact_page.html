@@ -9,7 +9,7 @@
 </head>
   <body>
     <div id="popup-btn">Contact Us</div>
-    <div id="form-container" class="is-hidden">
+    <div id="form-container">
       {% if success %}
         <p class="js-success-message">We appreciate you contacting us. Your message has been sent!</p>
       {% else %}
@@ -25,6 +25,7 @@
             <div class="loading-spinner">
               <svg><circle cx="25" cy="25" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg>
             </div>
+            <div class="loading-message is-hidden"></div>
         </div>
       {% endif %}
       
@@ -36,22 +37,22 @@
     <script>
       $(function() {
         $('#popup-btn').click(function() {
-          $('#form-container').removeClass('is-hidden');
+          $('#form-container').fadeToggle();
         })
+ 
+        $(document).mouseup((e) => {
+          var container = $('#form-container');
 
-        // $(document).mouseup((e) => {
-        //   var container = $('#form-container');
-
-        //   if (!container.is(e.target) && container.has(e.target).length === 0) {
-        //     container.fadeOut();
-        //   }
-        // });
-
+          if (!container.is(e.target) && container.has(e.target).length === 0) {
+            container.fadeOut();
+          }
+        });
       });
 
       const form = document.getElementById('contact-form')
       const loading = document.querySelector('.js-loading')
       const successMessage = document.querySelector('.js-success-message')
+      const loadingMessage = document.querySelector('.loading-message')
 
       form.addEventListener('submit', () => {
         showLoadingIndicator()
@@ -59,6 +60,7 @@
 
       function showLoadingIndicator() {
         form.classList.add('is-hidden')
+        loadingMessage.classList.remove('is-hidden')
         loading.classList.remove('is-hidden')
       }
 
