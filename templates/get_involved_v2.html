@@ -612,9 +612,91 @@
        </div>
         <!-- End Research Modal -->
 
-            <!-- End University Sector Specific Questions -->
+        <!-- End University Sector Specific Questions -->
 
-            <!-- Civic -->
+        <!-- Begin Civic Secotor Specific Questions -->
+            <!-- Branded Profile modal available above -->
+
+            <!-- Begin Legal Support Modal: data list -->
+            <div id="legalSupportModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="legalSupport" class="col-form-label">
+                                    What kind of legal support does your firm have documented experience in?
+                                </label>
+                                <input list="legalSuportType" name="legalSupport" id="legalSupport">
+                                <p>
+
+                                <datalist id="legalSuportType" name="legalSupportType">
+
+                                  <option value="Domestic Abuse or Violence">
+                                  <option value="Financial">
+                                  <option value="Other">
+
+                                </datalist>
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right" onclick="nextQ()">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Legal Support Modal -->
+
+            <!-- Begin Offer Users Modal: data list -->
+            <div id="offerUsersModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="offerUsers" class="col-form-label">
+                                    What does your firm want to offer for the users?
+                                </label>
+                                <input list="offerUsersType" name="offerUsers" id="offerUsers">
+                                <p>
+
+                                <datalist id="offerUsersType" name="offerUsersType">
+
+                                  <option value="Free Chat Support">
+                                  <option value="Pro Bono Cases">
+                                  <option value="Other">
+
+                                </datalist>
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right" onclick="nextQ()">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Offer Users Modal -->
+
+
+        <!-- End Civic Secotor Specific Questions -->
 
 
         </div>
