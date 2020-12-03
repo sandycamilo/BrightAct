@@ -83,7 +83,7 @@
                  <div class="modal-content">
                      <div class="modal-header">
                           <span class="close">&times;</span>
-                          <h2>Get Involved</h2>
+                          <h2>Get Involved Questionaire</h2>
                     </div>
                     <div class="modal-body">
                         <form>
@@ -191,7 +191,9 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <label for="sector" class="col-form-label">What is your country?</label>
+                                <label for="sector" class="col-form-label">
+                                    How would your organization’s industry sector best be categorized
+                                </label>
                                 <input list="sectors" name="sector" id="sector">
                                 <p>
 
@@ -518,7 +520,97 @@
 
 
             <!-- Begin University Sector Specific Questions -->
-            <!-- department? -->
+            <!-- Begin University Department Modal: text box -->
+            <div id="uniDeptModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="deptUni" class="col-form-label">What department of the university?</label>
+                                <input type="text" class="form-control" id="deptUni">
+                                <p>
+
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right" onclick="nextQ()">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+        <!-- End University Department Modal -->
+
+        <!-- Begin Level of Studies Modal: text box -->
+        <div id="studiesLevelModal" class="modal" tabindex="-1" role="dialog">
+
+         <!-- Modal content -->
+             <div class="modal-content">
+                 <div class="modal-header">
+                      <span class="close">&times;</span>
+                      <h2>Get Involved Questionaire</h2>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="studiesLevel" class="col-form-label">What is your current level of studies?</label>
+                            <input type="text" class="form-control" id="studiesLevel">
+                            <p>
+
+                            </p>
+                        </div>
+                     </form>
+                </div>
+                <div class="modal-footer">
+                     <button class="btn btn-default text-right" onclick="nextQ()">
+                         NEXT
+                     </button>
+                </div>
+             </div>
+
+        </div>
+
+        <!-- End Level of Studies Modal -->
+
+        <!-- Begin Research Modal: checkbox -->
+        <div id="researchModal" class="modal" tabindex="-1" role="dialog">
+
+            <!--Modal Content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                     <span class="close">&times;</span>
+                     <h2>Get Involved Questionaire</h2>
+               </div>
+               <div class="modal-body">
+                   <form>
+                       <div class="form-group">
+                           <label for="research" class="col-form-label">Is it for new or upcoming research?</label>
+                           <p>
+                           <input type="checkbox" name="research-new" id="research-new" value="new"> New <br>
+                           <input type="checkbox" name="research-upcoming" id="research-upcoming" value="upcoming"> Upcoming<br>
+                           <input type="checkbox" name="research-both" id="research-both" value="both"> Both
+                           </p>
+                       </div>
+                    </form>
+               </div>
+               <div class="modal-footer">
+                    <button class="btn btn-default text-right" onclick="nextQ()">
+                        NEXT
+                    </button>
+               </div>
+            </div>
+
+       </div>
+        <!-- End Research Modal -->
 
             <!-- End University Sector Specific Questions -->
 

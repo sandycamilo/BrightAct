@@ -1,5 +1,5 @@
 // Get the modal
-var modal = document.getElementById("collaborationModal");
+var modal = document.getElementById("sectorModal");
 
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
