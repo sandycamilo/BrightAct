@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- page title  -->
+  {% block head %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrightAct</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <link href="../static/css/base.css" rel="stylesheet">
+  <title>{% block title %}{% endblock %}</title>
+  {% endblock %}
+  <!-- navbar  -->
+  <nav class="navbar">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li><a href="#">BrightAct</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Changemakers</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Updates</a></li>
+            <li><a href="#" id="apply">Apply</a></li>
+            <!-- flappy bird escape feature -->
+            <li><button type="button" class="btn-light text-white">
+                <a class= "flappy" href="https://flappybird.io">Play Flappy Bird</a>
+                </button>
+            </li>
+        </ul>
+    </div>
+  </nav> 
+</head>
+<body> 
+  <!-- body content -->
+  <main>
+    {% block main %}{% endblock %}
+  </main>
+</body>
+<!-- footer -->
+<footer class='page-footer font-small grey  pt-4'>
+  <div class='container-fluid text-center'>
+       <div class='row'>
+       <hr class='clearfix w-100 d-md-none pb-3'>
+       <div class='col-md-6 mb-md-0 mb-3'>
+           <h5 class='text-uppercase'>♀️ Links ♀️</h5>
+           <ul class='list-unstyled'>
+               <li><a href='https://evaw-global-database.unwomen.org/en/countries/europe/sweden/2009/national-action-plan-on-the-implementation-of-sc-resolution-1325'>National Action Plan on the Implementation of UN SC Resolution 1325</a></li>
+               <li><a href='https://kvinnofridslinjen.se/en/'>Kvinnofridslinjen (Women's Resource)</a></li>
+               <li><a href='https://projectshield.withgoogle.com/landing'>Project Shield</a></li>
+               <li>
+                   <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-related="BrightAct_EU,https://twitter.com/sofie_wahlstrom" data-show-count="false">
+                       Tweet
+                   </a>
+                   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+                   </script>
+               </li>
+           </ul>
+       </div>
+       <div class='col-md-6 mb-md-0 mb-3'>
+           <h5 class='text-uppercase'>♂️ Links ♂️</h5>
+           <ul class='list-unstyled'>
+               <li><a href='https://evaw-global-database.unwomen.org/en/countries/europe/sweden/2008/global-network-men-engage'>Global Network Men Engage</a></li>
+               <li><a href='https://akillesjouren.se'>Akillesjouren (Men's Resource)</a></li>
+               <li><a href='https://www.government.se/articles/2019/02/review-of-swedens-action-to-combat-violence-against-women-and-domestic-violence/'>Review of Sweden’s action to combat violence against women and domestic violence</a></li>
+               <li>
+                   <div class="fb-share-button" data-href="https://brightact.org" data-layout="button" data-size="small">
+                       <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbrightact.org%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                           Share
+                       </a>
+                   </div>
+               </li>
+           </ul>
+       </div>
+       </div>
+  </div>
+  <div class='footer-copyright text-center py-3'>© 2020 Copyright:
+     <a href='https://brightact.org'> BrightAct.org</a>
+     <p>BRIGHTACT, 7 JÄRNVÄGSGATAN, HELSINGBORG, SKÅNE LÄN, 252 24, SWEDENSOFIE@BRIGHTACT.ORG</p>
+  </div>
+</footer>
+<!-- scripts/styles  -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap plugins -->
+    <!-- <script src="../static/js/bootstrap.min.js"></script> -->
+    <!-- Custom JS -->
+    <script src="../static/js/landing_page.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</html>

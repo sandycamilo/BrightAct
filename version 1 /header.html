@@ -1,81 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Bootstrap -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightAct</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
-        .nav-wrapper{
-            display: flex;
-            flex-direction: row;
-            padding-top: 15px;
-            padding-bottom:1px;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .brand-logo{
-            font-size: 70px;
-            color: black;
-            font-weight: bold;
-            position: relative;
-            padding: 0;
-            margin: 0;
-            left: -14%;
-            text-decoration: none;
-        }
-        .new1 {
-            border-top: 1px solid black;
-            padding: 0;
-            margin: 0;
-        } 
+    <!-- Custom CSS -->
+    <link href="../static/css/header.css" rel="stylesheet">
 
-        li {
-            position: relative;
-            right: -5%;
-            top: 35px;
-            left: 280px;
-            padding: 0;
-            margin: 0px;
-            margin-left: 100px;
-            font-size: 15px;
-        }
-
-        .nav {
-            padding: 0;
-            margin: 0px;
-            display: flex;
-            flex-direction: row;
-        }
-
-        .container-fluid {
-            display: flex;
-            flex-direction: column;
-        }
-
-        a:hover {
-         text-decoration: none;
-         color: black;
-
-        }
-    </style>
+</head>
 <body>
-     <!-- Escape to Safety -->
-     {% include 'easy_out.html' %}
+    <!-- header -->
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">BrightAct</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Changemakers</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Updates</a></li>
+                    <li><a href="#" id="apply">Apply</a></li>
+                    <!-- flappy bird escape feature -->
+                    <li><button type="button" class="btn-light text-white">
+                        <a class= "flappy" href="https://flappybird.io">Play Flappy Bird</a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <ul class="nav navbar-nav">
-                <a class="brand-logo" href="{{ url_for('landing_page') }}">BrightAct</a>
-                <li><a href="{{ url_for('about_page') }}">About Us</a></li>
-                <li><a href="{{ url_for('changemakers_page') }}">Changemakers</a></li>
-                <li><a href="{{ url_for('product_page') }}">Product</a></li>
-                <li><a href="{{ url_for('updates_page') }}">Updates</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap plugins -->
+    <script src="../static/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../static/js/landing_page.js"></script>
 </body>
 
+<!-- forms -->
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <img src="../static/img/BAlogo.png">
+        </div>
+   </div> -->
+   <!-- <div class="row text-center mt-5"> -->
+       <!-- Contact Form Link -->
+       <!-- <button class="btn btn-secondary rounded shadow">
+           <a href="{{ url_for('contact_page') }}">Contact</a>
+       </button> -->
+       <!-- Get Involved Link -->
+       <!-- <button class="btn btn-secondary rounded shadow">
+           <a href="{{ url_for('get_involved') }}">Get Involved</a>
+       </button>
+   </div>
+</div> -->
+
+<!-- forms -->
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <img src="../static/img/BAlogo.png">
+        </div>
+   </div>
+   <div class="row text-center mt-5"> -->
+       <!-- Contact Form Link -->
+       <!-- <button class="btn btn-secondary rounded shadow">
+           <a href="{{ url_for('contact_page') }}">Contact</a>
+       </button> -->
+       <!-- Get Involved Link -->
+       <!-- <button class="btn btn-secondary rounded shadow">
+           <a href="{{ url_for('get_involved') }}">Get Involved</a>
+       </button>
+   </div>
+</div -->
+
+<!-- megans code -->
+   <!-- Advocate
+    <section class="advocate text-center">
+        <div class="container">
+            <h4>BrightAct</h4>
+            <h3>We advocate for <span class="special" id="equality">equality</span> with thoughtful tech to address domestic violence <span id="globally" class="special">globally</span></h3>
+        </div>
+    </section> -->
+
+<!-- sandys code -->
+  <!-- navbar -->
+  <!-- <div class="navbar">
+    <h1>BrightAct</h1>
+   <ul>
+     <li>About</li>
+     <li>Changemakers</li>
+     <li>Product</li>
+     <li>Updates</li>
+     <button type="button">Apply</button>
+   </ul>
+  </div> -->
+
+<!-- elaines code -->
+    <!-- <script>
+    alert('Internet usage can be monitored and is impossible to erase completely. Remember to clear your browser history. If you need to leave this website quickly, click on the Play Flappy Bird button.');
+    </script>
+    <div class="sticky">
+        <h3 class="text-right">
+            <button type="button" class="btn-light text-white">
+            <a class= "flappy" href="https://flappybird.io">Play Flappy Bird</a>
+            </button>
+        </h3>
+    </div> */ -->
+    

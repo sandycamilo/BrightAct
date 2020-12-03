@@ -1,0 +1,123 @@
+  <!-- carousel -->
+  <div class="carousel">
+    <div id="slides" class="play-slide-show" data-delay="3000" data-transition="400">
+      <div class="slides-inner">
+          <div class="slide-item">
+            <img src="../static/img/2.png" width="1200" height="500px" alt="about">
+              <div class="slide-text">
+                <a>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
+                    organizations, cities and authorities that <b>inspire</b>. Specifically, we 
+                    enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
+                    the public sector provides services to inhabitants. We believe in people over profits-
+                    thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
+                </a>
+              </div>
+              <button type="button">ABOUT US</button> 
+          </div>
+          <div class="slide-item">
+            <img src="../static/img/2.png" width="1200" height="500px" alt="about">
+            <div class="slide-text">
+              <a>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
+                  organizations, cities and authorities that <b>inspire</b>. Specifically, we 
+                  enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
+                  the public sector provides services to inhabitants. We believe in people over profits-
+                  thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
+              </a>
+            </div>
+              <button type="button">CHANGEMAKERS</button>
+          </div>
+          <div class="slide-item">
+            <img src="../static/img/2.png" width="1200" height="500px" alt="about">
+            <div class="slide-text">
+              <a>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
+                  organizations, cities and authorities that <b>inspire</b>. Specifically, we 
+                  enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
+                  the public sector provides services to inhabitants. We believe in people over profits-
+                  thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
+              </a>
+            </div>
+            <button type="button">PRODUCT</button>
+          </div>
+          <div class="slide-item">
+            <img src="../static/img/2.png" width="1200" height="500px" alt="about">
+            <div class="slide-text">
+              <a>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
+                  organizations, cities and authorities that <b>inspire</b>. Specifically, we 
+                  enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
+                  the public sector provides services to inhabitants. We believe in people over profits-
+                  thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
+              </a>
+            </div>
+            <button type="button">UPDATES</button>
+          </div>
+          <div class="slide-item">
+            <img src="../static/img/2.png" width="1200" height="500px" alt="about">
+            <div class="slide-text">
+              <a>BrightAct is a <b>benefit</b> corporation based in Sweden. We partner with 
+                  organizations, cities and authorities that <b>inspire</b>. Specifically, we 
+                  enable <b>collaboration</b> accross borders using thoughtful tech to inovate how 
+                  the public sector provides services to inhabitants. We believe in people over profits-
+                  thus commit to limit and reinvest profit to <b>create impact</b> where most needed.
+              </a>
+            </div>
+            <button type="button">APPLY</button>
+          </div>
+      </div>
+      <a href="#" class="play-next-button"></a>
+      <a href="#" class="play-previous-button"></a>
+    </div>
+  </div>
+  <!-- carousel javascript -->
+  <script>
+  (function() {
+
+    const slides = document.getElementById('slides')
+    const slidesInner = slides.querySelector('.slides-inner')
+    const images = slidesInner.querySelectorAll('img')
+    const slideWidth = slides.clientWidth
+
+    const nextButton = slides.querySelector('.play-next-button')
+    const prevButton = slides.querySelector('.play-previous-button')
+
+    let index = 0
+
+    if (nextButton !== null) {
+        nextButton.addEventListener('click', function(e) {
+            e.preventDefault()
+
+            nextSlide()
+        })
+    }
+
+    if (prevButton !== null) {
+        prevButton.addEventListener('click', function(e) {
+            e.preventDefault()
+
+            prevSlide()
+        })
+    }
+
+    function nextSlide() {
+        index +=1 
+        if (index === images.length) {
+            index = 0 
+        }
+        slidesInner.style.transform = `translate3d(${index * -slideWidth}px,0,0)`
+    }
+
+    function prevSlide() {
+        if(index < 0) {
+            index = images.length -1
+        } else  {
+            index -= 1
+        }
+        slidesInner.style.transform = `translate3d(${index * -slideWidth}px,0,0)`
+    }
+
+  setInterval(function() {
+      nextSlide()
+  }, 5000)
+  }) ()
+</script>
+</body>
+</html>
