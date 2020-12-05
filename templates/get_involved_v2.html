@@ -8,7 +8,7 @@
 
 
         <div class="container">
-            <h1>Get Involved</h1>
+            <h1>Get Involved Questionaire</h1>
 
 
             <!-- Trigger/Open The Modal -->
@@ -17,7 +17,7 @@
             </button>
 
             <!-- Name Modal -->
-            <div id="nameModal" class="modal" tabindex="-1" role="dialog">
+            <div id="personNameModal" class="modal" tabindex="-1" role="dialog">
 
              <!-- Modal content -->
                  <div class="modal-content">
@@ -28,8 +28,8 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <label for="name" class="col-form-label">Your Name:</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <label for="personName" class="col-form-label">Your Name:</label>
+                                <input type="text" class="form-control" id="personName">
                                 <p>
 
                                 </p>
@@ -37,7 +37,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right" onclick="nextQ()">
+                         <button class="btn btn-default text-right next-question">
                              NEXT
                          </button>
                     </div>
@@ -47,7 +47,7 @@
             <!-- End Name Modal -->
 
             <!-- Orgaization Modal -->
-            <div id="nameModal" class="modal" tabindex="-1" role="dialog">
+            <div id="orgNameModal" class="modal" tabindex="-1" role="dialog">
 
              <!-- Modal content -->
                  <div class="modal-content">
@@ -58,8 +58,8 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <label for="name" class="col-form-label">What is the name of your organization?</label>
-                                <input type="text" class="form-control" id="name">
+                                <label for="orgName" class="col-form-label">What is the name of your organization?</label>
+                                <input type="text" class="form-control" id="orgName">
                                 <p>
 
                                 </p>
@@ -67,7 +67,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right" onclick="nextQ()">
+                         <button class="btn btn-default text-right next-question">
                              NEXT
                          </button>
                     </div>
@@ -139,7 +139,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right" onclick="nextQ()">
+                         <button class="btn btn-default text-right next-question">
                              NEXT
                          </button>
                     </div>
@@ -169,7 +169,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right" onclick="nextQ()">
+                         <button class="btn btn-default text-right next-question">
                              NEXT
                          </button>
                     </div>
@@ -210,7 +210,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right" onclick="nextQ()">
+                         <button class="btn btn-default text-right next-question">
                              NEXT
                          </button>
                     </div>
@@ -240,7 +240,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right" onclick="nextQ()">
+                         <button class="btn btn-default text-right next-question">
                              NEXT
                          </button>
                     </div>
@@ -270,7 +270,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right" onclick="nextQ()">
+                         <button class="btn btn-default text-right next-question">
                              NEXT
                          </button>
                     </div>
@@ -310,7 +310,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right" onclick="nextQ()">
+                         <button class="btn btn-default text-right next-question">
                              NEXT
                          </button>
                     </div>
@@ -340,7 +340,7 @@
                         </form>
                    </div>
                    <div class="modal-footer">
-                        <button class="btn btn-default text-right" onclick="nextQ()">
+                        <button class="btn btn-default text-right next-question">
                             NEXT
                         </button>
                    </div>
@@ -371,7 +371,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right" onclick="nextQ()">
+                         <button class="btn btn-default text-right next-question">
                              NEXT
                          </button>
                     </div>
@@ -401,7 +401,7 @@
                         </form>
                    </div>
                    <div class="modal-footer">
-                        <button class="btn btn-default text-right" onclick="nextQ()">
+                        <button class="btn btn-default text-right next-question">
                             NEXT
                         </button>
                    </div>
@@ -441,7 +441,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right" onclick="nextQ()">
+                         <button class="btn btn-default text-right next-question">
                              NEXT
                          </button>
                     </div>
@@ -454,7 +454,7 @@
             <!-- Begin Public Sector Specific Questions -->
             <!-- Begin Organization Type Modal
                     Input Type: Text -->
-            <div id="orgtypeModal" class="modal" tabindex="-1" role="dialog">
+            <div id="orgTypeModal" class="modal" tabindex="-1" role="dialog">
 
              <!-- Modal content -->
                  <div class="modal-content">
@@ -465,8 +465,8 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <label for="orgtype" class="col-form-label">What kind of organization? (municipality, local government, government, police, legal etc)</label>
-                                <input type="text" class="form-control" id="orgtype">
+                                <label for="orgType" class="col-form-label">What kind of organization? (municipality, local government, government, police, legal etc)</label>
+                                <input type="text" class="form-control" id="orgType">
                                 <p>
 
                                 </p>
@@ -474,7 +474,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right" onclick="nextQ()">
+                         <button class="btn btn-default text-right next-question">
                              NEXT
                          </button>
                     </div>
@@ -505,7 +505,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right" onclick="nextQ()">
+                         <button class="btn btn-default text-right next-question">
                              NEXT
                          </button>
                     </div>
@@ -541,7 +541,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right" onclick="nextQ()">
+                         <button class="btn btn-default text-right next-question">
                              NEXT
                          </button>
                     </div>
@@ -571,7 +571,7 @@
                      </form>
                 </div>
                 <div class="modal-footer">
-                     <button class="btn btn-default text-right" onclick="nextQ()">
+                     <button class="btn btn-default text-right next-question">
                          NEXT
                      </button>
                 </div>
@@ -603,7 +603,7 @@
                     </form>
                </div>
                <div class="modal-footer">
-                    <button class="btn btn-default text-right" onclick="nextQ()">
+                    <button class="btn btn-default text-right next-question">
                         NEXT
                     </button>
                </div>
@@ -647,7 +647,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right" onclick="nextQ()">
+                         <button class="btn btn-default text-right next-question">
                              NEXT
                          </button>
                     </div>
@@ -686,7 +686,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right" onclick="nextQ()">
+                         <button class="btn btn-default text-right next-question">
                              NEXT
                          </button>
                     </div>
