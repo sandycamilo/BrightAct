@@ -1,7 +1,7 @@
 # Prototype for BrightAct App website
 
 
-# To Run
+# To Run Locally
 
 - clone to desired local directory
 - install a virtual environment by entering the following in terminal `python3 -m venv env`
@@ -16,5 +16,6 @@
 
 
 
+# Deployed At:
 
 https://brightact.herokuapp.com/

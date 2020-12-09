@@ -3,12 +3,15 @@
 // // Get the modal
 // var modal = document.getElementById("sectorModal");
 //
+// hide all modals until the startButton is clicked
+// hideAllModals();
+
 // // Get the button that opens the modal
-// var btn = document.getElementById("myBtn");
-//
-// // Get the <span> element that closes the modal
+// var startButton = document.getElementById("startButton");
+
+// Get the <span> element that closes the modal
 // var span = document.getElementsByClassName("close")[0];
-//
+
 // // When the user clicks on the button, open the modal
 // btn.onclick = function() {
 //   modal.style.display = "block";
@@ -44,17 +47,46 @@ const modalIds = ["personNameModal", "orgNameModal", "countryModal", "roleModal"
 
 let modalIndex = 0;
 
+
 document.querySelector("body").addEventListener("click", (e) => {
     if(e.target.matches(".next-question")) {
-        modalIndex += 1;
-        hideAllModals();
-        console.log("Area of code reached")
+        // modalIndex += 1; // gets next modal
+        let selectedModalID = e.target.dataset.nextId;
+        ///  repeat the following for all variations
+        // get modalID then determine where to next
+        // ifthen else or switch
+        switch(selectedModalID){
+            // goal: if id matches sector value
+            case "sectorValue":
+                const sector = document.getElementById('sectors').value;
+                if(sector === "Civic") {
+                    selectedModalID = "legalSupportModal"
+
+                } else if(sector === "Public") {
+                        // modalIndex = modalIds.indexOf("orgTypeModal")
+                        selectedModalID = "orgTypeModal"
+                } else if(sector === "University") {
+                        // modalIndex = modalIds.indexOf("uniDeptModal")
+                        selectedModalID = "uniDeptModal"
+                } else if(sector === "Government (NGO)") {
+                        // modalIndex = modalIds.indexOf("targetModal")
+                        selectedModalID = "targetModel"
+                }
+                break;
+            default:
+
+                selectedModalID = modalIds[modalIndex]
+        }
         // what was last answer and what should next modal be?
-        showModal(modalIds[modalIndex])
+        showModal(selectedModalID)
+    } else if (e.target.matches("#startButton")) {
+        modalIndex = 0;
+        showModal(modalIds[0])
     }
 })
 
 function showModal(id) {
+    hideAllModals();
     document.getElementById(id).style.display = "block";
 }
 
@@ -65,7 +97,3 @@ function hideModal(id) {
 function hideAllModals() {
     modalIds.forEach((id) => {hideModal(id)})
 }
-
-hideAllModals()
-
-showModal(modalIds[0])

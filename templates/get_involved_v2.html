@@ -6,20 +6,28 @@
     </head>
     <body>
         <div class="container">
-            <img src="../static/img/undraw_connected.png">
+            <h1>Get Involved Questionaire</h1>
+
+            <br>
+            <img src="../static/img/undraw_connected.png" width="50%" length="50%">
             <p>
                 Connect with BrightAct to Get Involved and become a ChangeMaker!
             </p>
         </div>
 
         <div class="container">
-            <h1>Get Involved Questionaire</h1>
+
 
 
             <!-- Trigger/Open The Modal -->
-            <button id="myBtn" type="button" class="btn btn-success rounded shadow">
+            <button id="startButton" type="button" class="btn btn-success rounded shadow start-button">
                 Get Started!
             </button>
+            <p>
+                <br>
+                <br>
+                </br>
+            </p>
 
             <!-- Name Modal -->
             <div id="personNameModal" class="modal" tabindex="-1" role="dialog">
@@ -28,7 +36,7 @@
                  <div class="modal-content">
                      <div class="modal-header">
                           <span class="close">&times;</span>
-                          <h2>Get Involved</h2>
+                          <h2>Get Involved Questionaire</h2>
                     </div>
                     <div class="modal-body">
                         <form>
@@ -42,7 +50,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right next-question">
+                         <button class="btn btn-default text-right next-question" data-nextId="orgNameModal">
                              NEXT
                          </button>
                     </div>
@@ -72,7 +80,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right next-question">
+                         <button class="btn btn-default text-right next-question" data-nextId="countryModal">
                              NEXT
                          </button>
                     </div>
@@ -144,7 +152,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right next-question">
+                         <button class="btn btn-default text-right next-question" data-nextId="roleModal">
                              NEXT
                          </button>
                     </div>
@@ -174,7 +182,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right next-question">
+                         <button class="btn btn-default text-right next-question" data-nextId="sectorModal">
                              NEXT
                          </button>
                     </div>
@@ -215,7 +223,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right next-question">
+                         <button class="btn btn-default text-right next-question" data-nextId="phoneModal">
                              NEXT
                          </button>
                     </div>
@@ -245,7 +253,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right next-question">
+                         <button class="btn btn-default text-right next-question" data-nextId="foundModal">
                              NEXT
                          </button>
                     </div>
@@ -275,7 +283,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right next-question">
+                         <button class="btn btn-default text-right next-question" data-nextId="reasonModal">
                              NEXT
                          </button>
                     </div>
@@ -315,7 +323,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right next-question">
+                         <button class="btn btn-default text-right next-question" data-nextId="infoModal">
                              NEXT
                          </button>
                     </div>
@@ -345,7 +353,7 @@
                         </form>
                    </div>
                    <div class="modal-footer">
-                        <button class="btn btn-default text-right next-question">
+                        <button class="btn btn-default text-right next-question" data-nextId="sectorValue">
                             NEXT
                         </button>
                    </div>
@@ -376,7 +384,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right next-question">
+                         <button class="btn btn-default text-right next-question" data-nextId="collaborationModal">
                              NEXT
                          </button>
                     </div>
@@ -385,35 +393,7 @@
             </div>
             <!-- End Target Group Modal -->
 
-            <!-- Begin Branded Modal -->
-            <div id="brandedModal" class="modal" tabindex="-1" role="dialog">
 
-                <!--Modal Content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                         <span class="close">&times;</span>
-                         <h2>Get Involved Questionaire</h2>
-                   </div>
-                   <div class="modal-body">
-                       <form>
-                           <div class="form-group">
-                               <label for="branded" class="col-form-label">Are you interested in a branded profile for your organization in the app/website?</label>
-                               <p>
-                               <input type="checkbox" name="branded-yes" id="branded-yes" value="yes"> Yes, please <br>
-                               <input type="checkbox" name="branded-no" id="branded-no" value="no"> No, thank you.
-                               </p>
-                           </div>
-                        </form>
-                   </div>
-                   <div class="modal-footer">
-                        <button class="btn btn-default text-right next-question">
-                            NEXT
-                        </button>
-                   </div>
-                </div>
-
-           </div>
-            <!-- End Branded Modal -->
 
             <!-- Begin Collaboration Type Modal -->
             <div id="collaborationModal" class="modal" tabindex="-1" role="dialog">
@@ -446,7 +426,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right next-question">
+                         <button class="btn btn-default text-right next-question" data-nextId="brandedModal">
                              NEXT
                          </button>
                     </div>
@@ -454,6 +434,37 @@
 
             </div>
             <!-- End Collaboration Type Modal -->
+            <!-- Begin Branded Modal -->
+            <div id="brandedModal" class="modal" tabindex="-1" role="dialog">
+
+                <!--Modal Content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                         <span class="close">&times;</span>
+                         <h2>Get Involved Questionaire</h2>
+                   </div>
+                   <div class="modal-body">
+                       <form>
+                           <div class="form-group">
+                               <label for="branded" class="col-form-label">Are you interested in a branded profile for your organization in the app/website?</label>
+                               <p>
+                               <input type="checkbox" name="branded-yes" id="branded-yes" value="yes"> Yes, please <br>
+                               <input type="checkbox" name="branded-no" id="branded-no" value="no"> No, thank you.
+                               </p>
+                           </div>
+                        </form>
+                   </div>
+                   <div class="modal-footer">
+                        <button class="btn btn-default text-right next-question" data-nextId="tyModal">
+                            NEXT
+                        </button>
+                   </div>
+                </div>
+
+           </div>
+            <!-- End Branded Modal -->
+
+
             <!-- End HGO/Help Sector Specific Questions -->
 
             <!-- Begin Public Sector Specific Questions -->
@@ -479,7 +490,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right next-question">
+                         <button class="btn btn-default text-right next-question" data-nextId="deptModal">
                              NEXT
                          </button>
                     </div>
@@ -510,7 +521,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right next-question">
+                         <button class="btn btn-default text-right next-question" data-nextId="brandedModal">
                              NEXT
                          </button>
                     </div>
@@ -546,7 +557,7 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right next-question">
+                         <button class="btn btn-default text-right next-question" data-nextId="studiesLevelModal">
                              NEXT
                          </button>
                     </div>
@@ -576,7 +587,7 @@
                      </form>
                 </div>
                 <div class="modal-footer">
-                     <button class="btn btn-default text-right next-question">
+                     <button class="btn btn-default text-right next-question" data-nextId="researchModal">
                          NEXT
                      </button>
                 </div>
@@ -608,7 +619,7 @@
                     </form>
                </div>
                <div class="modal-footer">
-                    <button class="btn btn-default text-right next-question">
+                    <button class="btn btn-default text-right next-question" data-nextId="tyModal">
                         NEXT
                     </button>
                </div>
