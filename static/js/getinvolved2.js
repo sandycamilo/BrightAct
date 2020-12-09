@@ -74,7 +74,7 @@ document.querySelector("body").addEventListener("click", (e) => {
                 }
                 break;
             default:
-
+                modalIndex = modalIndex + 1
                 selectedModalID = modalIds[modalIndex]
         }
         // what was last answer and what should next modal be?
