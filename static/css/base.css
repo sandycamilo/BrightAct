@@ -5,6 +5,20 @@ header {
   position: sticky;
 }
 
+.main {
+  position: relative;
+  left: -160px;
+  font-size: 60px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.sub {
+  position: relative;
+  left: 280px;
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+}
+
 .navbar {
   font-weight: bold;
   background-color: rgba(225, 225, 225, 1);
@@ -33,7 +47,7 @@ header {
   color: white;
   margin-top: 10px;
   padding: 5px 45px;
-  border-radius: 25%;
+  border-radius: none;
 }
 
 .navbar:hover #apply {
@@ -54,6 +68,7 @@ header {
   color: black;
   font-size: 150%;
 }
+
 
 /* flappy bird escape to safety feauture */
 #overlay {
