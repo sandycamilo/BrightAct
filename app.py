@@ -83,7 +83,7 @@ def get_involved():
             flash('All fields are required.')
             print("**** Validate False ****")
             print(form.errors)
-            return render_template('get_involved.html', form=form)
+            return render_template('get_involved_v2.html', form=form)
         else:
             msg = Message(subject="Get Involved Form",
                         sender=form.name.data,
