@@ -4,7 +4,7 @@
   }
 
   body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: font-family: 'Roboto', sans-serif;
     color: tomato;
     font-size: 18px;
     overflow-x: hidden;
@@ -74,6 +74,7 @@
     width: 100%;
     height: 800px;
     margin: 10px;
+    margin-top: -10px;
   }
   /* placeholder for video */
   .placeholder {
@@ -83,13 +84,11 @@
 
   /* equality globally */
   .equality {
-    background-color: rgba(255, 234, 204, 0.399);
-    /* border: solid .5px black; */
+    background-color: rgba(245, 231, 211, 0.399);
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 300px;
-    /* margin: 10px; */
   }
 
   .equality-Brightact {
@@ -97,17 +96,32 @@
     margin: 10px;
     height: 100px;
     position: relative;
-    left: 45%;
+    left: 63%;
     top: 40px;
   }
 
+  .equality-Brightact h5 {
+    font-size: 22px;
+    position: relative;
+    left: -300px;
+    color: tomato;
+  }
+
   .equality-paragraph h1 {
-    font-size: 30px;
+    font-size: 26px;
     margin: 10px;
     padding: 20px;
     position: relative;
-    left: 25%;
+    left: 32%;
     top: -45px;
+    color: tomato;
+    line-height: 40px;
+    
+  }
+
+  .equality-paragraph b {
+    font-size: 39px;
+    color: black;
   }
 
   /* carousel */
@@ -252,16 +266,15 @@
   /* domestic violence happens to anyone */
   .domestic-violence {
     background-color: rgb(240, 240, 240);
-    /* border: solid .5px black; */
     position: relative;
     top: 5px;
     width: 100%;
-    height: 600px;
-    /* margin: 10px; */
+    height: 700px;
+    padding-top: 20px;
   }
 
   .domestic-title {
-    height: 400px;
+    height: 500px;
     position: relative;
     top: 22%;
     text-align: center;
@@ -270,51 +283,56 @@
   .domestic-title a {
     font-size: 88px;
     line-height: 79px;
+    text-decoration: none;
+    color: tomato;
+    line-height: 100px;
+    padding-bottom: 80px;
   }
-
-  .domestic-subtitle {
-    /* border: solid black .5px; */
-    width: 700px;
-    margin: 20px;
-    padding: 20px;
-    font-size: 18px;
-    line-height: 32px;
+  
+  .domestic-subtitle a {
+    width: 800px;
+    font-size: 19px;
+    line-height: 30px;
     position: relative;
-    left: 54%;
-    top: -7%;
+    color: tomato;
+    text-decoration: none;
+    left: 50%;
+    top: -9%;
   }
 
   /* assumptions quiz */
   .quiz {
     background-color: rgb(255, 171, 119);
-    /* border: solid .5px black; */
     width: 100%;
-    height: 400px;
-    /* margin: 10px; */
+    height: 360px;
   }
 
   .quiz-title a {
-    width: 300px;
+    width: 600px;
     height: 200px;
-    color: rgb(0, 33, 133);
-    font-size: 40px;
+    color: darkblue;
+    font-size: 28px;
     position: relative;
     left: 17%;
-    top: 100px
+    text-decoration: none;
+    top: 65px;
+  }
+  .quiz-subtitle a {
+    color: darkblue;
+    font-size: 20px;
+    text-decoration: none;
   }
 
-  .quiz-subtitle {
-    color: rgb(0, 33, 133);
-    font-size: 22px;
+  .quiz-subtitle  {
     position: relative;
-    top: 31%;
+    top: 20%;
     left:17%;
   }
 
   .quiz-button {
     position: relative;
-    left: 18%;
-    top: 28%;
+    left: 15%;
+    top: 20%;
   }
 
   .quiz-button button {
@@ -327,19 +345,16 @@
 
   /* get involved */
   .get-involved {
+    padding-top: 20px;
     background-color: rgb(235, 235, 235);
-    /* border: solid .5px black; */
-    /* margin: 10px; */
     width: 100%;
-    height: 500px;
+    height: 600px;
   }
 
   .getinvolved-title {
     width: 880px;
     align-items: center;
     height: 300px;
-    margin: 20px;
-    padding: 20px;
     position: relative;
     top: 16%;
     left: 25%;
@@ -349,6 +364,9 @@
   .getinvolved-title a {
     font-size: 66px;
     line-height: 60px;
+    text-decoration: none;
+    color: darkblue;
+    line-height: 80px;
   }
 
   .getinvolved-subtitle {
@@ -359,11 +377,15 @@
     position: relative;
     top:-105px;
     left: 24%;
+    padding-top: 80px;
   }
 
   .getinvolved-subtitle a {
-    font-size: 17px;
+    font-size: 18px;
     position: relative;
+    text-decoration: none;
+    color: darkblue;
+    line-height: 33px;
   }
 
   .getinvolved-subtitle b {
@@ -372,8 +394,8 @@
 
   .getinvolved-button button {
     position: relative;
-    left: 45%;
-    top: -290px;
+    left: 44%;
+    top: -160px;
     width: 200px;
     font-size: 15px;
   }
@@ -383,7 +405,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgb(240, 225, 225);
+    background-color: rgb(240, 236, 236);
   }
 
   .ill1 {
@@ -397,7 +419,7 @@
 
   }
   .abuse-percentage {
-    background-color: rgb(233, 196, 196);
+    background-color:tomato;
     display: flex;
     flex-direction: row;
     /* border: solid .5px black; */
@@ -407,15 +429,14 @@
   .abuse-1, .abuse-2, .abuse-3 {
     display: flex;
     flex-direction: row;
-    /* border: solid black 5px; */
     width: 500px;
     position: relative;
     left: 10%;
 
   }
   .abuse-1 h1 {
-    color: black;
-    font-size: 35px;
+    color: white;
+    font-size: 38px;
     position: relative;
     left: 25%;
     top: 2px;
@@ -423,7 +444,7 @@
   }
 
   .abuse-1 h5 {
-    color: black;
+    color: white;
     font-size: 12px;
     width: 400px;
     position: relative;
@@ -443,8 +464,8 @@
   }
 
   .abuse-2 h1 {
-    color: black;
-    font-size: 35px;
+    color: white;
+    font-size: 38px;;
     position: relative;
     left: 23%;
     top: 2px;
@@ -452,7 +473,7 @@
   }
 
   .abuse-2 h5 {
-    color: black;
+    color: white;
     font-size: 12px;
     width: 400px;
     position: relative;
@@ -472,8 +493,8 @@
   }
 
   .abuse-3 h1 {
-    color: black;
-    font-size: 35px;
+    color: white;
+    font-size: 38px;
     position: relative;
     left: 36%;
     top: 2px;
@@ -481,7 +502,7 @@
   }
 
   .abuse-3 h5 {
-    color: black;
+    color: white;
     font-size: 12px;
     width: 400px;
     position: relative;
@@ -502,18 +523,26 @@
 
   /* visualization worldmap  */
   .worldmap {
-    background-color: rgb(255, 249, 249);
-    /* border: solid .5px black; */
+    background-color: rgb(238, 238, 238);
     width: 100%;
-    height: 800px;
+    height: 600px;
+    padding-top: 80px;
+  }
+
+  .worldmap h5 {
+    position: relative;
+    left: 50%;
+    color: black;
+
   }
 
   /* men abuse get involved */
   .men {
-    background-color: rgb(255, 249, 241);
+    background-color: rgb(245, 231, 212);
     /* border: solid .5px black; */
     width: 100%;
-    height: 700px;
+    height: 400px;
+    padding-top: 20px;
   }
 
   .men-img {
@@ -528,18 +557,20 @@
     width: 550px;
     font-size: 24px;
     position: relative;
-    left: 360px;
-    top: 70px;
+    left: 330px;
+    top: 40px;
+    line-height: 30px;
     word-spacing: 5px;
+    padding-top: 70px;
   }
 
   .men b {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .men button {
     position: relative;
-    left: 26%;
+    left: 22%;
     top: 80px;
     width: 200px;
     font-size: 15px;
@@ -550,7 +581,8 @@
     background-color: rgb(245, 243, 243);
     /* border: solid .5px black; */
     width: 100%;
-    height: 890px;
+    height: 900px;
+    padding-top: 20px;
   }
 
   .covid-title { 
@@ -559,46 +591,48 @@
     position: relative;
     top: 60px;
     left: 30%;
+    line-height: 55px;
+    color: tomato;
   }
 
   .covid-subtitle {
+    padding-top: 40px;
     width: 500px;
+    line-height: 40px;
     text-align: center;
     position: relative;
     top: 50px;
-    left: 40%;
+    left: 39%;
+    color: tomato;
   }
 
   .covid1 {
     position: relative;
-    top: 90px;
+    top: 60px;
     left: 30%;
     width: 300px;
   }
 
   .covid2 {
     position: relative;
-    top: -310px;
+    top: -358px;
     left: 55%;
     width: 300px;
   }
 
   .covid-19 h1 {
-    font-size: 50px;
-  }
-
-  .covid-19 h5 {
-    /* color: black; */
+    font-size: 60px;
+      color: tomato;
   }
 
   .covid-19 small {
-    font-size: 19px;
+    font-size: 17px;
   }
 
   .covid-19 button {
     position: relative;
     left: 45%;
-    top: -240px;
+    top: -300px;
     width: 200px;
     font-size: 15px;
   }
@@ -624,15 +658,16 @@
     background-color: rgb(235, 235, 235);
     /* border: solid .5px black; */
     width: 100%;
-    height: 700px;
+    height: 500px;
+    padding-top: 20px;
   } 
   
   .eu-innovation h1 {
-    font-size: 45px;
+    font-size: 35px;
     color: rgb(4, 4, 148);
     width: 770px;
     text-align: center;
     position: relative;
-    top: 200px;
+    top: 150px;
     left: 30%;;
   }

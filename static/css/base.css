@@ -5,6 +5,20 @@ header {
   position: sticky;
 }
 
+.main {
+  position: relative;
+  left: -230px;
+  font-size: 60px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.sub {
+  position: relative;
+  left: 280px;
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+}
+
 .navbar {
   font-weight: bold;
   background-color: rgba(225, 225, 225, 1);
@@ -12,11 +26,11 @@ header {
 }
 
 .navbar:hover {
-  background-color: #FF5400;
+  background-color:tomato;
 }
 
 .navbar a {
-  color: #FF5400;
+  color: tomato;
 }
 
 .navbar:hover a {
@@ -24,36 +38,37 @@ header {
 }
 
 .navbar li a:hover {
-  background-color: #FF5400;
+  background-color: tomato;
   color: rgba(225, 225, 225, 1);
 }
 
 .navbar #apply {
-  background-color: #FF5400;
+  background-color: tomato;
   color: white;
-  margin-top: 10px;
-  padding: 5px 45px;
-  border-radius: 25%;
+  margin-bottom: 10px;
+  padding: 15px 15px;
+  border-radius: 10px;
 }
 
 .navbar:hover #apply {
   background-color: white;
-  color: #FF5400;
+  color: tomato;
 }
 
 .navbar #apply:hover {
   background-color: rgba(225, 225, 225, 1);
-  color: #FF5400;
+  color:tomato;
 }
 
 .advocate {
-  color: #FF5400;
+  color: tomato;
 }
 
 .advocate .special {
   color: black;
   font-size: 150%;
 }
+
 
 /* flappy bird escape to safety feauture */
 #overlay {

@@ -9,6 +9,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <!-- base css -->
   <link href="../static/css/base.css" rel="stylesheet">
+  <!-- google fonts  -->
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- css specific to the page  -->
   {% block css %}{% endblock %}
@@ -20,19 +23,19 @@
   <nav class="navbar">
     <div class="container-fluid">
         <ul class="nav navbar-nav">
-            <li><a href="#">BrightAct</a></li>
+            <li><a class= "main" href="#">BrightAct</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Changemakers</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">Updates</a></li>
-            <li><a href="#" id="apply">Apply</a></li>
+            <li><a class="sub" href="#">About</a></li>
+            <li><a class="sub" href="#">Changemakers</a></li>
+            <li><a class="sub" href="#">Product</a></li>
+            <li><a class="sub" href="#">Updates</a></li>
+            <li><a class="sub" href="#" id="apply">Apply</a></li>
             <!-- flappy bird escape feature -->
-            <li><button type="button" class="btn-light text-white">
+            <!-- <li><button type="button" class="btn-light text-white">
                 <a class= "flappy" href="https://flappybird.io">Play Flappy Bird</a>
                 </button>
-            </li>
+            </li> -->
         </ul>
     </div>
   </nav> 
