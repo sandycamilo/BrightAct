@@ -5,31 +5,44 @@
         <link rel="stylesheet" href="../static/css/getinvolved2.css">
     </head>
     <body>
+        <div class="container">
+            <h1>Get Involved Questionaire</h1>
 
+            <br>
+            <img src="../static/img/undraw_connected.png" width="50%" length="50%">
+            <p>
+                Connect with BrightAct to Get Involved and become a ChangeMaker!
+            </p>
+        </div>
 
         <div class="container">
-            <h1>Get Involved</h1>
+
 
 
             <!-- Trigger/Open The Modal -->
-            <button id="myBtn" type="button" class="btn btn-success rounded shadow">
+            <button id="startButton" type="button" class="btn btn-success rounded shadow start-button">
                 Get Started!
             </button>
+            <p>
+                <br>
+                <br>
+                </br>
+            </p>
 
-            <!-- The Modal -->
-            <div id="myModal" class="modal" id="get-involved" tabindex="-1" role="dialog">
+            <!-- Name Modal -->
+            <div id="personNameModal" class="modal" tabindex="-1" role="dialog">
 
              <!-- Modal content -->
                  <div class="modal-content">
                      <div class="modal-header">
                           <span class="close">&times;</span>
-                          <h2>Get Involved</h2>
+                          <h2>Get Involved Questionaire</h2>
                     </div>
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <label for="name" class="col-form-label">Your Name:</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <label for="personName" class="col-form-label">Your Name:</label>
+                                <input type="text" class="form-control" id="personName">
                                 <p>
 
                                 </p>
@@ -37,13 +50,682 @@
                          </form>
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-default text-right" onclick="nextQ()">
+                         <button class="btn btn-default text-right next-question" data-nextId="orgNameModal">
                              NEXT
                          </button>
                     </div>
                  </div>
 
             </div>
+            <!-- End Name Modal -->
+
+            <!-- Orgaization Modal -->
+            <div id="orgNameModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="orgName" class="col-form-label">What is the name of your organization?</label>
+                                <input type="text" class="form-control" id="orgName">
+                                <p>
+
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right next-question" data-nextId="countryModal">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Organization Modal -->
+
+            <!-- Country Modal -->
+            <div id="countryModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="country" class="col-form-label">What is your country?</label>
+                                <input list="countries" name="country" id="country">
+                                <p>
+                                <!-- drop down auto-complete? data list?
+                                    https://www.w3schools.com/tags/tag_datalist.asp
+                                    - alphabetize countries -->
+
+
+                                <datalist id="countries" name="country">
+
+                                    <option value="Austria">
+                                    <option value="Belgium">
+                                    <option value="Bulgaria">
+                                    <option value="Brazil">
+                                    <option value="Canada">
+                                    <option value="Croatia">
+                                    <option value="Cuba">
+                                    <option value="Cypress">
+                                    <option value="Czech Republic">
+                                    <option value="Denmark">
+                                    <option value="England">
+                                    <option value="Estonia">
+                                    <option value="Finland">
+                                    <option value="France">
+                                    <option value="Germany">
+                                    <option value="Greece">
+                                    <option value="Hungary">
+                                    <option value="Ireland">
+                                    <option value="Italy">
+                                    <option value="Latvia">
+                                    <option value="Lithuania">
+                                    <option value="Luxemburg">
+                                    <option value="Malta">
+                                    <option value="Mexico">
+                                    <option value="Netherlands">
+                                    <option value="Norway">
+                                    <option value="Poland">
+                                    <option value="Portugal">
+                                    <option value="Romania">
+                                    <option value="Slovakia">
+                                    <option value="Slovenia">
+                                    <option value="Spain">
+                                    <option value="Sweden">
+                                    <option value="United States of America">
+
+                                </datalist>
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right next-question" data-nextId="roleModal">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- end Country modal -->
+
+            <!-- Begin Role Modal -->
+            <div id="roleModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="role" class="col-form-label">What your role in that organization?</label>
+                                <input type="text" class="form-control" id="role">
+                                <p>
+
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right next-question" data-nextId="sectorModal">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Role Modal -->
+
+            <!-- Sector Modal -->
+            <!-- It is from this input that the industry sector specific questions are determined -->
+            <div id="sectorModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="sector" class="col-form-label">
+                                    How would your organization’s industry sector best be categorized
+                                </label>
+                                <input list="sectors" name="sector" id="sector">
+                                <p>
+
+                                <datalist id="sectors" name="sector">
+
+                                  <option value="Government (NGO)">
+                                  <option value="Civic">
+                                  <option value="University">
+                                  <option value="Public">
+
+                                </datalist>
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right next-question" data-nextId="phoneModal">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Sector Modal-->
+
+            <!-- Begin Phone Modal -->
+            <div id="phoneModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="phone" class="col-form-label">What is a good number where you can be reached?</label>
+                                <input type="text" class="form-control" id="phone">
+                                <p>
+
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right next-question" data-nextId="foundModal">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Phone Modal -->
+
+            <!-- Begin Found Modal -->
+            <div id="foundModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="found" class="col-form-label">How did you find BrightAct?</label>
+                                <input type="text" class="form-control" id="found">
+                                <p>
+
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right next-question" data-nextId="reasonModal">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Found Modal -->
+
+            <!-- Begin Reason Modal -->
+            <div id="reasonModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="reason" class="col-form-label">Reason for contact:</label>
+                                <input list="reasons" name="reason" id="sector">
+                                <p>
+
+                                <datalist id="reasons" name="reason">
+
+                                  <option value="Collaboration">
+                                  <option value="Information">
+                                  <option value="Research">
+                                  <option value="Support">
+                                  <option value="Sales">
+                                  <option value="Other">
+
+                                </datalist>
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right next-question" data-nextId="infoModal">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Reason Modal -->
+
+            <!-- Begin Info Modal -->
+            <div id="infoModal" class="modal" tabindex="-1" role="dialog">
+
+                <!--Modal Content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                         <span class="close">&times;</span>
+                         <h2>Get Involved Questionaire</h2>
+                   </div>
+                   <div class="modal-body">
+                       <form>
+                           <div class="form-group">
+                               <label for="info" class="col-form-label">Would you like more information?</label>
+                               <p>
+                               <input type="checkbox" name="info-yes" id="info-yes" value="yes"> Yes, please <br>
+                               <input type="checkbox" name="info-no" id="info-no" value="no"> No, thank you.
+                               </p>
+                           </div>
+                        </form>
+                   </div>
+                   <div class="modal-footer">
+                        <button class="btn btn-default text-right next-question" data-nextId="sectorValue">
+                            NEXT
+                        </button>
+                   </div>
+                </div>
+
+           </div>
+            <!-- End Info Modal -->
+
+            <!-- Begin NGO/Help Sector Specific Questions -->
+            <!-- Begin Target Group Modal -->
+            <div id="targetModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                          <h3>Government (NGO)</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="target" class="col-form-label">What is your organization's target group?</label>
+                                <input type="text" class="form-control" id="target">
+                                <p>
+
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right next-question" data-nextId="collaborationModal">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Target Group Modal -->
+
+
+
+            <!-- Begin Collaboration Type Modal -->
+            <div id="collaborationModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                           <h3>Government (NGO)</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="collaboration" class="col-form-label">What kind of collaboration are you interested in?</label>
+                                <input list="collaborationType" name="collaboration" id="collaboration">
+                                <p>
+
+                                <datalist id="collaborationType" name="collaborationType">
+
+                                  <option value="Chat Functions">
+                                  <option value="Education">
+                                  <option value="Other Support">
+                                  <option value="Profile Page">
+                                  <option value="Network">
+                                  <option value="Other">
+
+                                </datalist>
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right next-question" data-nextId="brandedModal">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Collaboration Type Modal -->
+
+            <!-- Begin Branded Modal -->
+            <div id="brandedModal" class="modal" tabindex="-1" role="dialog">
+
+                <!--Modal Content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                         <span class="close">&times;</span>
+                         <h2>Get Involved Questionaire</h2>
+                          <h3>Government (NGO)</h3>
+                   </div>
+                   <div class="modal-body">
+                       <form>
+                           <div class="form-group">
+                               <label for="branded" class="col-form-label">Are you interested in a branded profile for your organization in the app/website?</label>
+                               <p>
+                               <input type="checkbox" name="branded-yes" id="branded-yes" value="yes"> Yes, please <br>
+                               <input type="checkbox" name="branded-no" id="branded-no" value="no"> No, thank you.
+                               </p>
+                           </div>
+                        </form>
+                   </div>
+                   <div class="modal-footer">
+                        <button class="btn btn-default text-right next-question" data-nextId="tyModal">
+                            NEXT
+                        </button>
+                   </div>
+                </div>
+
+           </div>
+            <!-- End Branded Modal -->
+
+
+            <!-- End HGO/Help Sector Specific Questions -->
+
+            <!-- Begin Public Sector Specific Questions -->
+            <!-- Begin Organization Type Modal
+                    Input Type: Text -->
+            <div id="orgTypeModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                          <h3> Public </h3>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="orgType" class="col-form-label">What kind of organization? (municipality, local government, government, police, legal etc)</label>
+                                <input type="text" class="form-control" id="orgType">
+                                <p>
+
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right next-question" data-nextId="deptModal">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Organization Type Modal -->
+
+            <!-- Begin Department Modal
+                Input Type: Text-->
+            <div id="deptModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                          <h3> Public </h3>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="department" class="col-form-label">Within which department of your organization?</label>
+                                <input type="text" class="form-control" id="department">
+                                <p>
+
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right next-question" data-nextId="brandedModal">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Department Modal -->
+
+            <!-- Branded Profile Question available in NGO/Help Sector Specific Questions -->
+
+            <!-- End Public Sector Specific Questions -->
+
+
+            <!-- Begin University Sector Specific Questions -->
+            <!-- Begin University Department Modal: text box -->
+            <div id="uniDeptModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                          <h3> University</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="deptUni" class="col-form-label">What department of the university?</label>
+                                <input type="text" class="form-control" id="deptUni">
+                                <p>
+
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right next-question" data-nextId="studiesLevelModal">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+        <!-- End University Department Modal -->
+
+        <!-- Begin Level of Studies Modal: text box -->
+        <div id="studiesLevelModal" class="modal" tabindex="-1" role="dialog">
+
+         <!-- Modal content -->
+             <div class="modal-content">
+                 <div class="modal-header">
+                      <span class="close">&times;</span>
+                      <h2>Get Involved Questionaire</h2>
+                      <h3> University</h3>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="studiesLevel" class="col-form-label">What is your current level of studies?</label>
+                            <input type="text" class="form-control" id="studiesLevel">
+                            <p>
+
+                            </p>
+                        </div>
+                     </form>
+                </div>
+                <div class="modal-footer">
+                     <button class="btn btn-default text-right next-question" data-nextId="researchModal">
+                         NEXT
+                     </button>
+                </div>
+             </div>
+
+        </div>
+
+        <!-- End Level of Studies Modal -->
+
+        <!-- Begin Research Modal: checkbox -->
+        <div id="researchModal" class="modal" tabindex="-1" role="dialog">
+
+            <!--Modal Content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                     <span class="close">&times;</span>
+                     <h2>Get Involved Questionaire</h2>
+                     <h3> University</h3>
+               </div>
+               <div class="modal-body">
+                   <form>
+                       <div class="form-group">
+                           <label for="research" class="col-form-label">Is it for new or upcoming research?</label>
+                           <p>
+                           <input type="checkbox" name="research-new" id="research-new" value="new"> New <br>
+                           <input type="checkbox" name="research-upcoming" id="research-upcoming" value="upcoming"> Upcoming<br>
+                           <input type="checkbox" name="research-both" id="research-both" value="both"> Both
+                           </p>
+                       </div>
+                    </form>
+               </div>
+               <div class="modal-footer">
+                    <button class="btn btn-default text-right next-question" data-nextId="tyModal">
+                        NEXT
+                    </button>
+               </div>
+            </div>
+
+       </div>
+        <!-- End Research Modal -->
+
+        <!-- End University Sector Specific Questions -->
+
+        <!-- Begin Civic Secotor Specific Questions -->
+            <!-- Branded Profile modal available above -->
+
+            <!-- Begin Legal Support Modal: data list -->
+            <div id="legalSupportModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                          <h3> Civic</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="legalSupport" class="col-form-label">
+                                    What kind of legal support does your firm have documented experience in?
+                                </label>
+                                <input list="legalSuportType" name="legalSupport" id="legalSupport">
+                                <p>
+
+                                <datalist id="legalSuportType" name="legalSupportType">
+
+                                  <option value="Domestic Abuse or Violence">
+                                  <option value="Financial">
+                                  <option value="Other">
+
+                                </datalist>
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right next-question">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Legal Support Modal -->
+
+            <!-- Begin Offer Users Modal: data list -->
+            <div id="offerUsersModal" class="modal" tabindex="-1" role="dialog">
+
+             <!-- Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Get Involved Questionaire</h2>
+                          <h3> Civic</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="offerUsers" class="col-form-label">
+                                    What does your firm want to offer for the users?
+                                </label>
+                                <input list="offerUsersType" name="offerUsers" id="offerUsers">
+                                <p>
+
+                                <datalist id="offerUsersType" name="offerUsersType">
+
+                                  <option value="Free Chat Support">
+                                  <option value="Pro Bono Cases">
+                                  <option value="Other">
+
+                                </datalist>
+                                </p>
+                            </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button class="btn btn-default text-right next-question">
+                             NEXT
+                         </button>
+                    </div>
+                 </div>
+
+            </div>
+            <!-- End Offer Users Modal -->
+
+
+        <!-- End Civic Secotor Specific Questions -->
+
+
         </div>
         <script src="../static/js/getinvolved2.js"></script>
 
